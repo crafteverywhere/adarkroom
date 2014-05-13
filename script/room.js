@@ -8,39 +8,39 @@ var Room = {
 	_BUILDER_STATE_DELAY: 0.5 * 60 * 1000, // time between builder state updates
 	_STOKE_COOLDOWN: 10, // cooldown to stoke the fire
 	_NEED_WOOD_DELAY: 15 * 1000, // from when the stranger shows up, to when you need wood
-	
+
 	fire:null,
 	temperature:null,
 	buttons:{},
-	
+
 	Craftables: {
-		'trap': {
+		'陷阱': {
 			button: null,
 			maximum: 10,
-			availableMsg: 'builder says she can make traps to catch any creatures might still be alive out there',
-			buildMsg: 'more traps to catch more creatures',
-			maxMsg: "more traps won't help now",
+			availableMsg: '建造者说她能够制做陷阱来捕捉那些仍在野外活动的野兽。',
+			buildMsg: '陷阱越多，抓到的猎物就越多。',
+			maxMsg: "再增加陷阱已毫无裨益。",
 			type: 'building',
 			cost: function() {
 				var n = $SM.get('game.buildings["trap"]', true);
 				return {
-					'wood': 10 + (n*10)
+					'木头': 10 + (n*10)
 				};
 			}
 		},
-		'cart': {
+		'货车': {
 			button: null,
 			maximum: 1,
-			availableMsg: 'builder says she can make a cart for carrying wood',
-			buildMsg: 'the rickety cart will carry more wood from the forest',
+			availableMsg: '建造者说她能够制造出货车，用来搬运木头。',
+			buildMsg: '摇摇晃晃的货车满载从森林运出的木头。',
 			type: 'building',
 			cost: function() {
 				return {
-					'wood': 30
+					'木头': 30
 				};
 			}
 		},
-		'hut': {
+		'小屋': {
 			button: null,
 			maximum: 20,
 			availableMsg: "builder says there are more wanderers. says they'll work, too.",
@@ -50,11 +50,11 @@ var Room = {
 			cost: function() {
 				var n = $SM.get('game.buildings["hut"]', true);
 				return {
-					'wood': 100 + (n*50)
+					'木头': 100 + (n*50)
 				};
 			}
 		},
-		'lodge': {
+		'旅馆': {
 			button: null,
 			maximum: 1,
 			availableMsg: 'villagers could help hunt, given the means',
@@ -68,7 +68,7 @@ var Room = {
 				};
 			}
 		},
-		'trading post': {
+		'贸易站': {
 			button: null,
 			maximum: 1,
 			availableMsg: "a trading post would make commerce easier",
@@ -76,12 +76,12 @@ var Room = {
 			type: 'building',
 			cost: function() {
 				return {
-					'wood': 400,
-					'fur': 100
+					'木头': 400,
+					'毛皮': 100
 				};
 			}
 		},
-		'tannery': {
+		'制革屋': {
 			button: null,
 			maximum: 1,
 			availableMsg: "builder says leather could be useful. says the villagers could make it.",
@@ -89,12 +89,12 @@ var Room = {
 			type: 'building',
 			cost: function() {
 				return {
-					'wood': 500,
-					'fur': 50
+					'木头': 500,
+					'毛皮': 50
 				};
 			}
 		},
-		'smokehouse': {
+		'熏肉房': {
 			button: null,
 			maximum: 1,
 			availableMsg: "should cure the meat, or it'll spoil. builder says she can fix something up.",
@@ -102,12 +102,12 @@ var Room = {
 			type: 'building',
 			cost: function() {
 				return {
-					'wood': 600,
-					'meat': 50
+					'木头': 600,
+					'肉': 50
 				};
 			}
 		},
-		'workshop': {
+		'工坊': {
 			button: null,
 			maximum: 1,
 			availableMsg: "builder says she could make finer things, if she had the tools",
@@ -115,13 +115,13 @@ var Room = {
 			type: 'building',
 			cost: function() {
 				return {
-					'wood': 800,
-					'leather': 100,
-					'scales': 10
+					'木头': 800,
+					'皮革': 100,
+					'鳞片': 10
 				};
 			}
 		},
-		'steelworks': {
+		'炼钢坊': {
 			button: null,
 			maximum: 1,
 			availableMsg: "builder says the villagers could make steel, given the tools",
@@ -129,13 +129,13 @@ var Room = {
 			type: 'building',
 			cost: function() {
 				return {
-					'wood': 1500,
-					'iron': 100,
-					'coal': 100
+					'木头': 1500,
+					'铁': 100,
+					'煤': 100
 				};
 			}
 		},
-		'armoury': {
+		'军械坊': {
 			button: null,
 			maximum: 1,
 			availableMsg: "builder says it'd be useful to have a steady source of bullets",
@@ -143,9 +143,9 @@ var Room = {
 			type: 'building',
 			cost: function() {
 				return {
-					'wood': 3000,
-					'steel': 100,
-					'sulphur': 50
+					'木头': 3000,
+					'钢': 100,
+					'硫磺': 50
 				};
 			}
 		},
@@ -155,8 +155,8 @@ var Room = {
 			buildMsg: 'a torch to keep the dark away',
 			cost: function() {
 				return {
-					'wood': 1,
-					'cloth': 1
+					'木头': 1,
+					'布匹': 1
 				};
 			}
 		},
@@ -167,7 +167,7 @@ var Room = {
 			buildMsg: 'this waterskin\'ll hold a bit of water, at least',
 			cost: function() {
 				return {
-					'leather': 50
+					'皮革': 50
 				};
 			}
 		},
@@ -178,8 +178,8 @@ var Room = {
 			buildMsg: 'the cask holds enough water for longer expeditions',
 			cost: function() {
 				return {
-					'leather': 100,
-					'iron': 20
+					'皮革': 100,
+					'铁': 20
 				};
 			}
 		},
@@ -190,55 +190,55 @@ var Room = {
 			buildMsg: 'never go thirsty again',
 			cost: function() {
 				return {
-					'iron': 100,
-					'steel': 50
+					'铁': 100,
+					'钢': 50
 				};
 			}
 		},
-		'bone spear': {
+		'骨枪': {
 			button: null,
 			type: 'weapon',
 			buildMsg: "this spear's not elegant, but it's pretty good at stabbing",
 			cost: function() {
 				return {
-					'wood': 100,
-					'teeth': 5
+					'木头': 100,
+					'牙齿': 5
 				};
 			}
 		},
-		'rucksack': {
+		'双肩包': {
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
 			buildMsg: 'carrying more means longer expeditions to the wilds',
 			cost: function() {
 				return {
-					'leather': 200
+					'皮革': 200
 				};
 			}
 		},
-		'wagon': {
+		'篷车': {
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
 			buildMsg: 'the wagon can carry a lot of supplies',
 			cost: function() {
 				return {
-					'wood': 500,
-					'iron': 100
+					'木头': 500,
+					'铁': 100
 				};
 			}
 		},
-		'convoy': {
+		'车队': {
 			button: null,
 			type: 'upgrade',
 			maximum: 1,
 			buildMsg: 'the convoy can haul mostly everything',
 			cost: function() {
 				return {
-					'wood': 1000,
-					'iron': 200,
-					'steel': 100
+					'木头': 1000,
+					'铁': 200,
+					'钢': 100
 				};
 			}
 		},
@@ -248,8 +248,8 @@ var Room = {
 			buildMsg: "leather's not strong. better than rags, though.",
 			cost: function() {
 				return {
-					'leather': 200,
-					'scales': 20
+					'皮革': 200,
+					'鳞片': 20
 				};
 			}
 		},
@@ -259,8 +259,8 @@ var Room = {
 			buildMsg: "iron's stronger than leather",
 			cost: function() {
 				return {
-					'leather': 200,
-					'iron': 100
+					'皮革': 200,
+					'铁': 100
 				};
 			}
 		},
@@ -270,237 +270,237 @@ var Room = {
 			buildMsg: "steel's stronger than iron",
 			cost: function() {
 				return {
-					'leather': 200,
-					'steel': 100
+					'皮革': 200,
+					'钢': 100
 				};
 			}
 		},
-		'iron sword': {
+		'铁剑': {
 			button: null,
 			type: 'weapon',
 			buildMsg: "sword is sharp. good protection out in the wilds.",
 			cost: function() {
 				return {
-					'wood': 200,
-					'leather': 50,
-					'iron': 20
+					'木头': 200,
+					'皮革': 50,
+					'铁': 20
 				};
 			}
 		},
-		'steel sword': {
+		'钢剑': {
 			button: null,
 			type: 'weapon',
 			buildMsg: "the steel is strong, and the blade true.",
 			cost: function() {
 				return {
-					'wood': 500,
-					'leather': 100,
-					'steel': 20
+					'木头': 500,
+					'皮革': 100,
+					'钢': 20
 				};
 			}
 		},
-		'rifle': {
+		'步枪': {
 			type: 'weapon',
 			buildMsg: "black powder and bullets, like the old days.",
 			cost: function() {
 				return {
-					'wood': 200,
-					'steel': 50,
+					'木头': 200,
+					'钢': 50,
 					'sulphur': 50
 				};
 			}
 		}
 	},
-	
+
 	TradeGoods: {
-		'scales': {
+		'鳞片': {
 			type: 'good',
 			cost: function() {
 				return { fur: 150 };
 			}
 		},
-		'teeth': {
+		'牙齿': {
 			type: 'good',
 			cost: function() {
 				return { fur: 300 };
 			}
 		},
-		'iron': {
+		'铁': {
 			type: 'good',
 			cost: function() {
 				return {
-					'fur': 150,
-					'scales': 50
+					'毛皮': 150,
+					'鳞片': 50
 				};
 			}
 		},
-		'coal': {
+		'煤': {
 			type: 'good',
 			cost: function() {
 				return {
-					'fur': 200,
-					'teeth': 50
+					'毛皮': 200,
+					'牙齿': 50
 				};
 			}
 		},
-		'steel': {
+		'钢': {
 			type: 'good',
 			cost: function() {
 				return {
-					'fur': 300,
-					'scales': 50,
-					'teeth': 50
+					'毛皮': 300,
+					'鳞片': 50,
+					'牙齿': 50
 				};
 			}
 		},
-		'medicine': {
+		'药剂': {
 			type: 'good',
 			cost: function() {
 				return {
-					'scales': 50, 'teeth': 30
+					'鳞片': 50, '牙齿': 30
 				};
 			}
 		},
-		'bullets': {
+		'子弹': {
 			type: 'good',
 			cost: function() {
 				return {
-					'scales': 10
+					'鳞片': 10
 				};
 			}
 		},
-		'energy cell': {
+		'能量元件': {
 			type: 'good',
 			cost: function() {
 				return {
-					'scales': 10,
-					'teeth': 10
+					'鳞片': 10,
+					'牙齿': 10
 				};
 			}
 		},
-		'bolas': {
+		'套索': {
 			type: 'weapon',
 			cost: function() {
 				return {
-					'teeth': 10
+					'牙齿': 10
 				};
 			}
 		},
-		'grenade': {
+		'手雷': {
 			type: 'weapon',
 			cost: function() {
 				return {
-					'scales': 100,
-					'teeth': 50
+					'鳞片': 100,
+					'牙齿': 50
 				};
 			}
 		},
-		'bayonet': {
+		'刺刀': {
 			type: 'weapon',
 			cost: function() {
 				return {
-					'scales': 500,
-					'teeth': 250
+					'鳞片': 500,
+					'牙齿': 250
 				};
 			}
 		},
-		'alien alloy': {
+		'异星合金': {
 			type: 'good',
 			cost: function() {
 				return {
-					'fur': 1500,
-					'scales': 750,
-					'teeth': 300
+					'毛皮': 1500,
+					'鳞片': 750,
+					'牙齿': 300
 				};
 			}
 		},
-		'compass': {
+		'罗盘': {
 			type: 'upgrade',
 			maximum: 1,
 			cost: function() {
 				return { 
-					fur: 400, 
-					scales: 20, 
-					teeth: 10 
+					'毛皮': 400, 
+					'鳞片': 20, 
+					'牙齿': 10 
 				};
 			}
 		}
 	},
-	
+
 	MiscItems: {
-	  'laser rifle': {
+	  '激光枪': {
 	    type: 'weapon'
 	  }
 	},
-	
+
 	name: "Room",
 	init: function(options) {
 		this.options = $.extend(
 			this.options,
 			options
 		);
-		
+
 		if(Engine._debug) {
 			this._ROOM_WARM_DELAY = 5000;
 			this._BUILDER_STATE_DELAY = 5000;
 			this._STOKE_COOLDOWN = 0;
 			this._NEED_WOOD_DELAY = 5000;
 		}
-		
+
 		if(typeof $SM.get('features.location.room') == 'undefined') {
 			$SM.set('features.location.room', true);
 			$SM.set('game.builder.level', -1);
 		}
-		
+
 		Room.temperature = this.TempEnum.Cold;
 		Room.fire = this.FireEnum.Dead;
-		
-		
+
+
 		// Create the room tab
-		this.tab = Header.addLocation("A Dark Room", "room", Room);
-		
+		this.tab = Header.addLocation("小黑屋", "room", Room);
+
 		// Create the Room panel
 		this.panel = $('<div>')
 			.attr('id', "roomPanel")
 			.addClass('location')
 			.appendTo('div#locationSlider');
-		
+
 		Engine.updateSlider();
-		
+
 		// Create the light button
 		new Button.Button({
 			id: 'lightButton',
-			text: 'light fire',
+			text: '生火',
 			click: Room.lightFire,
 			cooldown: Room._STOKE_COOLDOWN,
 			width: '80px',
-			cost: {'wood': 5}
+			cost: {'木头': 5}
 		}).appendTo('div#roomPanel');
-		
+
 		// Create the stoke button
 		new Button.Button({
 			id: 'stokeButton',
-			text: "stoke fire",
+			text: "添柴",
 			click: Room.stokeFire,
 			cooldown: Room._STOKE_COOLDOWN,
 			width: '80px',
-			cost: {'wood': 1}
+			cost: {'木头': 1}
 		}).appendTo('div#roomPanel');
-		
+
 		// Create the stores container
 		$('<div>').attr('id', 'storesContainer').appendTo('div#roomPanel');
-		
+
 		//subscribe to stateUpdates
 		$.Dispatch('stateUpdate').subscribe(Room.handleStateUpdates);
-		
+
 		Room.updateButton();
 		Room.updateStoresView();
 		Room.updateIncomeView();
 		Room.updateBuildButtons();
-		
+
 		Room._fireTimer = setTimeout(Room.coolFire, Room._FIRE_COOL_DELAY);
 		Room._tempTimer = setTimeout(Room.adjustTemp, Room._ROOM_WARM_DELAY);
-		
+
 		/*
 		 * Builder states:
 		 * 0 - Approaching
@@ -516,33 +516,33 @@ var Room = {
 			setTimeout(Room.unlockForest, Room._NEED_WOOD_DELAY);
 		}
 		setTimeout($SM.collectIncome, 1000);
-		
-		Notifications.notify(Room, "the room is " + Room.temperature.text);
-		Notifications.notify(Room, "the fire is " + Room.fire.text);
+
+		Notifications.notify(Room, "房间" + Room.temperature.text);
+		Notifications.notify(Room, "火堆" + Room.fire.text);
 	},
-	
+
 	options: {}, // Nothing for now
-	
+
 	onArrival: function(transition_diff) {
 		Room.setTitle();
 		if(Room.changed) {
-			Notifications.notify(Room, "the fire is " + Room.fire.text);
-			Notifications.notify(Room, "the room is " + Room.temperature.text);
+			Notifications.notify(Room, "火堆" + Room.fire.text);
+			Notifications.notify(Room, "房间" + Room.temperature.text);
 			Room.changed = false;
 		}
 		if($SM.get('game.builder.level') == 3) {
 			$SM.add('game.builder.level', 1);
-			$SM.setIncome('builder', {
+			$SM.setIncome('建造者', {
 				delay: 10,
-				stores: {'wood' : 2 }
+				stores: {'木头' : 2 }
 			});
 			Room.updateIncomeView();
-			Notifications.notify(Room, "the stranger is standing by the fire. she says she can help. says she builds things.");
+			Notifications.notify(Room, "一名陌生人出现在火堆前。她说她能帮忙。帮忙建些东西。");
 		}
 
 		Engine.moveStoresView(null, transition_diff);
 	},
-	
+
 	TempEnum: {
 		fromInt: function(value) {
 			for(var k in this) {
@@ -552,13 +552,13 @@ var Room = {
 			}
 			return null;
 		},
-		Freezing: { value: 0, text: 'freezing' },
-		Cold: { value: 1, text: 'cold' },
-		Mild: { value: 2, text: 'mild' },
-		Warm: { value: 3, text: 'warm' },
-		Hot: { value: 4, text: 'hot' }
+		Freezing: { value: 0, text: '寒冷刺骨。' },
+		Cold: { value: 1, text: '很冷。' },
+		Mild: { value: 2, text: '很宜人。' },
+		Warm: { value: 3, text: '很温暖。' },
+		Hot: { value: 4, text: '很热。' }
 	},
-	
+
 	FireEnum: {
 		fromInt: function(value) {
 			for(var k in this) {
@@ -568,21 +568,21 @@ var Room = {
 			}
 			return null;
 		},
-		Dead: { value: 0, text: 'dead' },
-		Smoldering: { value: 1, text: 'smoldering' },
-		Flickering: { value: 2, text: 'flickering' },
-		Burning: { value: 3, text: 'burning' },
-		Roaring: { value: 4, text: 'roaring' }
+		Dead: { value: 0, text: '熄灭了。' },
+		Smoldering: { value: 1, text: '开始冒烟。' },
+		Flickering: { value: 2, text: '冒出火苗。' },
+		Burning: { value: 3, text: '燃烧着。' },
+		Roaring: { value: 4, text: '熊熊燃烧。' }
 	},
-	
+
 	setTitle: function() {
-		var title = Room.fire.value < 2 ? "A Dark Room" : "A Firelit Room";
+		var title = Room.fire.value < 2 ? "小黑屋" : "生火间";
 		if(Engine.activeModule == this) {
 			document.title = title;
 		}
 		$('div#location_room').text(title);
 	},
-	
+
 	updateButton: function() {
 		var light = $('#lightButton.button');
 		var stoke = $('#stokeButton.button');
@@ -599,7 +599,7 @@ var Room = {
 				Button.cooldown(stoke);
 			}
 		}
-		
+
 		if(!$SM.get('stores.wood')) {
 			light.addClass('free');
 			stoke.addClass('free');
@@ -608,7 +608,7 @@ var Room = {
 			stoke.removeClass('free');
 		}
 	},
-	
+
 	_fireTimer: null,
 	_tempTimer: null,
 	lightFire: function() {
@@ -623,7 +623,7 @@ var Room = {
 		Room.fire = Room.FireEnum.Burning;
 		Room.onFireChange();
 	},
-	
+
 	stokeFire: function() {
 		var wood = $SM.get('stores.wood');
 		if(wood === 0) {
@@ -639,7 +639,7 @@ var Room = {
 		}
 		Room.onFireChange();
 	},
-	
+
 	onFireChange: function() {
 		if(Engine.activeModule != Room) {
 			Room.changed = true;
@@ -655,7 +655,7 @@ var Room = {
 		Room.updateButton();
 		Room.setTitle();
 	},
-	
+
 	coolFire: function() {
 		var wood = $SM.get('stores.wood');
 		if(Room.fire.value <= Room.FireEnum.Flickering.value &&
@@ -670,7 +670,7 @@ var Room = {
 			Room.onFireChange();
 		}
 	},
-	
+
 	adjustTemp: function() {
 		var old = Room.temperature.value;
 		if(Room.temperature.value > 0 && Room.temperature.value > Room.fire.value) {
@@ -686,7 +686,7 @@ var Room = {
 		}
 		Room._tempTimer = setTimeout(Room.adjustTemp, Room._ROOM_WARM_DELAY);
 	},
-	
+
 	unlockForest: function() {
 		$SM.set('stores.wood', 4);
 		Outside.init();
@@ -694,7 +694,7 @@ var Room = {
 		Notifications.notify(Room, "the wood is running out");
 		Engine.event('progress', 'outside');
 	},
-	
+
 	updateBuilderState: function() {
 		var lBuilder = $SM.get('game.builder.level');
 		if(lBuilder == 0) {
@@ -722,7 +722,7 @@ var Room = {
 		}
 		Engine.saveGame();
 	},
-	
+
 	updateStoresView: function() {
 		var stores = $('div#stores');
 		var weapons = $('div#weapons');
@@ -740,7 +740,7 @@ var Room = {
 			wNeedsAppend = true;
 		}
 		for(var k in $SM.get('stores')) {
-			
+
 			var type = null;
 			if(Room.Craftables[k]) {
 				type = Room.Craftables[k].type;
@@ -749,7 +749,7 @@ var Room = {
 			} else if (Room.MiscItems[k]) {
 			  type = Room.MiscItems[k].type;
 			}
-			
+
 			var location;
 			switch(type) {
 			case 'upgrade':
@@ -762,24 +762,24 @@ var Room = {
 				location = stores;
 				break;
 			}
-			
+
 			var id = "row_" + k.replace(' ', '-');
 			var row = $('div#' + id, location);
 			var num = $SM.get('stores["'+k+'"]');
-			
+
 			if(typeof num != 'number' || isNaN(num)) {
 				// No idea how counts get corrupted, but I have reason to believe that they occassionally do.
 				// Build a little fence around it!
 				num = 0;
 				$SM.set('stores["'+k+'"]', 0);
 			}
-			
-			
+
+
 			// thieves?
 			if(typeof $SM.get('game.thieves') == 'undefined' && num > 5000 && $SM.get('features.location.world')) {
 				$SM.startThieves();
 			}
-			
+
 			if(row.length == 0 && num > 0) {
 				row = $('<div>').attr('id', id).addClass('storeRow');
 				$('<div>').addClass('row_key').text(k).appendTo(row);
@@ -803,17 +803,17 @@ var Room = {
 				$('div#' + row.attr('id') + ' > div.row_val', location).text(Math.floor(num));
 			}
 		}
-		
+
 		if(needsAppend && stores.children().length > 0) {
 			stores.appendTo('div#storesContainer');
 			stores.animate({opacity: 1}, 300, 'linear');
 		}
-		
+
 		if(wNeedsAppend && weapons.children().length > 0) {
 			weapons.appendTo('div#storesContainer');
 			weapons.animate({opacity: 1}, 300, 'linear');
 		}
-		
+
 		if(newRow) {
 			Room.updateIncomeView();
 		}
@@ -822,7 +822,7 @@ var Room = {
 			Outside.updateVillage();
 		}
 	},
-	
+
 	updateIncomeView: function() {
 		var stores = $('div#stores');
 		if(stores.length == 0 || typeof $SM.get('income') == 'undefined') return;
@@ -848,7 +848,7 @@ var Room = {
 			}
 		});
 	},
-	
+
 	buy: function(buyBtn) {
 		var thing = $(buyBtn).attr('buildThing');
 		var good = Room.TradeGoods[thing];
@@ -857,7 +857,7 @@ var Room = {
 		if(good.maximum <= numThings) {
 			return;
 		}
-		
+
 		var storeMod = {};
 		var cost = good.cost();
 		for(var k in cost) {
@@ -870,16 +870,16 @@ var Room = {
 			}
 		}
 		$SM.setM('stores', storeMod);
-		
+
 		Notifications.notify(Room, good.buildMsg);
-		
+
 		$SM.add('stores["'+thing+'"]', 1);
-		
+
 		if(thing == 'compass') {
 			Path.openPath();
 		}
 	},
-	
+
 	build: function(buildBtn) {
 		var thing = $(buildBtn).attr('buildThing');
 		if(Room.temperature.value <= Room.TempEnum.Cold.value) {
@@ -887,7 +887,7 @@ var Room = {
 			return false;
 		}
 		var craftable = Room.Craftables[thing];
-		
+
 		var numThings = 0; 
 		switch(craftable.type) {
 		case 'good':
@@ -900,12 +900,12 @@ var Room = {
 			numThings = $SM.get('game.buildings["'+thing+'"]', true);
 			break;
 		}
-		
+
 		if(numThings < 0) numThings = 0;
 		if(craftable.maximum <= numThings) {
 			return;
 		}
-		
+
 		var storeMod = {};
 		var cost = craftable.cost();
 		for(var k in cost) {
@@ -918,9 +918,9 @@ var Room = {
 			}
 		}
 		$SM.setM('stores', storeMod);
-		
+
 		Notifications.notify(Room, craftable.buildMsg);
-		
+
 		switch(craftable.type) {
 		case 'good':
 		case 'weapon':
@@ -933,11 +933,11 @@ var Room = {
 			break;
 		}		
 	},
-	
+
 	needsWorkshop: function(type) {
 		return type == 'weapon' || type == 'upgrade' || type =='tool';
 	},
-	
+
 	craftUnlocked: function(thing) {
 		if(Room.buttons[thing]) {
 			return true;
@@ -946,14 +946,14 @@ var Room = {
 		var craftable = Room.Craftables[thing];
 		if(Room.needsWorkshop(craftable.type) && $SM.get('game.buildings["workshop"]', true) == 0) return false;
 		var cost = craftable.cost();
-		
+
 		//show button if one has already been built
 		if($SM.get('game.buildings["'+thing+'"]') > 0){
 			Room.buttons[thing] = true;
 			return true;
 		}
 		// Show buttons if we have at least 1/2 the wood, and all other components have been seen.
-		if($SM.get('stores.wood', true) < cost['wood'] * 0.5) {
+		if($SM.get('stores.wood', true) < cost['木头'] * 0.5) {
 			return false;
 		}
 		for(var c in cost) {
@@ -961,7 +961,7 @@ var Room = {
 				return false;
 			}
 		}
-		
+
 		Room.buttons[thing] = true;
 		//don't notify if it has already been built before
 		if(!$SM.get('game.buildings["'+thing+'"]')){
@@ -969,7 +969,7 @@ var Room = {
 		}
 		return true;
 	},
-	
+
 	buyUnlocked: function(thing) {
 		if(Room.buttons[thing]) {
 			return true;
@@ -981,7 +981,7 @@ var Room = {
 		}
 		return false;
 	},
-	
+
 	updateBuildButtons: function() {
 		var buildSection = $('#buildBtns');
 		var needsAppend = false;
@@ -989,21 +989,21 @@ var Room = {
 			buildSection = $('<div>').attr('id', 'buildBtns').css('opacity', 0);
 			needsAppend = true;
 		}
-		
+
 		var craftSection = $('#craftBtns');
 		var cNeedsAppend = false;
 		if(craftSection.length == 0 && $SM.get('game.buildings["workshop"]', true) > 0) {
 			craftSection = $('<div>').attr('id', 'craftBtns').css('opacity', 0);
 			cNeedsAppend = true;
 		}
-		
+
 		var buySection = $('#buyBtns');
 		var bNeedsAppend = false;
 		if(buySection.length == 0 && $SM.get('game.buildings["trading post"]', true) > 0) {
 			buySection = $('<div>').attr('id', 'buyBtns').css('opacity', 0);
 			bNeedsAppend = true;
 		}
-		
+
 		for(var k in Room.Craftables) {
 			craftable = Room.Craftables[k];
 			var max = $SM.num(k, craftable) + 1 > craftable.maximum;
@@ -1038,7 +1038,7 @@ var Room = {
 				Button.setDisabled(craftable.button, false);
 			}
 		}
-		
+
 		for(var k in Room.TradeGoods) {
 			good = Room.TradeGoods[k];
 			var max = $SM.num(k, good) + 1 > good.maximum;
@@ -1071,7 +1071,7 @@ var Room = {
 				Button.setDisabled(good.button, false);
 			}
 		}
-		
+
 		if(needsAppend && buildSection.children().length > 0) {
 			buildSection.appendTo('div#roomPanel').animate({opacity: 1}, 300, 'linear');
 		}
@@ -1082,7 +1082,7 @@ var Room = {
 			buySection.appendTo('div#roomPanel').animate({opacity: 1}, 300, 'linear');
 		}
 	},
-	
+
 	handleStateUpdates: function(e){
 		if(e.category == 'stores'){
 			Room.updateStoresView();
