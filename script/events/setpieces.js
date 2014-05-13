@@ -2,16 +2,16 @@
  * Events that only occur at specific times. Launched manually.
  **/
 Events.Setpieces = {
-	"outpost": { /* Friendly Outpost */
-		title: 'An Outpost',
+	"前哨": { /* Friendly Outpost */
+		title: '前哨',
 		scenes: {
 			'start': {
 				text: [
-					'a safe place in the wilds.'
+					'荒野中安全的地方。'
 				],
-				notification: 'a safe place in the wilds.',
+				notification: '荒野中安全的地方。',
 				loot: {
-					'cured meat': {
+					'腌肉': {
 						min: 5,
 						max: 10,
 						chance: 1
@@ -22,64 +22,64 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
 			}
 		}
 	},
-	"swamp": { /* Swamp */
-		title: 'A Murky Swamp',
+	"迷雾沼泽": { /* Swamp */
+		title: '迷雾沼泽',
 		scenes: {
 			'start': {
 				text: [
-					'rotting reeds rise out of the swampy earth.',
-					'a lone frog sits in the muck, silently.'
+					'腐烂的芦草冒出沼泽的表面。',
+					'一只孤独的蛙蹲坐在淤泥中，一言不发。'
 				],
-				notification: 'a swamp festers in the stagnant air.',
+				notification: '凝滞的空气中，沼泽正在溃烂。',
 				buttons: {
 					'enter': {
-						text: 'enter',
+						text: '进入',
 						nextScene: {1: 'cabin'}
 					},
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
 			},
 			'cabin': {
 				text: [
-					'deep in the swamp is a moss-covered cabin.',
-					'an old wanderer sits inside, in a seeming trance.'
+					'沼泽深处现出一栋苔藓密布的小屋。',
+					'一名年迈的流浪者坐在里头，，看起来正在发呆。'
 				],
 				buttons: {
 					'talk': {
-						cost: {'charm': 1},
-						text: 'talk',
+						cost: {'护身符': 1},
+						text: '对话',
 						nextScene: {1: 'talk'}
 					},
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
 			},
 			'talk': {
 				text: [
-					'the wanderer takes the charm and nods slowly.',
-					'he speaks of once leading the great fleets to fresh worlds.',
+					'流浪者接过护身符，缓缓点了点头。',
+					'他谈起曾率领一支伟大的舰队前往新世界。',
 					'unfathomable destruction to fuel wanderer hungers.',
 					'his time here, now, is his penance.'
 				],
 				onLoad: function() {
-					$SM.addPerk('gastronome');
+					$SM.addPerk('美食家');
 					World.markVisited(World.curPos[0], World.curPos[1]);
 				},
 				buttons: {
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
@@ -87,22 +87,22 @@ Events.Setpieces = {
 		}
 	},
 	"cave": { /* Cave */
-		title: 'A Damp Cave',
+		title: '潮湿洞穴',
 		scenes: {
 			'start': {
 				text: [
-					'the mouth of the cave is wide and dark.',
-					"can't see what's inside."
+					'洞口宽敞而黑暗。',
+					"看不清里面有什么。"
 				],
-				notification: 'the earth here is split, as if bearing an ancient wound',
+				notification: '大地裂开，宛如古老的伤痕。',
 				buttons: {
 					'enter': {	
-						text: 'go inside',
+						text: '进入',
 						cost: { torch: 1 },
 						nextScene: {0.3: 'a1', 0.6: 'a2', 1: 'a3'}
 					},
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
@@ -110,20 +110,20 @@ Events.Setpieces = {
 			
 			'a1': {
 				combat: true,
-				enemy: 'beast',
+				enemy: '野兽',
 				chara: 'B',
 				damage: 1,
 				hit: 0.8,
 				attackDelay: 1,
 				health: 5,
-				notification: 'a startled beast defends its home',
+				notification: '受到惊吓的野兽正要捍卫它的巢穴。',
 				loot: {
-					'fur': {
+					'毛皮': {
 						min: 1,
 						max: 10,
 						chance: 1
 					},
-					'teeth': {
+					'牙齿': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -131,48 +131,48 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'b1', 1: 'b2'}
 					},
 					'leave': {
-						text: 'leave cave',
+						text: '离开洞穴',
 						nextScene: 'end'
 					}
 				}
 			},
 			'a2': {
 				text: [
-					'the cave narrows a few feet in.',
-					"the walls are moist and moss-covered"
+					'洞穴狭窄，几无立足之地。',
+					"岩壁潮湿，覆盖着苔藓。"
 				],
 				buttons: {
 					'continue': {	
-						text: 'squeeze',
+						text: '挤入深处',
 						nextScene: {0.5: 'b2', 1: 'b3'}
 					},
 					'leave': {
-						text: 'leave cave',
+						text: '离开洞穴',
 						nextScene: 'end'
 					}
 				}
 			},
 			'a3': {
 				text: [
-			       'the remains of an old camp sits just inside the cave.',
-			       'bedrolls, torn and blackened, lay beneath a thin layer of dust.'
+			       '洞穴内出现一处老旧营地的遗迹。',
+			       '破旧脏污的睡袋平躺着，布满了一层薄薄的灰尘。'
 				],
 				loot: {
-					'cured meat': {
+					'腌肉': {
 						min: 1,
 						max: 5,
 						chance: 1
 					},
-					'torch': {
+					'火把': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'leather': {
+					'皮革': {
 						min: 1,
 						max: 5,
 						chance: 0.3
@@ -180,38 +180,38 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'b3', 1: 'b4'}
 					},
 					'leave': {
-						text: 'leave cave',
+						text: '离开洞穴',
 						nextScene: 'end'
 					}
 				}
 			},
 			'b1': {
 				text: [
-			       'the body of a wanderer lies in a small cavern.',
-			       "rot's been to work on it, and some of the pieces are missing.",
-			       "can't tell what left it here."
+			       '流浪者的尸体躺在狭小的洞穴里。',
+			       "它已经开始腐烂，且遗失了一些肢体。",
+			       "难以分辨这里还留下了什么。"
 				],
 				loot: {
-					'iron sword': {
+					'铁剑': {
 						min: 1,
 						max: 1,
 						chance: 1
 					},
-					'cured meat': {
+					'腌肉': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'torch': {
+					'火把': {
 						min: 1,
 						max: 3,
 						chance: 0.5
 					},
-					'medicine': {
+					'药剂': {
 					  min: 1,
 					  max: 2,
 					  chance: 0.1
@@ -219,42 +219,42 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: { 1: 'c1' }
 					},
 					'leave': {
-						text: 'leave cave',
+						text: '离开洞穴',
 						nextScene: 'end'
 					}
 				}
 			},
 			'b2': {
 				text: [
-			       'the torch sputters and dies in the damp air',
-			       'the darkness is absolute'
+			       '火把劈啪作响，熄灭在了潮湿的空气中。',
+			       '漆黑一片。'
 			    ],
-				notification: 'the torch goes out',
+				notification: '火把燃尽了。',
 				buttons: {
 					'continue': {	
-						text: 'continue',
-						cost: {'torch': 1},
+						text: '继续深入',
+						cost: {'火把': 1},
 						nextScene: { 1: 'c1' }
 					},
 					'leave': {
-						text: 'leave cave',
+						text: '离开洞穴',
 						nextScene: 'end'
 					}
 				}
 			},
 			'b3': {
 				combat: true,
-				enemy: 'beast',
+				enemy: '野兽',
 				chara: 'B',
 				damage: 1,
 				hit: 0.8,
 				attackDelay: 1,
 				health: 5,
-				notification: 'a startled beast defends its home',
+				notification: '受到惊吓的野兽正要捍卫它的巢穴。',
 				loot: {
 					'fur': {
 						min: 1,
