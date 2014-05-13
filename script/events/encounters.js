@@ -4,306 +4,306 @@
 Events.Encounters = [
 	/* Tier 1 */
 	{ /* Snarling Beast */
-		title: 'A Snarling Beast',
+		title: '咆哮的野兽',
  		isAvailable: function() {
  			return World.getDistance() <= 10 && World.getTerrain() == World.TILE.FOREST;
  		},
  		scenes: {
  			'start': {
  				combat: true,
- 				enemy: 'snarling beast',
+ 				enemy: '咆哮的野兽',
  				chara: 'B',
  				damage: 1,
  				hit: 0.8,
  				attackDelay: 1,
  				health: 5,
  				loot: {
- 					'fur': {
+ 					'毛皮': {
  						min: 1,
  						max: 3,
  						chance: 1
  					},
- 					'meat': {
+ 					'肉': {
  						min: 1,
  						max: 3,
  						chance: 1
  					},
- 					'teeth': {
+ 					'牙齿': {
  						min: 1,
  						max: 3,
  						chance: 0.8
  					}
  				},
- 				notification: 'a snarling beast leaps out of the underbrush'
+ 				notification: '一只咆哮的野兽从灌木丛里蹿了出来。'
  			}
  		}
 	},
 	{ /* Gaunt Man */
-     	title: 'A Gaunt Man',
+     	title: '憔悴的男子',
   		isAvailable: function() {
   			return World.getDistance() <= 10 && World.getTerrain() == World.TILE.BARRENS;
   		},
   		scenes: {
   			'start': {
   				combat: true,
-  				enemy: 'gaunt man',
+  				enemy: '憔悴的男子',
   				chara: 'G',
   				damage: 2,
   				hit: 0.8,
   				attackDelay: 2,
   				health: 6,
   				loot: {
-  					'cloth': {
+  					'布匹': {
   						min: 1,
   						max: 3,
   						chance: 0.8
   					},
-  					'teeth': {
+  					'牙齿': {
   						min: 1,
   						max: 2,
   						chance: 0.8
   					},
-  					'leather': {
+  					'皮革': {
   						min: 1,
   						max: 2,
   						chance: 0.5
   					}
   				},
-  				notification: 'a gaunt man approaches, a crazed look in his eye'
+  				notification: '一名憔悴的男子靠了过来，眼中流露出疯狂。'
   			}
 		}
   	},
 	{ /* Strange Bird */
-     	title: 'A Strange Bird',
+     	title: '怪鸟',
   		isAvailable: function() {
   			return World.getDistance() <= 10 && World.getTerrain() == World.TILE.FIELD;
   		},
   		scenes: {
   			'start': {
   				combat: true,
-  				enemy: 'strange bird',
+  				enemy: '怪鸟',
   				chara: 'B',
   				damage: 3,
   				hit: 0.8,
   				attackDelay: 2,
   				health: 4,
   				loot: {
-  					'scales': {
+  					'鳞片': {
   						min: 1,
   						max: 3,
   						chance: 0.8
   					},
-  					'teeth': {
+  					'牙齿': {
   						min: 1,
   						max: 2,
   						chance: 0.5
   					},
-  					'meat': {
+  					'肉': {
   						min: 1,
   						max: 3,
   						chance: 0.8
   					}
   				},
-  				notification: 'a strange looking bird speeds across the plains'
+  				notification: '一只模样古怪的鸟快速掠过平原。'
   			}
 		}
   	},
 	/* Tier 2*/
 	{ /* Shivering Man */
-     	title: 'A Shivering Man',
+     	title: '颤抖的男子',
   		isAvailable: function() {
   			return World.getDistance() > 10 && World.getDistance() <= 20 && World.getTerrain() == World.TILE.BARRENS;
   		},
   		scenes: {
   			'start': {
   				combat: true,
-  				enemy: 'shivering man',
+  				enemy: '颤抖的男子',
   				chara: 'S',
   				damage: 5,
   				hit: 0.5,
   				attackDelay: 1,
   				health: 20,
   				loot: {
-  					'cloth': {
+  					'布匹': {
   						min: 1,
   						max: 1,
   						chance: 0.2
   					},
-  					'teeth': {
+  					'牙齿': {
   						min: 1,
   						max: 2,
   						chance: 0.8
   					},
-  					'leather': {
+  					'皮革': {
   						min: 1,
   						max: 1,
   						chance: 0.2
   					},
-  					'medicine': {
+  					'药剂': {
   					  min: 1,
   					  max: 3,
   					  chance: 0.7
   					}
   				},
-  				notification: 'a shivering man approaches and attacks with surprising strength'
+  				notification: '一名颤抖的男子靠了过来，以令人吃惊的怪力发起袭击。'
   			}
 		}
   },
 	{ /* Man-eater */
-		title: 'A Man-Eater',
+		title: '食人怪',
  		isAvailable: function() {
  			return World.getDistance() > 10 && World.getDistance() <= 20 && World.getTerrain() == World.TILE.FOREST;
  		},
  		scenes: {
  			'start': {
  				combat: true,
- 				enemy: 'man-eater',
+ 				enemy: '食人怪',
  				chara: 'E',
  				damage: 3,
  				hit: 0.8,
  				attackDelay: 1,
  				health: 25,
  				loot: {
- 					'fur': {
+ 					'毛皮': {
  						min: 5,
  						max: 10,
  						chance: 1
  					},
- 					'meat': {
+ 					'肉': {
  						min: 5,
  						max: 10,
  						chance: 1
  					},
- 					'teeth': {
+ 					'牙齿': {
  						min: 5,
  						max: 10,
  						chance: 0.8
  					}
  				},
- 				notification: 'a large creature attacks, claws freshly bloodied'
+ 				notification: '一只巨大的生物袭来，爪子上鲜血淋漓。'
  			}
  		}
 	},
 	{ /* Scavenger */
-     	title: 'A Scavenger',
+     	title: '拾荒者',
   		isAvailable: function() {
   			return World.getDistance() > 10 && World.getDistance() <= 20 && World.getTerrain() == World.TILE.BARRENS;
   		},
   		scenes: {
   			'start': {
   				combat: true,
-  				enemy: 'scavenger',
+  				enemy: '拾荒者',
   				chara: 'S',
   				damage: 4,
   				hit: 0.8,
   				attackDelay: 2,
   				health: 30,
   				loot: {
-  					'cloth': {
+  					'布匹': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-  					'leather': {
+  					'皮革': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-  					'iron': {
+  					'铁': {
   						min: 1,
   						max: 5,
   						chance: 0.5
   					},
-  					'medicine': {
+  					'药剂': {
   					  min: 1,
   					  max: 2,
   					  chance: 0.1
   					}
   				},
-  				notification: 'a scavenger draws close, hoping for an easy score'
+  				notification: '一名拾荒者贴了过来，想要发起偷袭。'
   			}
 		}
   	},
 	{ /* Huge Lizard */
-     	title: 'A Huge Lizard',
+     	title: '巨蜥',
   		isAvailable: function() {
   			return World.getDistance() > 10 && World.getDistance() <= 20 && World.getTerrain() == World.TILE.FIELD;
   		},
   		scenes: {
   			'start': {
   				combat: true,
-  				enemy: 'lizard',
+  				enemy: '巨蜥',
   				chara: 'L',
   				damage: 5,
   				hit: 0.8,
   				attackDelay: 2,
   				health: 20,
   				loot: {
-  					'scales': {
+  					'鳞片': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-  					'teeth': {
+  					'牙齿': {
   						min: 5,
   						max: 10,
   						chance: 0.5
   					},
-  					'meat': {
+  					'肉': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					}
   				},
-  				notification: 'the grass thrashes wildly as a huge lizard pushes through'
+  				notification: '草丛疯摇，一只巨蜥扑了出来。'
   			}
 		}
   	},
 	/* Tier 3*/
 	{ /* Feral Terror */
-		title: 'A Feral Terror',
+		title: '凶怪',
  		isAvailable: function() {
  			return World.getDistance() > 20 && World.getTerrain() == World.TILE.FOREST;
  		},
  		scenes: {
  			'start': {
  				combat: true,
- 				enemy: 'feral terror',
+ 				enemy: '凶怪',
  				chara: 'F',
  				damage: 6,
  				hit: 0.8,
  				attackDelay: 1,
  				health: 45,
  				loot: {
- 					'fur': {
+ 					'毛皮': {
  						min: 5,
  						max: 10,
  						chance: 1
  					},
- 					'meat': {
+ 					'肉': {
  						min: 5,
  						max: 10,
  						chance: 1
  					},
- 					'teeth': {
+ 					'牙齿': {
  						min: 5,
  						max: 10,
  						chance: 0.8
  					}
  				},
- 				notification: 'a beast, wilder than imagining, erupts out of the foliage'
+ 				notification: '一只超出想象的狂野的凶怪，从林子中扑将出来。'
  			}
  		}
 	},
 	{ /* Soldier */
-     	title: 'A Soldier',
+     	title: '士兵',
   		isAvailable: function() {
   			return World.getDistance() > 20 && World.getTerrain() == World.TILE.BARRENS;
   		},
   		scenes: {
   			'start': {
   				combat: true,
-  				enemy: 'soldier',
+  				enemy: '士兵',
 				ranged: true,
   				chara: 'D',
   				damage: 8,
@@ -311,40 +311,40 @@ Events.Encounters = [
   				attackDelay: 2,
   				health: 50,
   				loot: {
-  					'cloth': {
+  					'衣服': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-  					'bullets': {
+  					'子弹': {
   						min: 1,
   						max: 5,
   						chance: 0.5
   					},
-  					'rifle': {
+  					'步枪': {
   						min: 1,
   						max: 1,
   						chance: 0.2
   					},
-  					'medicine': {
+  					'药剂': {
   					  min: 1,
   					  max: 2,
   					  chance: 0.1
   					}
   				},
-  				notification: 'a soldier opens fire from across the desert'
+  				notification: '士兵从沙漠那边开火。'
   			}
 		}
   	},
 	{ /* Sniper */
-     	title: 'A Sniper',
+     	title: '狙击手',
   		isAvailable: function() {
   			return World.getDistance() > 20 && World.getTerrain() == World.TILE.FIELD;
   		},
   		scenes: {
   			'start': {
   				combat: true,
-  				enemy: 'sniper',
+  				enemy: '狙击手',
   				chara: 'S',
   				damage: 15,
   				hit: 0.8,
@@ -352,28 +352,28 @@ Events.Encounters = [
   				health: 30,
 				ranged: true,
   				loot: {
-  					'cloth': {
+  					'布匹': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-  					'bullets': {
+  					'子弹': {
   						min: 1,
   						max: 5,
   						chance: 0.5
   					},
-  					'rifle': {
+  					'步枪': {
   						min: 1,
   						max: 1,
   						chance: 0.2
   					},
-  					'medicine': {
+  					'药剂': {
   					  min: 1,
   					  max: 2,
   					  chance: 0.1
   					}
   				},
-  				notification: 'a shot rings out, from somewhere in the long grass'
+  				notification: '从深草丛的某处射出一发子弹。'
   			}
 		}
   	}
