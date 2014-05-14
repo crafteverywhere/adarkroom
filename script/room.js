@@ -863,7 +863,7 @@ var Room = {
 		for(var k in cost) {
 			var have = $SM.get('stores["'+k+'"]', true);
 			if(have < cost[k]) {
-				Notifications.notify(Room, "not enough " + k);
+				Notifications.notify(Room, "不足" + k);
 				return false;
 			} else {
 				storeMod[k] = have - cost[k];
@@ -875,7 +875,7 @@ var Room = {
 
 		$SM.add('stores["'+thing+'"]', 1);
 
-		if(thing == 'compass') {
+		if(thing == '罗盘') {
 			Path.openPath();
 		}
 	},
@@ -944,7 +944,7 @@ var Room = {
 		}
 		if($SM.get('game.builder.level') < 4) return false;
 		var craftable = Room.Craftables[thing];
-		if(Room.needsWorkshop(craftable.type) && $SM.get('game.buildings["workshop"]', true) == 0) return false;
+		if(Room.needsWorkshop(craftable.type) && $SM.get('game.buildings["工坊"]', true) == 0) return false;
 		var cost = craftable.cost();
 
 		//show button if one has already been built
@@ -992,14 +992,14 @@ var Room = {
 
 		var craftSection = $('#craftBtns');
 		var cNeedsAppend = false;
-		if(craftSection.length == 0 && $SM.get('game.buildings["workshop"]', true) > 0) {
+		if(craftSection.length == 0 && $SM.get('game.buildings["工坊"]', true) > 0) {
 			craftSection = $('<div>').attr('id', 'craftBtns').css('opacity', 0);
 			cNeedsAppend = true;
 		}
 
 		var buySection = $('#buyBtns');
 		var bNeedsAppend = false;
-		if(buySection.length == 0 && $SM.get('game.buildings["trading post"]', true) > 0) {
+		if(buySection.length == 0 && $SM.get('game.buildings["贸易站"]', true) > 0) {
 			buySection = $('<div>').attr('id', 'buyBtns').css('opacity', 0);
 			bNeedsAppend = true;
 		}
