@@ -22,7 +22,7 @@ var Room = {
 			maxMsg: "再增加陷阱已毫无裨益.",
 			type: 'building',
 			cost: function() {
-				var n = $SM.get('game.buildings["trap"]', true);
+				var n = $SM.get('game.buildings["陷阱"]', true);
 				return {
 					'木头': 10 + (n*10)
 				};
