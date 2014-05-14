@@ -4,14 +4,14 @@ var Path = {
 	
 	// Everything not in this list weighs 1
 	Weight: {
-		'bone spear': 2,
-		'iron sword': 3,
-		'steel sword': 5,
-		'rifle': 5,
-		'bullets': 0.1,
-		'energy cell': 0.2,
-		'laser rifle': 5,
-		'bolas': 0.5
+		'骨枪': 2,
+		'铁剑': 3,
+		'钢剑': 5,
+		'步枪': 5,
+		'子弹': 0.1,
+		'能量元件': 0.2,
+		'激光枪': 5,
+		'套索': 0.5
 	},
 		
 	name: 'Path',
@@ -26,7 +26,7 @@ var Path = {
 		World.init();
 		
 		// Create the path tab
-		this.tab = Header.addLocation("A Dusty Path", "path", Path);
+		this.tab = Header.addLocation("漫漫尘路", "path", Path);
 		
 		// Create the Path panel
 		this.panel = $('<div>').attr('id', "pathPanel")
@@ -40,7 +40,7 @@ var Path = {
 		// Add the embark button
 		new Button.Button({
 			id: 'embarkButton',
-			text: "embark",
+			text: "出发",
 			click: Path.embark,
 			width: '80px',
 			cooldown: World.DEATH_COOLDOWN
@@ -57,7 +57,7 @@ var Path = {
 	openPath: function() {
 		Path.init();
 		Engine.event('progress', 'path');
-		Notifications.notify(Room, 'the compass points ' + World.dir);
+		Notifications.notify(Room, '罗盘指向' + World.dir);
 	},
 	
 	getWeight: function(thing) {
@@ -68,11 +68,11 @@ var Path = {
 	},
 	
 	getCapacity: function() {
-		if($SM.get('stores.convoy', true) > 0) {
+		if($SM.get('stores["车队"]', true) > 0) {
 			return Path.DEFAULT_BAG_SPACE + 60;
-		} else if($SM.get('stores.wagon', true) > 0) {
+		} else if($SM.get('stores["篷车"]', true) > 0) {
 			return Path.DEFAULT_BAG_SPACE + 30;
-		} else if($SM.get('stores.rucksack', true) > 0) {
+		} else if($SM.get('stores["双肩包"]', true) > 0) {
 			return Path.DEFAULT_BAG_SPACE + 10;
 		}
 		return Path.DEFAULT_BAG_SPACE;
@@ -130,11 +130,11 @@ var Path = {
 		
 		// Add the armour row
 		var armour = "none";
-		if($SM.get('stores["s armour"]', true) > 0)
+		if($SM.get('stores["钢甲"]', true) > 0)
 			armour = "steel";
-		else if($SM.get('stores["i armour"]', true) > 0)
+		else if($SM.get('stores["铁甲"]', true) > 0)
 			armour = "iron";
-		else if($SM.get('stores["l armour"]', true) > 0)
+		else if($SM.get('stores["皮甲"]', true) > 0)
 			armour = "leather";
 		var aRow = $('#armourRow');
 		if(aRow.length == 0) {
@@ -162,15 +162,15 @@ var Path = {
 		var total = 0;
 		// Add the non-craftables to the craftables
 		var carryable = $.extend({
-			'cured meat': { type: 'tool' },
-			'bullets': { type: 'tool' },
-			'grenade': {type: 'weapon' },
-			'bolas': {type: 'weapon' },
-			'laser rifle': {type: 'weapon' },
-			'energy cell': {type: 'tool' },
-			'bayonet': {type: 'weapon' },
-			'charm': {type: 'tool'},
-			'medicine': {type: 'tool'}
+			'腌肉': { type: 'tool' },
+			'子弹': { type: 'tool' },
+			'手雷': {type: 'weapon' },
+			'套索': {type: 'weapon' },
+			'激光枪': {type: 'weapon' },
+			'能量元件': {type: 'tool' },
+			'刺刀': {type: 'weapon' },
+			'护身符': {type: 'tool'},
+			'药剂': {type: 'tool'}
 		}, Room.Craftables);
 		
 		for(var k in carryable) {
@@ -226,9 +226,9 @@ var Path = {
 		}
 		
 		// Update bagspace
-		$('#bagspace').text('free ' + Math.floor(Path.getCapacity() - total) + '/' + Path.getCapacity());
+		$('#bagspace').text('容量' + Math.floor(Path.getCapacity() - total) + '/' + Path.getCapacity());
 		
-		if(Path.outfit['cured meat'] > 0) {
+		if(Path.outfit['腌肉'] > 0) {
 			Button.setDisabled($('#embarkButton'), false);
 		} else {
 			Button.setDisabled($('#embarkButton'), true);
@@ -249,9 +249,9 @@ var Path = {
 		
 		var numAvailable = $SM.get('stores["'+name+'"]', true);
 		var tt = $('<div>').addClass('tooltip bottom right').appendTo(row);
-		$('<div>').addClass('row_key').text('weight').appendTo(tt);
+		$('<div>').addClass('row_key').text('重量').appendTo(tt);
 		$('<div>').addClass('row_val').text(Path.getWeight(name)).appendTo(tt);
-		$('<div>').addClass('row_key').text('available').appendTo(tt);
+		$('<div>').addClass('row_key').text('库存').appendTo(tt);
 		$('<div>').addClass('row_val').addClass('numAvailable').text(numAvailable).appendTo(tt);
 		
 		return row;
@@ -291,7 +291,7 @@ var Path = {
 	},
 	
 	setTitle: function() {
-		document.title = 'A Dusty Path';
+		document.title = '漫漫尘路';
 	},
 	
 	embark: function() {
