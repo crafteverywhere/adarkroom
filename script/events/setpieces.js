@@ -7,11 +7,11 @@ Events.Setpieces = {
 		scenes: {
 			'start': {
 				text: [
-					'荒野中安全的地方。'
+					'荒野中安全的地方.'
 				],
-				notification: '荒野中安全的地方。',
+				notification: '荒野中安全的地方.',
 				loot: {
-					'腌肉': {
+					'熏肉': {
 						min: 5,
 						max: 10,
 						chance: 1
@@ -34,10 +34,10 @@ Events.Setpieces = {
 		scenes: {
 			'start': {
 				text: [
-					'腐烂的芦草冒出沼泽的表面。',
-					'一只孤独的蛙蹲坐在淤泥中，一言不发。'
+					'腐烂的芦草冒出沼泽的表面.',
+					'一只孤独的蛙蹲坐在淤泥中，一言不发.'
 				],
-				notification: '凝滞的空气中，沼泽正在溃烂。',
+				notification: '凝滞的空气中，沼泽正在溃烂.',
 				buttons: {
 					'enter': {
 						text: '进入',
@@ -51,8 +51,8 @@ Events.Setpieces = {
 			},
 			'cabin': {
 				text: [
-					'沼泽深处现出一栋苔藓密布的小屋。',
-					'一名年迈的流浪者坐在里头，，看起来正在发呆。'
+					'沼泽深处现出一栋苔藓密布的小屋.',
+					'一名年迈的流浪者坐在里头，，看起来正在发呆.'
 				],
 				buttons: {
 					'talk': {
@@ -68,10 +68,10 @@ Events.Setpieces = {
 			},
 			'talk': {
 				text: [
-					'流浪者接过护身符，缓缓点了点头。',
-					'他谈起曾率领一支伟大的舰队前往新世界。',
-					'unfathomable destruction to fuel wanderer hungers.',
-					'his time here, now, is his penance.'
+					'流浪者接过护身符，缓缓点了点头.',
+					'他谈起曾率领一支伟大的舰队前往新世界.',
+					'以莫测的毁灭之力填补流浪者心中的欲壑.',
+					'而如今，他待在这里的时光，都是在为此赎罪.'
 				],
 				onLoad: function() {
 					$SM.addPerk('美食家');
@@ -91,10 +91,10 @@ Events.Setpieces = {
 		scenes: {
 			'start': {
 				text: [
-					'洞口宽敞而黑暗。',
-					"看不清里面有什么。"
+					'洞口宽敞而黑暗.',
+					"看不清里面有什么."
 				],
-				notification: '大地裂开，宛如古老的伤痕。',
+				notification: '大地裂开，宛如古老的伤痕.',
 				buttons: {
 					'enter': {	
 						text: '进入',
@@ -116,7 +116,7 @@ Events.Setpieces = {
 				hit: 0.8,
 				attackDelay: 1,
 				health: 5,
-				notification: '受到惊吓的野兽正要捍卫它的巢穴。',
+				notification: '受到惊吓的野兽正要捍卫它的巢穴.',
 				loot: {
 					'毛皮': {
 						min: 1,
@@ -142,8 +142,8 @@ Events.Setpieces = {
 			},
 			'a2': {
 				text: [
-					'洞穴狭窄，几无立足之地。',
-					"岩壁潮湿，覆盖着苔藓。"
+					'洞穴狭窄，几无立足之地.',
+					"岩壁潮湿，覆盖着苔藓."
 				],
 				buttons: {
 					'continue': {	
@@ -158,11 +158,11 @@ Events.Setpieces = {
 			},
 			'a3': {
 				text: [
-			       '洞穴内出现一处老旧营地的遗迹。',
-			       '破旧脏污的睡袋平躺着，布满了一层薄薄的灰尘。'
+			       '洞穴内出现一处老旧营地的遗迹.',
+			       '破旧脏污的睡袋平躺着，布满了一层薄薄的灰尘.'
 				],
 				loot: {
-					'腌肉': {
+					'熏肉': {
 						min: 1,
 						max: 5,
 						chance: 1
@@ -191,9 +191,9 @@ Events.Setpieces = {
 			},
 			'b1': {
 				text: [
-			       '流浪者的尸体躺在狭小的洞穴里。',
-			       "它已经开始腐烂，且遗失了一些肢体。",
-			       "难以分辨这里还留下了什么。"
+			       '流浪者的尸体躺在狭小的洞穴里.',
+			       "它已经开始腐烂，且遗失了一些肢体.",
+			       "难以分辨这里还留下了什么."
 				],
 				loot: {
 					'铁剑': {
@@ -201,7 +201,7 @@ Events.Setpieces = {
 						max: 1,
 						chance: 1
 					},
-					'腌肉': {
+					'熏肉': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -230,10 +230,10 @@ Events.Setpieces = {
 			},
 			'b2': {
 				text: [
-			       '火把劈啪作响，熄灭在了潮湿的空气中。',
-			       '漆黑一片。'
+			       '火把劈啪作响，熄灭在了潮湿的空气中.',
+			       '漆黑一片.'
 			    ],
-				notification: '火把燃尽了。',
+				notification: '火把燃尽了.',
 				buttons: {
 					'continue': {	
 						text: '继续深入',
@@ -254,14 +254,14 @@ Events.Setpieces = {
 				hit: 0.8,
 				attackDelay: 1,
 				health: 5,
-				notification: '受到惊吓的野兽正要捍卫它的巢穴。',
+				notification: '受到惊吓的野兽正要捍卫它的巢穴.',
 				loot: {
-					'fur': {
+					'毛皮': {
 						min: 1,
 						max: 3,
 						chance: 1
 					},
-					'teeth': {
+					'牙齿': {
 						min: 1,
 						max: 2,
 						chance: 0.8
@@ -269,11 +269,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {1: 'c2'}
 					},
 					'leave': {
-						text: 'leave cave',
+						text: '离开洞穴',
 						nextScene: 'end'
 					}
 				}
@@ -288,12 +288,12 @@ Events.Setpieces = {
 				health: 6,
 				notification: 'a cave lizard attacks',
 				loot: {
-					'scales': {
+					'鳞片': {
 						min: 1,
 						max: 3,
 						chance: 1
 					},
-					'teeth': {
+					'牙齿': {
 						min: 1,
 						max: 2,
 						chance: 0.8
@@ -301,11 +301,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {1: 'c2'}
 					},
 					'leave': {
-						text: 'leave cave',
+						text: '离开洞穴',
 						nextScene: 'end'
 					}
 				}
@@ -320,12 +320,12 @@ Events.Setpieces = {
 				health: 10,
 				notification: 'a large beast charges out of the dark',
 				loot: {
-					'fur': {
+					'毛皮': {
 						min: 1,
 						max: 3,
 						chance: 1
 					},
-					'teeth': {
+					'牙齿': {
 						min: 1,
 						max: 3,
 						chance: 1
@@ -333,11 +333,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'end1', 1: 'end2'}
 					},
 					'leave': {
-						text: 'leave cave',
+						text: '离开洞穴',
 						nextScene: 'end'
 					}
 				}
@@ -352,12 +352,12 @@ Events.Setpieces = {
 				health: 10,
 				notification: 'a giant lizard shambles forward',
 				loot: {
-					'scales': {
+					'鳞片': {
 						min: 1,
 						max: 3,
 						chance: 1
 					},
-					'teeth': {
+					'牙齿': {
 						min: 1,
 						max: 3,
 						chance: 1
@@ -365,11 +365,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.7: 'end2', 1: 'end3'}
 					},
 					'leave': {
-						text: 'leave cave',
+						text: '离开洞穴',
 						nextScene: 'end'
 					}
 				}
@@ -382,27 +382,27 @@ Events.Setpieces = {
 					World.clearDungeon();
 				},
 				loot: {
-					'meat': {
+					'肉': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'fur': {
+					'毛皮': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'scales': {
+					'鳞片': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'teeth': {
+					'牙齿': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'cloth': {
+					'布匹': {
 						min: 5,
 						max: 10,
 						chance: 0.5
@@ -410,7 +410,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave cave',
+						text: '离开洞穴',
 						nextScene: 'end'
 					}
 				}
@@ -420,37 +420,37 @@ Events.Setpieces = {
 			       'a small supply cache is hidden at the back of the cave.'
 		        ],
 		        loot: {
-					'cloth': {
+					'布匹': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'leather': {
+					'皮革': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'iron': {
+					'铁': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'cured meat': {
+					'熏肉': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'steel': {
+					'钢': {
 						min: 5,
 						max: 10,
 						chance: 0.5
 					},
-					'bolas': {
+					'套索': {
 						min: 1,
 						max: 3,
 						chance: 0.3
 					},
-					'medicine': {
+					'药剂': {
 					  min: 1,
 					  max: 4,
 					  chance: 0.15
@@ -461,7 +461,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave cave',
+						text: '离开洞穴',
 						nextScene: 'end'
 					}
 				}
@@ -471,17 +471,17 @@ Events.Setpieces = {
 			       'an old case is wedged behind a rock, covered in a thick layer of dust.'
 		        ],
 		        loot: {
-		        	'steel sword': {
+		        	'钢剑': {
 		        		min: 1,
 		        		max: 1,
 		        		chance: 1
 		        	},
-		        	'bolas': {
+		        	'套索': {
 		        		min: 1,
 		        		max: 3,
 		        		chance: 0.5
 		        	},
-    					'medicine': {
+    					'药剂': {
     					  min: 1,
     					  max: 3,
     					  chance: 0.3
@@ -492,7 +492,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave cave',
+						text: '离开洞穴',
 						nextScene: 'end'
 					}
 				}
@@ -510,11 +510,11 @@ Events.Setpieces = {
 				notification: "the town lies abandoned, its citizens long dead",
 				buttons: {
 					'enter': {	
-						text: 'explore',
+						text: '探索',
 						nextScene: {0.3: 'a1', 0.7: 'a3', 1: 'a2'}
 					},
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
@@ -527,12 +527,12 @@ Events.Setpieces = {
 				],
 				buttons: {
 					'enter': {
-						text: 'enter',
+						text: '进入',
 						nextScene: {0.5: 'b1', 1: 'b2'},
 						cost: {torch: 1}
 					},
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
@@ -547,17 +547,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 30,
   				loot: {
-  					'cloth': {
+  					'布匹': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-  					'leather': {
+  					'皮革': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-					'cured meat': {
+					'熏肉': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -566,11 +566,11 @@ Events.Setpieces = {
   				notification: 'ambushed on the street.',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'b3', 1: 'b4'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
@@ -582,12 +582,12 @@ Events.Setpieces = {
 				],
 				buttons: {
 					'enter': {
-						text: 'enter',
+						text: '进入',
 						nextScene: {0.5: 'b5', 1: 'end5'},
 						cost: {torch: 1}
 					},
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
@@ -597,22 +597,22 @@ Events.Setpieces = {
 			       'a small cache of supplies is tucked inside a rusting locker.'
 			    ],
 			    loot: {
-			    	'cured meat': {
+			    	'熏肉': {
 			    		min: 1,
 			    		max: 5,
 			    		chance: 1
 			    	},
-			    	'torch': {
+			    	'火把': {
 			    		min: 1,
 			    		max: 3,
 			    		chance: 0.8
 			    	},
-			    	'bullets': {
+			    	'子弹': {
 			    		min: 1,
 			    		max: 5,
 			    		chance: 0.3
 			    	},
-  					'medicine': {
+  					'药剂': {
   					  min: 1,
   					  max: 3,
   					  chance: 0.05
@@ -620,11 +620,11 @@ Events.Setpieces = {
 		    	},
 		    	buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'c1', 1: 'c2'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
@@ -638,17 +638,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 30,
   				loot: {
-  					'cloth': {
+  					'布匹': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-  					'leather': {
+  					'皮革': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-  					'cured meat': {
+  					'熏肉': {
   						min: 1,
   						max: 5,
   						chance: 0.5
@@ -657,11 +657,11 @@ Events.Setpieces = {
   				notification: 'a scavenger waits just inside the door.',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'c2', 1: 'c3'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
@@ -675,12 +675,12 @@ Events.Setpieces = {
   				attackDelay: 1,
   				health: 25,
   				loot: {
-  					'teeth': {
+  					'牙齿': {
   						min: 1,
   						max: 5,
   						chance: 1
   					},
-  					'fur': {
+  					'毛皮': {
   						min: 5,
   						max: 10,
   						chance: 1
@@ -689,11 +689,11 @@ Events.Setpieces = {
   				notification: 'a beast stands alone in an overgrown park.',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'c4', 1: 'c5'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
@@ -704,22 +704,22 @@ Events.Setpieces = {
 			       "it's been picked over by scavengers, but there's still some things worth taking."
 				],
 				loot: {
-					'cured meat': {
+					'熏肉': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'torch': {
+					'火把': {
 						min: 1,
 						max: 3,
 						chance: 0.5
 					},
-					'bullets': {
+					'子弹': {
 						min: 1,
 						max: 5,
 						chance: 0.3
 					},
-					'medicine': {
+					'药剂': {
 					  min: 1,
 					  max: 3,
 					  chance: 0.1
@@ -727,48 +727,48 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'c5', 1: 'c6' }
 					},
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
 			},
 			'b5': {
 				combat: true,
-				enemy: 'madman',
+				enemy: '疯子',
 				chara: 'M',
 				damage: 6,
   				hit: 0.3,
   				attackDelay: 1,
   				health: 10,
   				loot: {
-  					'cloth': {
+  					'布匹': {
   						min: 2,
   						max: 4,
   						chance: 0.3
   					},
-  					'cured meat': {
+  					'熏肉': {
   						min: 1,
   						max: 5,
   						chance: 0.9
   					},
-  					'medicine': {
+  					'药剂': {
   						min: 1,
   						max: 2,
   						chance: 0.4
   					}
   				},
-  				notification: 'a madman attacks, screeching.',
+  				notification: '一个疯子尖叫着袭来.',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.3: 'end5', 1: 'end6'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
@@ -782,17 +782,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 30,
   				loot: {
-  					'cloth': {
+  					'布匹': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-  					'leather': {
+  					'皮革': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-					'cured meat': {
+					'熏肉': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -801,11 +801,11 @@ Events.Setpieces = {
   				notification: 'a thug moves out of the shadows.',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {1: 'd1'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
@@ -819,12 +819,12 @@ Events.Setpieces = {
   				attackDelay: 1,
   				health: 25,
   				loot: {
-  					'teeth': {
+  					'牙齿': {
   						min: 1,
   						max: 5,
   						chance: 1
   					},
-  					'fur': {
+  					'毛皮': {
   						min: 5,
   						max: 10,
   						chance: 1
@@ -833,11 +833,11 @@ Events.Setpieces = {
   				notification: 'a beast charges out of a ransacked classroom.',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {1: 'd1'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
@@ -850,11 +850,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 			        'continue': {
-						text: 'enter',
+						text: '进入',
 						nextScene: {1: 'd1'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 		        }
@@ -868,12 +868,12 @@ Events.Setpieces = {
   				attackDelay: 1,
   				health: 25,
   				loot: {
-  					'teeth': {
+  					'牙齿': {
   						min: 1,
   						max: 5,
   						chance: 1
   					},
-  					'fur': {
+  					'毛皮': {
   						min: 5,
   						max: 10,
   						chance: 1
@@ -882,11 +882,11 @@ Events.Setpieces = {
   				notification: 'another beast, draw by the noise, leaps out of a copse of trees.',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {1: 'd2'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
@@ -898,11 +898,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {1: 'd2'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
@@ -913,7 +913,7 @@ Events.Setpieces = {
 			       "can't read the words."
 		        ],
 		        loot: {
-		        	'cured meat': {
+		        	'熏肉': {
 		        		min: 1,
 		        		max: 5,
 		        		chance: 1
@@ -921,11 +921,11 @@ Events.Setpieces = {
 		        },
 		        buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {1: 'd2'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
@@ -939,17 +939,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 30,
   				loot: {
-  					'cured meat': {
+  					'熏肉': {
   						min: 1,
   						max: 5,
   						chance: 1
   					},
-  					'leather': {
+  					'皮革': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-					'steel sword': {
+					'钢剑': {
 						min: 1,
 						max: 1,
 						chance: 0.5
@@ -958,11 +958,11 @@ Events.Setpieces = {
   				notification: 'a panicked scavenger bursts through the door, screaming.',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'end1', 1: 'end2'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
@@ -976,17 +976,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 30,
   				loot: {
-  					'cured meat': {
+  					'熏肉': {
   						min: 1,
   						max: 5,
   						chance: 1
   					},
-  					'leather': {
+  					'皮革': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-  					'steel sword': {
+  					'钢剑': {
   						min: 1,
   						max: 1,
   						chance: 0.5
@@ -995,11 +995,11 @@ Events.Setpieces = {
   				notification: "a man stands over a dead wanderer. notices he's not alone.",
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'end3', 1: 'end4'}
 					},
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
@@ -1013,27 +1013,27 @@ Events.Setpieces = {
 					World.clearDungeon();
 				},
 				loot: {
-					'steel sword': {
+					'钢剑': {
 						min: 1,
 						max: 1,
 						chance: 1
 					},
-					'steel': {
+					'钢': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'cured meat': {
+					'熏肉': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'bolas': {
+					'套索': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'medicine': {
+					'药剂': {
 					  min: 1,
 					  max: 2,
 					  chance: 0.3
@@ -1041,7 +1041,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
@@ -1060,12 +1060,12 @@ Events.Setpieces = {
 						max: 10,
 						chance: 1
 					},
-					'cured meat': {
+					'熏肉': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'leather': {
+					'皮革': {
 						min: 5,
 						max: 10,
 						chance: 1
@@ -1073,7 +1073,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
@@ -1087,12 +1087,12 @@ Events.Setpieces = {
 					World.clearDungeon();
 				},
 				loot: {
-					'rifle': {
+					'步枪': {
 						min: 1,
 						max: 1,
 						chance: 1
 					},
-					'bullets': {
+					'子弹': {
 						min: 1,
 						max: 5,
 						chance: 1
@@ -1100,7 +1100,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
@@ -1115,27 +1115,27 @@ Events.Setpieces = {
 					World.clearDungeon();
 				},
 				loot: {
-					'cured meat': {
+					'熏肉': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'iron': {
+					'铁': {
 						min: 5,
 						max: 10,
 						chance: 1
 					},
-					'torch': {
+					'火把': {
 						min: 1,
 						max: 5,
 						chance: 1
 					},
-					'bolas': {
+					'套索': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'medicine': {
+					'药剂': {
 					  min: 1,
 					  max: 2,
 					  chance: 0.1
@@ -1143,7 +1143,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 				}
@@ -1156,7 +1156,7 @@ Events.Setpieces = {
 					World.clearDungeon();
 				},
         loot: {
-        	'medicine': {
+        	'药剂': {
         		min: 2,
         		max: 5,
         		chance: 1
@@ -1164,7 +1164,7 @@ Events.Setpieces = {
         },
         buttons: {
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 		    }
@@ -1179,7 +1179,7 @@ Events.Setpieces = {
 				},
         buttons: {
 					'leave': {
-						text: 'leave town',
+						text: '离开小镇',
 						nextScene: 'end'
 					}
 		    }
@@ -1198,11 +1198,11 @@ Events.Setpieces = {
 				notification: "the towers of a decaying city dominate the skyline",
 				buttons: {
 					'enter': {	
-						text: 'explore',
+						text: '探索',
 						nextScene: {0.2: 'a1', 0.5: 'a2', 0.8: 'a3', 1: 'a4'}
 					},
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
@@ -1214,11 +1214,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 					'continue': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'b1', 1: 'b2'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -1230,11 +1230,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 					'continue': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'b3', 1: 'b4'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -1246,11 +1246,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 					'continue': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'b5', 1: 'b6'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -1261,12 +1261,12 @@ Events.Setpieces = {
 		        ],
         buttons: {
           'enter': {
-            text: 'enter',
-            cost: { 'torch': 1 },
+            text: '进入',
+            cost: { '火把': 1 },
             nextScene: {0.5: 'b7', 1: 'b8'}
           },
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
         }
@@ -1279,11 +1279,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 		        	'enter': {	
-						text: 'enter',
+						text: '进入',
 						nextScene: {0.5: 'c1', 1: 'c2'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -1298,17 +1298,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 20,
   				loot: {
-  					'scales': {
+  					'鳞片': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-  					'teeth': {
+  					'牙齿': {
   						min: 5,
   						max: 10,
   						chance: 0.5
   					},
-  					'meat': {
+  					'肉': {
   						min: 5,
   						max: 10,
   						chance: 0.8
@@ -1320,7 +1320,7 @@ Events.Setpieces = {
 						nextScene: {0.5: 'c2', 1: 'c3'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -1336,17 +1336,17 @@ Events.Setpieces = {
   				health: 30,
 				ranged: true,
   				loot: {
-  					'cured meat': {
+  					'熏肉': {
   						min: 1,
   						max: 5,
   						chance: 0.8
   					},
-					'bullets': {
+					'子弹': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'rifle': {
+					'步枪': {
 						min: 1,
 						max: 1,
 						chance: 0.2
@@ -1354,11 +1354,11 @@ Events.Setpieces = {
   				},
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'c4', 1: 'c5'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -1374,17 +1374,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 50,
   				loot: {
-  					'cured meat': {
+  					'熏肉': {
   						min: 1,
   						max: 5,
   						chance: 0.8
   					},
-					'bullets': {
+					'子弹': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'rifle': {
+					'步枪': {
 						min: 1,
 						max: 1,
 						chance: 0.2
@@ -1392,11 +1392,11 @@ Events.Setpieces = {
   				},
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'c5', 1: 'c6'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -1411,22 +1411,22 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 10,
   				loot: {
-  					'cured meat': {
+  					'熏肉': {
   						min: 1,
   						max: 5,
   						chance: 0.8
   					},
-  					'cloth': {
+  					'布匹': {
   						min: 1,
   						max: 5,
   						chance: 0.5
   					},
-  					'leather': {
+  					'皮革': {
   						min: 1,
   						max: 1,
   						chance: 0.2
   					},
-  					'medicine': {
+  					'药剂': {
   					  min: 1,
   					  max: 3,
   					  chance: 0.05
@@ -1434,11 +1434,11 @@ Events.Setpieces = {
   				},
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'c7', 1: 'c8'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -1450,11 +1450,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'c8', 1: 'c9'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -1466,11 +1466,11 @@ Events.Setpieces = {
 		        ],
 		    buttons: {
 		      'continue': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.3: 'c12', 0.7: 'c10', 1: 'c11'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		    }
@@ -1485,17 +1485,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 10,
   				loot: {
-  					'cured meat': {
+  					'熏肉': {
   						min: 1,
   						max: 3,
   						chance: 0.5
   					},
-  					'cloth': {
+  					'布匹': {
   						min: 1,
   						max: 5,
   						chance: 0.8
   					},
-  					'medicine': {
+  					'药剂': {
   					  min: 1,
   					  max: 2,
   					  chance: 0.5
@@ -1503,11 +1503,11 @@ Events.Setpieces = {
   				},
         buttons: {
         	'continue': {	
-    				text: 'continue',
+    				text: '继续深入',
     				nextScene: {0.3: 'c13', 0.7: 'c11', 1: 'end15'}
     			},
     			'leave': {
-    				text: 'leave city',
+    				text: '离开城市',
     				nextScene: 'end'
     			}
 		    }
@@ -1522,17 +1522,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 30,
   				loot: {
-  					'steel sword': {
+  					'钢剑': {
   						min: 1,
   						max: 1,
   						chance: 0.5
   					},
-  					'cured meat': {
+  					'熏肉': {
   						min: 1,
   						max: 3,
   						chance: 0.5
   					},
-  					'cloth': {
+  					'布匹': {
   						min: 1,
   						max: 5,
   						chance: 0.8
@@ -1540,11 +1540,11 @@ Events.Setpieces = {
   				},
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'd1', 1: 'd2'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -1560,17 +1560,17 @@ Events.Setpieces = {
   				attackDelay: 1,
   				health: 30,
   				loot: {
-  					'meat': {
+  					'肉': {
   						min: 1,
   						max: 5,
   						chance: 0.8
   					},
-  					'fur': {
+  					'毛皮': {
   						min: 1,
   						max: 5,
   						chance: 0.8
   					},
-  					'teeth': {
+  					'牙齿': {
   						min: 1,
   						max: 5,
   						chance: 0.5
@@ -1578,11 +1578,11 @@ Events.Setpieces = {
   				},
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {1: 'd2'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -1597,11 +1597,11 @@ Events.Setpieces = {
 		        buttons: {
 		        	'enter': {	
 						text: 'investigate',
-						cost: { 'torch': 1 },
+						cost: { '火把': 1 },
 						nextScene: {0.5: 'd2', 1: 'd3'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -1615,11 +1615,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 		        	'enter': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'd4', 1: 'd5'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -1632,11 +1632,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 		        	'enter': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {1: 'd5'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -1649,11 +1649,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 		        	'enter': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'd5', 1: 'd6'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -1666,11 +1666,11 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 		        	'enter': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'd7', 1: 'd8'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -1682,27 +1682,27 @@ Events.Setpieces = {
 					'the owner stands by, stoic.'
 				],
 				loot: {
-					'steel sword': {
+					'钢剑': {
 						min: 1,
 						max: 1,
 						chance: 0.8
 					},
-					'rifle': {
+					'步枪': {
 						min: 1,
 						max: 1,
 						chance: 0.5
 					},
-					'bullets': {
+					'子弹': {
 						min: 1,
 						max: 8,
 						chance: 0.25
 					},
-					'alien alloy': {
+					'异星合金': {
 						min: 1,
 						max: 1,
 						chance: 0.01
 					},
-					'medicine': {
+					'药剂': {
 					  min: 1,
 					  max: 4,
 					  chance: 0.5
@@ -1710,11 +1710,11 @@ Events.Setpieces = {
 				},
 		        buttons: {
 		        	'enter': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {1: 'd8'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -1726,7 +1726,7 @@ Events.Setpieces = {
 			       'the people back away, avoiding eye contact.'
 		        ],
 		        loot: {
-		        	'cured meat': {
+		        	'熏肉': {
 		        		min: 5,
 		        		max: 10,
 		        		chance: 1
@@ -1734,11 +1734,11 @@ Events.Setpieces = {
 		        },
 		        buttons: {
 		        	'enter': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'd8', 1: 'd9'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -1750,11 +1750,11 @@ Events.Setpieces = {
 		        ],
 		    buttons: {
 		      'enter': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.2: 'end12', 0.6: 'd10', 1: 'd11'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		    }
@@ -1771,17 +1771,17 @@ Events.Setpieces = {
 				attackDelay: 0.5,
 				health: 40,
   			loot: {
-					'cured meat': {
+					'熏肉': {
 						min: 1,
 						max: 3,
 						chance: 0.5
 					},
-					'cloth': {
+					'布匹': {
 						min: 3,
 						max: 8,
 						chance: 0.8
 					},
-					'medicine': {
+					'药剂': {
 					  min: 1,
 					  max: 3,
 					  chance: 0.3
@@ -1789,11 +1789,11 @@ Events.Setpieces = {
 				},
         buttons: {
     			'continue': {
-    				text: 'continue',
+    				text: '继续深入',
     				nextScene: { 1: 'end10' }
     			},
     			'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		    }
@@ -1810,17 +1810,17 @@ Events.Setpieces = {
 				attackDelay: 0.7,
 				health: 30,
   			loot: {
-					'meat': {
+					'肉': {
 						min: 3,
 						max: 8,
 						chance: 1
 					},
-					'teeth': {
+					'牙齿': {
 						min: 2,
 						max: 4,
 						chance: 1
 					},
-					'scales': {
+					'鳞片': {
 					  min: 3,
 					  max: 5,
 					  chance: 1
@@ -1828,11 +1828,11 @@ Events.Setpieces = {
 				},
         buttons: {
     			'continue': {
-    				text: 'continue',
+    				text: '继续深入',
     				nextScene: { 1: 'end10' }
     			},
     			'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		    }
@@ -1843,7 +1843,7 @@ Events.Setpieces = {
 					'strips of meat are hung up to dry in this ward.'
 				],
 				loot: {
-					'cured meat': {
+					'熏肉': {
 					  min: 3,
 					  max: 10,
 					  chance: 1
@@ -1851,11 +1851,11 @@ Events.Setpieces = {
 				},
         buttons: {
     			'continue': {
-    				text: 'continue',
+    				text: '继续深入',
     				nextScene: { 0.5: 'end10', 1: 'end11' }
     			},
     			'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		    }
@@ -1871,7 +1871,7 @@ Events.Setpieces = {
   				attackDelay: 1,
   				health: 45,
   				loot: {
-  					'meat': {
+  					'肉': {
   						min: 5,
   						max: 10,
   						chance: 0.8
@@ -1879,11 +1879,11 @@ Events.Setpieces = {
   				},
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'end1', 1: 'end2'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -1895,22 +1895,22 @@ Events.Setpieces = {
 			       "maybe some useful stuff in the rubble."
 		        ],
 		        loot: {
-		        	'bullets': {
+		        	'子弹': {
 		        		min: 1,
 		        		max: 5,
 		        		chance: 0.5
 		        	},
-		        	'steel': {
+		        	'钢': {
 		        		min: 1,
 		        		max: 10,
 		        		chance: 0.8
 		        	},
-		        	'alien alloy': {
+		        	'异星合金': {
 		        		min: 1,
 		        		max: 1,
 		        		chance: 0.01
 		        	},
-		        	'cloth': {
+		        	'布匹': {
 		        		min: 1,
 		        		max: 10,
 		        		chance: 1
@@ -1918,11 +1918,11 @@ Events.Setpieces = {
 		        },
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {1: 'end2'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -1939,12 +1939,12 @@ Events.Setpieces = {
   				attackDelay: 0.25,
   				health: 60,
   				loot: {
-  					'fur': {
+  					'毛皮': {
   						min: 5,
   						max: 10,
   						chance: 0.8
   					},
-					'teeth': {
+					'牙齿': {
 						min: 5,
 						max: 10,
 						chance: 0.5
@@ -1952,11 +1952,11 @@ Events.Setpieces = {
   				},
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'end2', 1: 'end3'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -1977,7 +1977,7 @@ Events.Setpieces = {
 						max: 1,
 						chance: 0.5
 					},
-					'cured meat': {
+					'熏肉': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -1985,11 +1985,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'end4', 1: 'end5'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2006,17 +2006,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 50,
   				loot: {
-  					'cured meat': {
+  					'熏肉': {
   						min: 1,
   						max: 5,
   						chance: 0.8
   					},
-					'bullets': {
+					'子弹': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'rifle': {
+					'步枪': {
 						min: 1,
 						max: 1,
 						chance: 0.2
@@ -2024,11 +2024,11 @@ Events.Setpieces = {
   				},
 		        buttons: {
 		        	'continue': {	
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {1: 'end5'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 		        }
@@ -2045,17 +2045,17 @@ Events.Setpieces = {
 				attackDelay: 2,
 				health: 55,
 				loot: {
-					'rifle': {
+					'步枪': {
 						min: 1,
 						max: 1,
 						chance: 0.5
 					},
-					'bullets': {
+					'子弹': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'cured meat': {
+					'熏肉': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -2063,11 +2063,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'end5', 1: 'end6'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2084,12 +2084,12 @@ Events.Setpieces = {
 				attackDelay: 0.5,
 				health: 40,
 				loot: {
-					'cloth': {
+					'布匹': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'teeth': {
+					'牙齿': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -2097,11 +2097,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'end7', 1: 'end8'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2117,12 +2117,12 @@ Events.Setpieces = {
 				attackDelay: 1,
 				health: 45,
 				loot: {
-					'cloth': {
+					'布匹': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'teeth': {
+					'牙齿': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -2130,11 +2130,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {1: 'end8'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2150,12 +2150,12 @@ Events.Setpieces = {
 				attackDelay: 2,
 				health: 20,
 				loot: {
-					'cloth': {
+					'布匹': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'teeth': {
+					'牙齿': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -2163,11 +2163,11 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {0.5: 'end8', 1: 'end9'}
 					},
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2183,22 +2183,22 @@ Events.Setpieces = {
 				attackDelay: 2,
 				health: 40,
 				loot: {
-					'cloth': {
+					'布匹': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'teeth': {
+					'牙齿': {
 						min: 2,
 						max: 2,
 						chance: 1
 					},
-					'steel': {
+					'钢': {
 					  min: 1,
 					  max: 3,
 					  chance: 0.6
 					},
-					'scales': {
+					'鳞片': {
 					  min: 2,
 					  max: 3,
 					  chance: 0.1
@@ -2206,7 +2206,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {1: 'end14'}
 					}
 				}
@@ -2215,7 +2215,7 @@ Events.Setpieces = {
 			'd11': {
 				notification: 'as soon as the door is open a little bit, hundreds of tentacles erupt.',
 				combat: true,
-				enemy: 'tentacles',
+				enemy: '触手怪',
 				plural: true,
 				chara: 'TTT',
 				damage: 2,
@@ -2223,7 +2223,7 @@ Events.Setpieces = {
 				attackDelay: 0.5,
 				health: 60,
 				loot: {
-					'meat': {
+					'肉': {
 						min: 10,
 						max: 20,
 						chance: 1
@@ -2231,7 +2231,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: {1: 'end13'}
 					}
 				}
@@ -2247,17 +2247,17 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					bullets: {
+					'子弹': {
 						min: 5,
 						max: 10,
 						chance: 0.8
 					},
-					bolas: {
+					'套索': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'alien alloy': {
+					'异星合金': {
 						min: 1,
 						max: 1,
 						chance: 0.5
@@ -2265,7 +2265,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2281,12 +2281,12 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					torch: {
+					'火把': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'cured meat': {
+					'熏肉': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -2294,7 +2294,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2311,27 +2311,27 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					rifle: {
+					'步枪': {
 						min: 1,
 						max: 1,
 						chance: 0.8
 					},
-					bullets: {
+					'子弹': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'laser rifle': {
+					'激光枪': {
 						min: 1,
 						max: 1,
 						chance: 0.3
 					},
-					'energy cell': {
+					'能量元件': {
 						min: 1,
 						max: 5,
 						chance: 0.3
 					},
-					'alien alloy': {
+					'异星合金': {
 						min: 1,
 						max: 1,
 						chance: 0.3
@@ -2339,7 +2339,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2357,17 +2357,17 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					rifle: {
+					'步枪': {
 						min: 1,
 						max: 1,
 						chance: 1
 					},
-					bullets: {
+					'子弹': {
 						min: 1,
 						max: 10,
 						chance: 1
 					},
-					grenade: {
+					'手雷': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -2375,7 +2375,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2392,22 +2392,22 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					rifle: {
+					'步枪': {
 						min: 1,
 						max: 1,
 						chance: 1
 					},
-					bullets: {
+					'子弹': {
 						min: 1,
 						max: 10,
 						chance: 1
 					},
-					'cured meat': {
+					'熏肉': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'medicine': {
+					'药剂': {
 					  min: 1,
 					  max: 4,
 					  chance: 0.1
@@ -2415,7 +2415,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2432,17 +2432,17 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					'laser rifle': {
+					'激光枪': {
 						min: 1,
 						max: 1,
 						chance: 0.5
 					},
-					'energy cell': {
+					'能量元件': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'cured meat': {
+					'熏肉': {
 						min: 1,
 						max: 10,
 						chance: 1
@@ -2450,7 +2450,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2467,17 +2467,17 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					'steel sword': {
+					'钢剑': {
 						min: 1,
 						max: 1,
 						chance: 0.8
 					},
-					'energy cell': {
+					'能量元件': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'cured meat': {
+					'熏肉': {
 						min: 1,
 						max: 10,
 						chance: 1
@@ -2485,7 +2485,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2502,17 +2502,17 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					'steel sword': {
+					'钢剑': {
 						min: 1,
 						max: 1,
 						chance: 0.8
 					},
-					'bolas': {
+					'套索': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'cured meat': {
+					'熏肉': {
 						min: 1,
 						max: 10,
 						chance: 1
@@ -2520,7 +2520,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2537,22 +2537,22 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					'rifle': {
+					'步枪': {
 						min: 1,
 						max: 1,
 						chance: 0.8
 					},
-					'bullets': {
+					'子弹': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'bolas': {
+					'套索': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'alien alloy': {
+					'异星合金': {
 						min: 1,
 						max: 1,
 						chance: 0.2
@@ -2560,7 +2560,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2577,22 +2577,22 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					'energy cell': {
+					'能量元件': {
 						min: 1,
 						max: 1,
 						chance: 0.3
 					},
-					'medicine': {
+					'药剂': {
 						min: 1,
 						max: 5,
 						chance: 0.3
 					},
-					'teeth': {
+					'牙齿': {
 						min: 3,
 						max: 8,
 						chance: 1
 					},
-					'scales': {
+					'鳞片': {
 						min: 4,
 						max: 7,
 						chance: 0.9
@@ -2600,7 +2600,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2616,17 +2616,17 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					'energy cell': {
+					'能量元件': {
 						min: 1,
 						max: 1,
 						chance: 0.2
 					},
-					'medicine': {
+					'药剂': {
 						min: 3,
 						max: 10,
 						chance: 1
 					},
-					'teeth': {
+					'牙齿': {
 						min: 1,
 						max: 2,
 						chance: 0.2
@@ -2634,7 +2634,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2649,22 +2649,22 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					'energy cell': {
+					'能量元件': {
 						min: 1,
 						max: 3,
 						chance: 0.2
 					},
-					'medicine': {
+					'药剂': {
 						min: 3,
 						max: 10,
 						chance: 0.5
 					},
-					'bullets': {
+					'子弹': {
 						min: 2,
 						max: 8,
 						chance: 1
 					},
-					'torch': {
+					'火把': {
 					  min: 1,
 					  max: 3,
 					  chance: 0.5
@@ -2674,7 +2674,7 @@ Events.Setpieces = {
 					  max: 1,
 					  chance: 0.5
 					},
-					'alien alloy': {
+					'异星合金': {
 					  min: 1,
 					  max: 2,
 					  chance: 0.8
@@ -2682,7 +2682,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2698,27 +2698,27 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					'steel sword': {
+					'钢剑': {
 						min: 1,
 						max: 3,
 						chance: 0.5
 					},
-					'rifle': {
+					'步枪': {
 						min: 1,
 						max: 2,
 						chance: 0.3
 					},
-					'teeth': {
+					'牙齿': {
 						min: 2,
 						max: 8,
 						chance: 1
 					},
-					'cloth': {
+					'布匹': {
 					  min: 3,
 					  max: 6,
 					  chance: 0.5
 					},
-					'alien alloy': {
+					'异星合金': {
 					  min: 1,
 					  max: 1,
 					  chance: 0.1
@@ -2726,7 +2726,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2742,27 +2742,27 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					'energy cell': {
+					'能量元件': {
 						min: 2,
 						max: 5,
 						chance: 0.8
 					},
-					'medicine': {
+					'药剂': {
 						min: 3,
 						max: 12,
 						chance: 1
 					},
-					'cloth': {
+					'布匹': {
 					  min: 1,
 					  max: 3,
 					  chance: 0.5
 					},
-					'steel': {
+					'钢': {
 					  min: 2,
 					  max: 3,
 					  chance: 0.3
 					},
-					'alien alloy': {
+					'异星合金': {
 					  min: 1,
 					  max: 1,
 					  chance: 0.3
@@ -2770,7 +2770,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave city',
+						text: '离开城市',
 						nextScene: 'end'
 					}
 				}
@@ -2785,27 +2785,27 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					'alien alloy': {
+					'异星合金': {
 						min: 1,
 						max: 1,
 						chance: 0.8
 					},
-					'medicine': {
+					'药剂': {
 					  min: 1,
 					  max: 4,
 					  chance: 1
 					},
-					'cured meat': {
+					'熏肉': {
 					  min: 3,
 					  max: 7,
 					  chance: 1
 					},
-					'bolas': {
+					'套索': {
 					  min: 1,
 					  max: 3,
 					  chance: 0.5
 					},
-					'fur': {
+					'毛皮': {
 					  min: 1,
 					  max: 5,
 					  chance: 0.8
@@ -2813,7 +2813,7 @@ Events.Setpieces = {
 				},
 				buttons: {
     			'leave': {
-    				text: 'leave city',
+    				text: '离开城市',
     				nextScene: 'end'
     			}
 		    }
@@ -2831,11 +2831,11 @@ Events.Setpieces = {
 				notification: 'the remains of an old house stand as a monument to simpler times',
 				buttons: {
 					'enter': {
-						text: 'go inside',
-						nextScene: { 0.25: 'medicine', 0.5: 'supplies', 1: 'occupied' }
+						text: '进入',
+						nextScene: { 0.25: '药剂', 0.5: 'supplies', 1: 'occupied' }
 					},
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
@@ -2851,17 +2851,17 @@ Events.Setpieces = {
 					Notifications.notify(null, 'water replenished');
 				},
 				loot: {
- 					'cured meat': {
+ 					'熏肉': {
  						min: 1,
  						max: 10,
  						chance: 0.8
  					},
-					'leather': {
+					'皮革': {
 						min: 1,
 						max: 10,
 						chance: 0.2
 					},
-					'cloth': {
+					'布匹': {
 						min: 1,
 						max: 10,
 						chance: 0.5
@@ -2869,12 +2869,12 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
 			},
-			'medicine': {
+			'药剂': {
 				text: [
 				  'the house has been ransacked.',
 					'but there is a cache of medicine under the floorboards.'
@@ -2883,7 +2883,7 @@ Events.Setpieces = {
 					World.markVisited(World.curPos[0], World.curPos[1]);
 				},
 				loot: {
-					'medicine': {
+					'药剂': {
 						min: 2,
 						max: 5,
 						chance: 1
@@ -2891,7 +2891,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
@@ -2909,17 +2909,17 @@ Events.Setpieces = {
 					World.markVisited(World.curPos[0], World.curPos[1]);
 				},
 				loot: {
- 					'cured meat': {
+ 					'熏肉': {
  						min: 1,
  						max: 10,
  						chance: 0.8
  					},
-					'leather': {
+					'皮革': {
 						min: 1,
 						max: 10,
 						chance: 0.2
 					},
-					'cloth': {
+					'布匹': {
 						min: 1,
 						max: 10,
 						chance: 0.5
@@ -2927,7 +2927,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
@@ -2946,22 +2946,22 @@ Events.Setpieces = {
 					World.markVisited(World.curPos[0], World.curPos[1]);
 				},
 		        loot: {
-		        	'rifle': {
+		        	'步枪': {
 		        		min: 1,
 		        		max: 3,
 		        		chance: 0.5
 		        	},
-		        	'bullets': {
+		        	'子弹': {
 		        		min: 5,
 		        		max: 20,
 		        		chance: 0.8
 		        	},
-		        	'laser rifle': {
+		        	'激光枪': {
 		        		min: 1,
 		        		max: 3,
 		        		chance: 0.3
 		        	},
-		        	'energy cell': {
+		        	'能量元件': {
 		        		min: 5,
 		        		max: 10,
 		        		chance: 0.5
@@ -2971,7 +2971,7 @@ Events.Setpieces = {
 		        		max: 5,
 		        		chance: 0.5
 		        	},
-		        	'alien alloy': {
+		        	'异星合金': {
 		        		min: 1,
 		        		max: 1,
 		        		chance: 0.3
@@ -2979,7 +2979,7 @@ Events.Setpieces = {
 		        },
 		        buttons: {
 		        	'leave': {
-		        		text: 'leave',
+		        		text: '离开',
 		        		nextScene: 'end'
 		        	}
 		        }
@@ -2999,7 +2999,7 @@ Events.Setpieces = {
 					World.markVisited(World.curPos[0], World.curPos[1]);
 				},
 		        loot: {
-		        	'alien alloy': {
+		        	'异星合金': {
 		        		min: 1,
 		        		max: 3,
 		        		chance: 1
@@ -3007,7 +3007,7 @@ Events.Setpieces = {
 		        },
 		        buttons: {
 		        	'leave': {
-		        		text: 'leave',
+		        		text: '离开',
 		        		nextScene: 'end'
 		        	}
 		        }
@@ -3052,7 +3052,7 @@ Events.Setpieces = {
 						nextScene: {1: 'a1'}
 					},
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
@@ -3067,17 +3067,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 50,
   				loot: {
-  					'cured meat': {
+  					'熏肉': {
   						min: 1,
   						max: 5,
   						chance: 0.8
   					},
-					'bullets': {
+					'子弹': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'rifle': {
+					'步枪': {
 						min: 1,
 						max: 1,
 						chance: 0.2
@@ -3086,7 +3086,7 @@ Events.Setpieces = {
   				notification: 'a soldier, alerted, opens fire.',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: { 1: 'a2' }
 					},
 					'run': {
@@ -3105,17 +3105,17 @@ Events.Setpieces = {
   				attackDelay: 2,
   				health: 50,
   				loot: {
-  					'cured meat': {
+  					'熏肉': {
   						min: 1,
   						max: 5,
   						chance: 0.8
   					},
-					'bullets': {
+					'子弹': {
 						min: 1,
 						max: 5,
 						chance: 0.5
 					},
-					'rifle': {
+					'步枪': {
 						min: 1,
 						max: 1,
 						chance: 0.2
@@ -3124,7 +3124,7 @@ Events.Setpieces = {
   				notification: 'a second soldier joins the fight.',
  				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: { 1: 'a3' }
 					},
 					'run': {
@@ -3147,7 +3147,7 @@ Events.Setpieces = {
 						max: 1,
 						chance: 0.5
 					},
-					'cured meat': {
+					'熏肉': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -3156,7 +3156,7 @@ Events.Setpieces = {
 				notification: 'a grizzled soldier attacks, waving a bayonet.',
  				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: { 1: 'cleared' }
 					}
 				}
@@ -3174,7 +3174,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
@@ -3196,7 +3196,7 @@ Events.Setpieces = {
 						nextScene: {1: 'a1'}
 					},
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
@@ -3210,12 +3210,12 @@ Events.Setpieces = {
 				attackDelay: 2,
 				health: 10,
 				loot: {
-					'cured meat': {
+					'熏肉': {
 						min: 1,
 						max: 5,
 						chance: 0.8
 					},
-					'cloth': {
+					'布匹': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -3224,7 +3224,7 @@ Events.Setpieces = {
 				notification: 'a man joins the fight',
 				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: { 1: 'a2' }
 					},
 					'run': {
@@ -3242,12 +3242,12 @@ Events.Setpieces = {
  				attackDelay: 2,
  				health: 10,
  				loot: {
-					'cured meat': {
+					'熏肉': {
 						min: 1,
  						max: 5,
 						chance: 0.8
 					},
-					'cloth': {
+					'布匹': {
 						min: 1,
  						max: 5,
 						chance: 0.8
@@ -3256,7 +3256,7 @@ Events.Setpieces = {
  				notification: 'a man joins the fight',
  				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: { 1: 'a3' }
 					},
 					'run': {
@@ -3274,17 +3274,17 @@ Events.Setpieces = {
  				attackDelay: 2,
  				health: 20,
  				loot: {
-					'cured meat': {
+					'熏肉': {
 						min: 5,
  						max: 10,
 						chance: 1
 					},
-					'cloth': {
+					'布匹': {
 						min: 5,
  						max: 10,
 						chance: 0.8
 					},
-					'iron': {
+					'铁': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -3293,7 +3293,7 @@ Events.Setpieces = {
  				notification: 'only the chief remains.',
  				buttons: {
 					'continue': {
-						text: 'continue',
+						text: '继续深入',
 						nextScene: { 1: 'cleared' }
 					}
 				}
@@ -3311,7 +3311,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
@@ -3330,53 +3330,53 @@ Events.Setpieces = {
 				notification: 'the path leads to an abandoned mine',
 				buttons: {
 					'enter': {
-						text: 'go inside',
+						text: '进入',
 						nextScene: { 1: 'enter' },
-						cost: { 'torch': 1 }
+						cost: { '火把': 1 }
 					},
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
 			},
  			'enter': {
  				combat: true,
- 				enemy: 'beastly matriarch',
+ 				enemy: '蛮女',
  				chara: 'M',
  				damage: 4,
  				hit: 0.8,
  				attackDelay: 2,
  				health: 10,
  				loot: {
- 					'teeth': {
+ 					'牙齿': {
  						min: 5,
  						max: 10,
  						chance: 1
  					},
-					'scales': {
+					'鳞片': {
 						min: 5,
  						max: 10,
 						chance: 0.8
 					},
-					'cloth': {
+					'布匹': {
 						min: 5,
  						max: 10,
 						chance: 0.5
 					}
  				},
- 				notification: 'a large creature lunges, muscles rippling in the torchlight',
+ 				notification: '一只巨大的怪物跳了出来，火把的光照亮了它暴起的肌肉',
  				buttons: {
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: { 1: 'cleared' }
 					}
 				}
  			},
 			'cleared': {
 				text: [
-					'the beast is dead.',
-					'the mine is now safe for workers.'
+					'野兽死了.',
+					'对工人来说这座矿工现在安全了.'
 				],
 				notification: 'the iron mine is clear of dangers',
 				onLoad: function() {
@@ -3386,7 +3386,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
@@ -3399,37 +3399,37 @@ Events.Setpieces = {
 		scenes: {
 			'start': {
 				text: [
-					'a destroyed village lies in the dust.',
-					'charred bodies litter the ground.'
+					'被毁灭的村子灰尘遍地.',
+					'破烂的尸体俯首即是.'
 				],
 				notification: 'the metallic tang of wanderer afterburner hangs in the air.',
 				buttons: {
 					'enter': {
-						text: 'enter',
+						text: '进入',
 						nextScene: {1: 'underground'}
 					},
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
 			},
 			'underground': {
 				text: [
-					'a shack stands at the center of the village.',
-					'there are still supplies inside.'
+					'一栋小棚子矗立在村子中央.',
+					'里头似乎还有些物资.'
 				],
 				buttons: {
 					'take': {
-						text: 'take',
+						text: '拿走',
 						nextScene: {1: 'exit'}
 					}
 				}
 			},
 			'exit': {
 				text: [
-					'all the work of a previous generation is here.',
-					'ripe for the picking.'
+					'这里留存着前代人的全部作品.',
+					'是时候继承这些财富了.'
 				],
 				onLoad: function() {
 					World.markVisited(World.curPos[0], World.curPos[1]);
@@ -3437,7 +3437,7 @@ Events.Setpieces = {
 				},
 				buttons: {
 					'leave': {
-						text: 'leave',
+						text: '离开',
 						nextScene: 'end'
 					}
 				}
