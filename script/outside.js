@@ -2,83 +2,83 @@
  * Module that registers the outdoors functionality
  */
 var Outside = {
-	name: "Outside",
+	name: "户外",
 	
 	_GATHER_DELAY: 60,
 	_TRAPS_DELAY: 90,
 	_POP_DELAY: [0.5, 3],
 	
 	_INCOME: {
-		'gatherer': {
+		'采集工': {
 			delay: 10,
 			stores: {
-				'wood': 1
+				'木头': 1
 			}
 		},
-		'hunter': {
+		'猎户': {
 			delay: 10,
 			stores: {
-				'fur': 0.5,
-				'meat': 0.5
+				'毛皮': 0.5,
+				'肉': 0.5
 			}
 		},
-		'trapper': {
+		'陷阱工': {
 			delay: 10,
 			stores: {
-				'meat': -1,
-				'bait': 1
+				'肉': -1,
+				'诱饵': 1
 			}
 		},
-		'tanner': {
+		'制革工': {
 			delay: 10,
 			stores: {
-				'fur': -5,
-				'leather': 1
+				'毛皮': -5,
+				'皮革': 1
 			}
 		},
-		'charcutier': {
+		'熏肉工': {
 			delay: 10,
 			stores: {
-				'meat': -5,
-				'wood': -5,
-				'cured meat': 1
+				'肉': -5,
+				'木头': -5,
+				'熏肉': 1
 			}
 		},
-		'iron miner': {
+		'铁矿工': {
 			delay: 10,
 			stores: {
-				'cured meat': -1,
-				'iron': 1
+				'熏肉': -1,
+				'铁': 1
 			}
 		},
-		'coal miner': {
+		'煤矿工': {
 			delay: 10,
 			stores: {
-				'cured meat': -1,
-				'coal': 1
+				'熏肉': -1,
+				'煤': 1
 			}
 		},
-		'sulphur miner': {
+		'硫磺矿工': {
 			delay: 10,
 			stores: {
-				'cured meat': -1,
-				'sulphur': 1
+				'熏肉': -1,
+				'硫磺': 1
 			}
 		},
-		'steelworker': {
+		'炼钢工': {
 			delay: 10,
 			stores: {
-				'iron': -1,
-				'coal': -1,
-				'steel': 1
+				'铁': -1,
+				'煤': -1,
+				'钢': 1
 			}
 		},
-		'armourer': {
+		'军火工': {
 			delay: 10,
 			stores: {
-				'steel': -1,
-				'sulphur': -1,
-				'bullets': 1
+				'钢': -1,
+				'硫磺': -1,
+				'子弹': 1
 			}
 		}
 	},
@@ -86,33 +86,33 @@ var Outside = {
 	TrapDrops: [
 		{
 			rollUnder: 0.5,
-			name: 'fur',
-			message: 'scraps of fur'
+			name: '毛皮',
+			message: '残破的皮毛'
 		},
 		{
 			rollUnder: 0.75,
-			name: 'meat',
-			message: 'bits of meat'
+			name: '肉',
+			message: '一点儿肉'
 		},
 		{
 			rollUnder: 0.85,
-			name: 'scales',
-			message: 'strange scales'
+			name: '鳞片',
+			message: '奇怪的鳞片'
 		},
 		{
 			rollUnder: 0.93,
-			name: 'teeth',
-			message: 'scattered teeth'
+			name: '牙齿',
+			message: '散落的牙齿'
 		},
 		{
 			rollUnder: 0.995,
-			name: 'cloth',
-			message: 'tattered cloth'
+			name: '布匹',
+			message: '破烂的布匹'
 		},
 		{
 			rollUnder: 1.0,
-			name: 'charm',
-			message: 'a crudely made charm'
+			name: '护身符',
+			message: '做工粗糙的护身符'
 		}
 	],
 	
@@ -128,7 +128,7 @@ var Outside = {
 		}
 		
 		// Create the outside tab
-		this.tab = Header.addLocation("A Silent Forest", "outside", Outside);
+		this.tab = Header.addLocation("静谧森林", "outside", Outside);
 		
 		// Create the Outside panel
 		this.panel = $('<div>').attr('id', "outsidePanel")
@@ -153,7 +153,7 @@ var Outside = {
 		// Create the gather button
 		new Button.Button({
 			id: 'gatherButton',
-			text: "gather wood",
+			text: "采集木头",
 			click: Outside.gatherWood,
 			cooldown: Outside._GATHER_DELAY,
 			width: '80px'
@@ -161,7 +161,7 @@ var Outside = {
 	},
 	
 	getMaxPopulation: function() {
-		return $SM.get('game.buildings["hut"]', true) * 4;
+		return $SM.get('game.buildings["小屋"]', true) * 4;
 	},
 	
 	increasePopulation: function() {
@@ -170,15 +170,15 @@ var Outside = {
 			var num = Math.floor(Math.random()*(space/2) + space/2);
 			if(num == 0) num = 1;
 			if(num == 1) {
-				Notifications.notify(null, 'a stranger arrives in the night');
+				Notifications.notify(null, '陌生人在夜里抵达.');
 			} else if(num < 5) {
-				Notifications.notify(null, 'a weathered family takes up in one of the huts.');
+				Notifications.notify(null, '饱经风雨的一家人住进了一间小屋.');
 			} else if(num < 10) {
-				Notifications.notify(null, 'a small group arrives, all dust and bones.');
+				Notifications.notify(null, '一群瘦骨嶙峋，风尘仆仆的人抵达了.');
 			} else if(num < 30) {
-				Notifications.notify(null, 'a convoy lurches in, equal parts worry and hope.');
+				Notifications.notify(null, '车队历经磨难来到了小镇，怀着和担忧同等的希望.');
 			} else {
-				Notifications.notify(null, "the town's booming. word does get around.");
+				Notifications.notify(null, "镇子繁荣热闹，言语无法形容.");
 			}
 			Engine.log('population increased by ' + num);
 			$SM.add('game.population', num);
@@ -388,13 +388,13 @@ var Outside = {
 		}
 		
 		for(var k in $SM.get('game.buildings')) {
-			if(k == 'trap') {
+			if(k == '陷阱') {
 				var numTraps = $SM.get('game.buildings["'+k+'"]');
-				var numBait = $SM.get('stores.bait', true);
+				var numBait = $SM.get('stores["诱饵"]', true);
 				var traps = numTraps - numBait;
 				traps = traps < 0 ? 0 : traps;
 				Outside.updateVillageRow(k, traps, village);
-				Outside.updateVillageRow('baited trap', numBait > numTraps ? numTraps : numBait, village);
+				Outside.updateVillageRow('上饵陷阱', numBait > numTraps ? numTraps : numBait, village);
 			} else {
 				if(Outside.checkWorker(k)) {
 					Outside.updateWorkersView();
@@ -406,7 +406,7 @@ var Outside = {
 		population.text('pop ' + $SM.get('game.population') + '/' + this.getMaxPopulation());
 		
 		var hasPeeps;
-		if($SM.get('game.buildings["hut"]', true) == 0) {
+		if($SM.get('game.buildings["小屋"]', true) == 0) {
 			hasPeeps = false;
 			village.addClass('noHuts');
 		} else {
@@ -432,14 +432,14 @@ var Outside = {
 	
 	checkWorker: function(name) {
 		var jobMap = {
-			'lodge': ['hunter', 'trapper'],
-			'tannery': ['tanner'],
-			'smokehouse': ['charcutier'],
-			'iron mine': ['iron miner'],
-			'coal mine': ['coal miner'],
-			'sulphur mine': ['sulphur miner'],
-			'steelworks': ['steelworker'],
-			'armoury' : ['armourer']
+			'旅馆': ['猎户', '陷阱工'],
+			'制革屋': ['制革弓'],
+			'熏肉房': ['熏肉工'],
+			'铁矿': ['铁矿工'],
+			'煤矿': ['煤矿工'],
+			'硫磺矿': ['硫磺矿工'],
+			'炼钢坊': ['炼钢工'],
+			'警械坊' : ['军火工']
 		};
 		
 		var jobs = jobMap[name];
@@ -490,11 +490,11 @@ var Outside = {
 	
 	updateTrapButton: function() {
 		var btn = $('div#trapsButton');
-		if($SM.get('game.buildings["trap"]', true) > 0) {
+		if($SM.get('game.buildings["陷阱"]', true) > 0) {
 			if(btn.length == 0) {
 				new Button.Button({
 					id: 'trapsButton',
-					text: "check traps",
+					text: "检查陷阱",
 					click: Outside.checkTraps,
 					cooldown: Outside._TRAPS_DELAY,
 					width: '80px'
@@ -510,20 +510,20 @@ var Outside = {
 	},
 	
 	setTitle: function() {
-		var numHuts = $SM.get('game.buildings["hut"]', true);
+		var numHuts = $SM.get('game.buildings["小屋"]', true);
 		var title;
 		if(numHuts == 0) {
-			title = "A Silent Forest";
+			title = "静谧森林";
 		} else if(numHuts == 1) {
-			title = "A Lonely Hut";
+			title = "孤独小屋";
 		} else if(numHuts <= 4) {
-			title = "A Tiny Village";
+			title = "小型村落";
 		} else if(numHuts <= 8) {
-			title = "A Modest Village";
+			title = "中等村落";
 		} else if(numHuts <= 14) {
-			title = "A Large Village";
+			title = "大型村落";
 		} else {
-			title = "A Raucous Village";
+			title = "喧嚣小镇";
 		}
 		
 		if(Engine.activeModule == this) {
@@ -535,7 +535,7 @@ var Outside = {
 	onArrival: function(transition_diff) {
 		Outside.setTitle();
 		if(!$SM.get('game.outside.seenForest')) {
-			Notifications.notify(Outside, "the sky is grey and the wind blows relentlessly");
+			Notifications.notify(Outside, "天色阴沉，风无情地刮着");
 			$SM.set('game.outside.seenForest', true);
 		}
 		Outside.updateTrapButton();
@@ -545,16 +545,16 @@ var Outside = {
 	},
 	
 	gatherWood: function() {
-		Notifications.notify(Outside, "dry brush and dead branches litter the forest floor");
-		var gatherAmt = $SM.get('game.buildings["cart"]', true) > 0 ? 50 : 10;
-		$SM.add('stores.wood', gatherAmt);
+		Notifications.notify(Outside, "林地上散落着枯枝败叶");
+		var gatherAmt = $SM.get('game.buildings["货车"]', true) > 0 ? 50 : 10;
+		$SM.add('stores["木头"]', gatherAmt);
 	},
 	
 	checkTraps: function() {
 		var drops = {};
 		var msg = [];
-		var numTraps = $SM.get('game.buildings["trap"]', true);
-		var numBait = $SM.get('stores.bait', true);
+		var numTraps = $SM.get('game.buildings["陷阱"]', true);
+		var numBait = $SM.get('stores["诱饵"]', true);
 		var numDrops = numTraps + (numBait < numTraps ? numBait : numTraps);
 		for(var i = 0; i < numDrops; i++) {
 			var roll = Math.random();
@@ -571,7 +571,7 @@ var Outside = {
 				}
 			}
 		}
-		var s = 'the traps contain ';
+		var s = '陷阱捕获到';
 		for(var i = 0, len = msg.length; i < len; i++) {
 			if(len > 1 && i > 0 && i < len - 1) {
 				s += ", ";
@@ -582,7 +582,7 @@ var Outside = {
 		}
 		
 		var baitUsed = numBait < numTraps ? numBait : numTraps;
-		drops['bait'] = -baitUsed;
+		drops['诱饵'] = -baitUsed;
 		
 		Notifications.notify(Outside, s);
 		$SM.addM('stores', drops);
