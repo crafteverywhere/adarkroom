@@ -102,11 +102,11 @@ var Ship = {
 	},
 	
 	reinforceHull: function() {
-		if($SM.get('stores["alien alloy"]', true) < Ship.ALLOY_PER_HULL) {
+		if($SM.get('stores["异星合金"]', true) < Ship.ALLOY_PER_HULL) {
 			Notifications.notify(Ship, "异星合金不足");
 			return false;
 		}
-		$SM.add('stores["alien alloy"]', -Ship.ALLOY_PER_HULL);
+		$SM.add('stores["异星合金"]', -Ship.ALLOY_PER_HULL);
 		$SM.add('game.spaceShip.hull', 1);
 		if($SM.get('game.spaceShip.hull') > 0) {
 			Button.setDisabled($('#liftoffButton', Ship.panel), false);
