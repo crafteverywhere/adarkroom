@@ -5,7 +5,7 @@ Events.Room = [
 	{ /* The Nomad  --  Merchant */
 		title: '游牧部落',
 		isAvailable: function() {
-			return Engine.activeModule == Room && $SM.get('stores.["毛皮"]', true) > 0;
+			return Engine.activeModule == Room && $SM.get('stores["毛皮"]', true) > 0;
 		},
 		scenes: {
 			'start': {
@@ -33,7 +33,7 @@ Events.Room = [
 					},
 					'buyCompass': {
 						available: function() {
-							return $SM.get('stores.compass', true) < 1;
+							return $SM.get('stores["罗盘"]', true) < 1;
 						},
 						text: '购买罗盘',
 						cost: { '毛皮': 300, '鳞片': 15, '牙齿': 5 },
@@ -51,7 +51,7 @@ Events.Room = [
 	}, { /* Noises Outside  --  gain wood/fur */
 		title: '噪音',
 		isAvailable: function() {
-			return Engine.activeModule == Room && $SM.get('stores.["木头"]');
+			return Engine.activeModule == Room && $SM.get('stores["木头"]');
 		},
 		scenes: {
 			'start': {
@@ -87,7 +87,7 @@ Events.Room = [
 				reward: { '木头': 100, '毛皮': 10 },
 				text: [
 					'一捆用粗糙的毛皮扎起来的柴火斜倚在门槛上.',
-					'the night is silent.'
+					'黑夜重归静谧.'
 				],
 				buttons: {
 					'backinside': {
@@ -101,7 +101,7 @@ Events.Room = [
 	{ /* Noises Inside  --  trade wood for better good */
 		title: '噪音',
 		isAvailable: function() {
-			return Engine.activeModule == Room && $SM.get('stores.["木头"]');
+			return Engine.activeModule == Room && $SM.get('stores["木头"]');
 		},
 		scenes: {
 			start: {
@@ -127,7 +127,7 @@ Events.Room = [
 			       '地上散落着小鳞片.'
 			    ],
 			    onLoad: function() {
-			    	var numWood = $SM.get('stores.["木头"]', true);
+			    	var numWood = $SM.get('stores["木头"]', true);
 			    	numWood = Math.floor(numWood * 0.1);
 			    	if(numWood == 0) numWood = 1;
 			    	var numScales = Math.floor(numWood / 5);
@@ -147,7 +147,7 @@ Events.Room = [
 			       '地上散落着小牙齿.'
 			    ],
 			    onLoad: function() {
-			    	var numWood = $SM.get('stores.["木头"]', true);
+			    	var numWood = $SM.get('stores["木头"]', true);
 			    	numWood = Math.floor(numWood * 0.1);
 			    	if(numWood == 0) numWood = 1;
 			    	var numTeeth = Math.floor(numWood / 5);
@@ -167,7 +167,7 @@ Events.Room = [
 			       '地上散落着布片.'
 			    ],
 			    onLoad: function() {
-			    	var numWood = $SM.get('stores.["木头"]', true);
+			    	var numWood = $SM.get('stores["木头"]', true);
 			    	numWood = Math.floor(numWood * 0.1);
 			    	if(numWood == 0) numWood = 1;
 			    	var numCloth = Math.floor(numWood / 5);
@@ -186,7 +186,7 @@ Events.Room = [
 	{ /* The Beggar  --  trade fur for better good */
 		title: '乞丐',
 		isAvailable: function() {
-			return Engine.activeModule == Room && $SM.get('stores.["毛皮"]');
+			return Engine.activeModule == Room && $SM.get('stores["毛皮"]');
 		},
 		scenes: {
 			start: {
@@ -257,7 +257,7 @@ Events.Room = [
 	{ /* Mysterious Wanderer  --  wood gambling */
 		title: '神秘流浪者',
 		isAvailable: function() {
-			return Engine.activeModule == Room && $SM.get('stores.["木头"]');
+			return Engine.activeModule == Room && $SM.get('stores["木头"]');
 		},
 		scenes: {
 			start: {
@@ -290,7 +290,7 @@ Events.Room = [
 			    onLoad: function() {
 			    	if(Math.random() < 0.5) {
 			    		setTimeout(function() {
-			    			$SM.add('stores.["木头"]', 300);
+			    			$SM.add('stores["木头"]', 300);
 			    			Notifications.notify(Room, '神秘的流浪者回来了，货车上木头堆得更高了.');
 			    		}, 60 * 1000);
 			    	}
@@ -309,7 +309,7 @@ Events.Room = [
 			    onLoad: function() {
 			    	if(Math.random() < 0.3) {
 			    		setTimeout(function() {
-			    			$SM.add('stores.["木头"]', 1500);
+			    			$SM.add('stores["木头"]', 1500);
 			    			Notifications.notify(Room, '神秘的流浪者回来了，货车上木头堆得更高了.');
 			    		}, 60 * 1000);
 			    	}
@@ -327,7 +327,7 @@ Events.Room = [
 	{ /* Mysterious Wanderer  --  fur gambling */
 		title: '神秘流浪者',
 		isAvailable: function() {
-			return Engine.activeModule == Room && $SM.get('stores.["毛皮"]');
+			return Engine.activeModule == Room && $SM.get('stores["毛皮"]');
 		},
 		scenes: {
 			start: {
@@ -360,7 +360,7 @@ Events.Room = [
 			    onLoad: function() {
 			    	if(Math.random() < 0.5) {
 			    		setTimeout(function() {
-			    			$SM.add('stores.["毛皮"]', 300);
+			    			$SM.add('stores["毛皮"]', 300);
 			    			Notifications.notify(Room, '神秘的流浪者回来了，货车上毛皮堆得更高了.');
 			    		}, 60 * 1000);
 			    	}
@@ -379,7 +379,7 @@ Events.Room = [
 			    onLoad: function() {
 			    	if(Math.random() < 0.3) {
 			    		setTimeout(function() {
-			    			$SM.add('stores.["毛皮"]', 1500);
+			    			$SM.add('stores["毛皮"]', 1500);
 			    			Notifications.notify(Room, '神秘的流浪者回来了，货车上毛皮堆得更高了.');
 			    		}, 60 * 1000);
 			    	}
@@ -402,15 +402,15 @@ Events.Room = [
 		scenes: {
 			'start': {
 				text: [
-					"the scout says she's been all over.",
-					"willing to talk about it, for a price."
+					"侦察兵说她曾环游世界.",
+					"她愿意为我们讲述一部分经历."
 				],
-				notification: 'a scout stops for the night',
+				notification: '侦察兵夜宿于此',
 				buttons: {
 					'buyMap': {
 						text: '购买地图',
 						cost: { '毛皮': 200, '鳞片': 10 },
-						notification: 'the map uncovers a bit of the world',
+						notification: '地图上已探知的地方扩大了一点',
 						onChoose: World.applyMap
 					},
 					'learn': {
@@ -433,70 +433,70 @@ Events.Room = [
 	},
 
 	{ /* The Wandering Master */
-		title: 'The Master',
+		title: '宗师',
 		isAvailable: function() {
 			return Engine.activeModule == Room && $SM.get('features.location.world');
 		},
 		scenes: {
 			'start': {
 				text: [
-					'an old wanderer arrives.',
-					'he smiles warmly and asks for lodgings for the night.'
+					'一名年迈的流浪者抵达了.',
+					'他面带和煦的微笑，请求留宿一晚.'
 				],
-				notification: 'an old wanderer arrives',
+				notification: '年迈的流浪者抵达了',
 				buttons: {
 					'agree': {
-						text: 'agree',
+						text: '同意老人的请求',
 						cost: {
-							'cured meat': 100,
+							'熏肉': 100,
 							'毛皮': 100,
-							'torch': 1
+							'火把': 1
 						},
 						nextScene: {1: 'agree'}
 					},
 					'deny': {
-						text: 'turn him away',
+						text: '赶走他',
 						nextScene: 'end'
 					}
 				}
 			},
 			'agree': {
 				text: [
-			       'in exchange, the wanderer offers his wisdom.'
+			       '作为回报，流浪者为我们分享了他的智慧.'
 		        ],
 		        buttons: {
 		        	'evasion': {
-		        		text: 'evasion',
+		        		text: '避实就虚',
 		        		available: function() {
-		        			return !$SM.hasPerk('evasive');
+		        			return !$SM.hasPerk('避实就虚');
 		        		},
 		        		onChoose: function() {
-		        			$SM.addPerk('evasive');
+		        			$SM.addPerk('避实就虚');
 		        		},
 		        		nextScene: 'end'
 		        	},
 		        	'precision': {
 		        		text: 'precision',
 		        		available: function() {
-		        			return !$SM.hasPerk('precise');
+		        			return !$SM.hasPerk('精密');
 		        		},
 		        		onChoose: function() {
-		        			$SM.addPerk('precise');
+		        			$SM.addPerk('精密');
 		        		},
 		        		nextScene: 'end'
 		        	},
 		        	'force': {
 		        		text: 'force',
 		        		available: function() {
-		        			return !$SM.hasPerk('barbarian');
+		        			return !$SM.hasPerk('野蛮人');
 		        		},
 		        		onChoose: function() {
-		        			$SM.addPerk('barbarian');
+		        			$SM.addPerk('野蛮人');
 		        		},
 		        		nextScene: 'end'
 		        	},
 		        	'nothing': {
-		        		text: 'nothing',
+		        		text: '一无所获',
 		        		nextScene: 'end'
 		        	}
 		        }
@@ -505,38 +505,38 @@ Events.Room = [
 	},
 
 	{ /* The Sick Man */
-  		title: 'The Sick Man',
+  		title: '患病男子',
   		isAvailable: function() {
-  			return Engine.activeModule == Room && $SM.get('stores.medicine', true) > 0;
+  			return Engine.activeModule == Room && $SM.get('stores["药剂"]', true) > 0;
   		},
   		scenes: {
   			'start': {
   				text: [
-  					"a man hobbles up, coughing.",
-  					"he begs for medicine."
+  					"男子咳嗽着，一瘸一拐地走了过来.",
+  					"他祈求分给他一支药剂."
   				],
-  				notification: 'a sick man hobbles up',
+  				notification: '患病男子一瘸一拐地走了过来',
   				buttons: {
   					'help': {
-  						text: 'give 1 medicine',
-  						cost: { 'medicine': 1 },
-  						notification: 'the man swallows the medicine eagerly',
+  						text: '给他1支药剂',
+  						cost: { '药剂': 1 },
+  						notification: '男子迫不及待咽下了药剂',
   						nextScene: { 0.1: 'alloy', 0.3: 'cells', 0.5: '鳞片', 1.0: 'nothing' }
   					},
   					'ignore': {
-  						text: 'tell him to leave',
+  						text: '请他离开',
   						nextScene: 'end'
   					}
   				}
   			},
   			'alloy': {
   				text: [
-  					"the man is thankful.",
-  					'he leaves a reward.',
-  					'some weird metal he picked up on his travels.'
+  					"男子感激涕零.",
+  					'他留下报酬走了.',
+  					'那是他在旅途中捡到的一些古怪的金属.'
   				],
   				onLoad: function() {
-  					$SM.add('stores["alien alloy"]', 1);
+  					$SM.add('stores["异星合金"]', 1);
 			    },
   				buttons: {
   					'bye': {
@@ -547,12 +547,12 @@ Events.Room = [
   			},
   			'cells': {
   				text: [
-  					"the man is thankful.",
-  					'he leaves a reward.',
-  					'some weird glowing boxes he picked up on his travels.'
+  					"男子感激涕零.",
+  					'他留下报酬走了.',
+  					'那是他在旅途中捡到的一些古怪的发光盒子.'
   				],
   				onLoad: function() {
-  					$SM.add('stores["energy cell"]', 3);
+  					$SM.add('stores["能量元件"]', 3);
 			    },
   				buttons: {
   					'bye': {
@@ -563,12 +563,12 @@ Events.Room = [
   			},
   			'鳞片': {
   				text: [
-  					"the man is thankful.",
-  					'he leaves a reward.',
-  					'all he has are some scales.'
+  					"男子感激涕零.",
+  					'他留下报酬走了.',
+  					'全是些鳞片.'
   				],
   				onLoad: function() {
-  					$SM.add('stores.scales', 5);
+  					$SM.add('stores["鳞片"]', 5);
 			    },
   				buttons: {
   					'bye': {
@@ -579,7 +579,7 @@ Events.Room = [
   			},
   			'nothing': {
   				text: [
-  					"the man expresses his thanks and hobbles off."
+  					"男子表达了他的谢意，一瘸一拐地离开了."
   				],
   				buttons: {
   					'bye': {
