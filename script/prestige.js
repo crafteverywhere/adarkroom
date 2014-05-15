@@ -1,6 +1,6 @@
 var Prestige = {
 		
-	name: '声望',
+	name: 'Prestige',
 
 	options: {},
 
