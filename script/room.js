@@ -660,7 +660,7 @@ var Room = {
 		var wood = $SM.get('stores.["木头"]');
 		if(Room.fire.value <= Room.FireEnum.Flickering.value &&
 			$SM.get('game.builder.level') > 3 && wood > 0) {
-			Notifications.notify(Room, "建造者添加了柴火", true);
+			Notifications.notify(Room, "建造者添了柴火", true);
 			$SM.set('stores.["木头"]', wood - 1);
 			Room.fire = Room.FireEnum.fromInt(Room.fire.value + 1);
 		}
@@ -675,11 +675,11 @@ var Room = {
 		var old = Room.temperature.value;
 		if(Room.temperature.value > 0 && Room.temperature.value > Room.fire.value) {
 			Room.temperature = Room.TempEnum.fromInt(Room.temperature.value - 1);
-			Notifications.notify(Room, "the room is " + Room.temperature.text, true);
+			Notifications.notify(Room, "房间" + Room.temperature.text, true);
 		}
 		if(Room.temperature.value < 4 && Room.temperature.value < Room.fire.value) {
 			Room.temperature = Room.TempEnum.fromInt(Room.temperature.value + 1);
-			Notifications.notify(Room, "the room is " + Room.temperature.text, true);
+			Notifications.notify(Room, "房间" + Room.temperature.text, true);
 		}
 		if(Room.temperature.value != old) {
 			Room.changed = true;
@@ -690,7 +690,7 @@ var Room = {
 	unlockForest: function() {
 		$SM.set('stores.["木头"]', 4);
 		Outside.init();
-		Notifications.notify(Room, "风在屋外咆哮");
+		Notifications.notify(Room, "屋外寒风呼啸");
 		Notifications.notify(Room, "木头用光了");
 		Engine.event('progress', 'outside');
 	},
@@ -776,7 +776,7 @@ var Room = {
 
 
 			// thieves?
-			if(typeof $SM.get('game.thieves') == 'undefined' && num > 5000 && $SM.get('features.location.world')) {
+			if(typeof $SM.get('game["小偷"]') == 'undefined' && num > 5000 && $SM.get('features.location.world')) {
 				$SM.startThieves();
 			}
 
