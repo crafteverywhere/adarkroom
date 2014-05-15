@@ -1,6 +1,7 @@
-A Dark Room
+A Dark Room（小黑屋）
 =========
 
-A Minimalist Text Adventure Game
+极简主义文字冒险游戏
+-craft翻译版
 
-[Click to play](http://adarkroom.doublespeakgames.com/)
+[点我来玩哈！](http://crafteverywhere.github,io/adarkroom/)
