@@ -48,7 +48,7 @@ var Room = {
 			maxMsg: '再没有空地可以建小屋了',
 			type: 'building',
 			cost: function() {
-				var n = $SM.get('game.buildings["hut"]', true);
+				var n = $SM.get('game.buildings["小屋"]', true);
 				return {
 					'木头': 100 + (n*50)
 				};
