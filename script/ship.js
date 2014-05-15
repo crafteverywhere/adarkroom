@@ -24,7 +24,7 @@ var Ship = {
 		}
 		
 		// Create the Ship tab
-		this.tab = Header.addLocation("An Old Starship", "ship", Ship);
+		this.tab = Header.addLocation("古老飞船", "ship", Ship);
 		
 		// Create the Ship panel
 		this.panel = $('<div>').attr('id', "shipPanel")
@@ -48,25 +48,25 @@ var Ship = {
 		// Draw the reinforce button
 		new Button.Button({
 			id: 'reinforceButton',
-			text: 'reinforce hull',
+			text: '强化机体',
 			click: Ship.reinforceHull,
 			width: '100px',
-			cost: {'alien alloy': Ship.ALLOY_PER_HULL}
+			cost: {'异星合金': Ship.ALLOY_PER_HULL}
 		}).appendTo('div#shipPanel');
 		
 		// Draw the engine button
 		new Button.Button({
 			id: 'engineButton',
-			text: 'upgrade engine',
+			text: '升级引擎',
 			click: Ship.upgradeEngine,
 			width: '100px',
-			cost: {'alien alloy': Ship.ALLOY_PER_THRUSTER}
+			cost: {'异星合金': Ship.ALLOY_PER_THRUSTER}
 		}).appendTo('div#shipPanel');
 		
 		// Draw the lift off button
 		var b = new Button.Button({
 			id: 'liftoffButton',
-			text: 'lift off',
+			text: '升空',
 			click: Ship.checkLiftOff,
 			width: '100px',
 			cooldown: Ship.LIFTOFF_COOLDOWN
@@ -88,7 +88,7 @@ var Ship = {
 	onArrival: function(transition_diff) {
 		Ship.setTitle();
 		if(!$SM.get('game.spaceShip.seenShip')) {
-			Notifications.notify(Ship, 'somewhere above the debris cloud, the wanderer fleet hovers. been on this rock too long.');
+			Notifications.notify(Ship, '破碎云层的上方，流浪者舰队在盘旋着.我们已经在这块大石头上耽搁太久了.');
 			$SM.set('game.spaceShip.seenShip', true);
 		}
 
@@ -97,13 +97,13 @@ var Ship = {
 	
 	setTitle: function() {
 		if(Engine.activeModule == this) {
-			document.title = "An Old Starship";
+			document.title = "古老飞船";
 		}
 	},
 	
 	reinforceHull: function() {
 		if($SM.get('stores["alien alloy"]', true) < Ship.ALLOY_PER_HULL) {
-			Notifications.notify(Ship, "not enough alien alloy");
+			Notifications.notify(Ship, "异星合金不足");
 			return false;
 		}
 		$SM.add('stores["alien alloy"]', -Ship.ALLOY_PER_HULL);
@@ -116,7 +116,7 @@ var Ship = {
 	
 	upgradeEngine: function() {
 		if($SM.get('stores["alien alloy"]', true) < Ship.ALLOY_PER_THRUSTER) {
-			Notifications.notify(Ship, "not enough alien alloy");
+			Notifications.notify(Ship, "异星合金不足");
 			return false;
 		}
 		$SM.add('stores["alien alloy"]', -Ship.ALLOY_PER_THRUSTER);
@@ -131,11 +131,11 @@ var Ship = {
 	checkLiftOff: function() {
 		if(!$SM.get('game.spaceShip.seenWarning')) {
 			Events.startEvent({
-				title: 'Ready to Leave?',
+				title: '准备好离开了吗?',
 				scenes: {
 					'start': {
 						text: [
-							"time to get out of this place. won't be coming back."
+							"是时候离开这里，永远也不再回来了."
 						],
 						buttons: {
 							'fly': {
