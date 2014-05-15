@@ -259,9 +259,9 @@ var World = {
 			total += num * Path.getWeight(k);
 			if(num > 0 && item.length == 0) {
 				item = World.createItemDiv(k, num);
-				if(k == '腌肉' && World.water > 0) {
+				if(k == '熏肉' && World.water > 0) {
 					item.insertAfter(water);
-				} else if(k == '腌肉') {
+				} else if(k == '熏肉') {
 					item.prependTo(supplies);
 				} else {
 					item.appendTo(supplies);
@@ -275,13 +275,13 @@ var World = {
 		
 		// Update label
 		var t = 'pockets';
-		if($SM.get('stores.rucksack', true) > 0) {
+		if($SM.get('stores["双肩包"]', true) > 0) {
 			t = '双肩包';
 		}
 		$('#backpackTitle').text(t);
 		
 		// Update bagspace
-		$('#backpackSpace').text('free ' + Math.floor(Path.getCapacity() - total) + '/' + Path.getCapacity());
+		$('#backpackSpace').text('背包空间' + Math.floor(Path.getCapacity() - total) + '/' + Path.getCapacity());
 	},
 	
 	setWater: function(w) {
@@ -439,7 +439,7 @@ var World = {
 		movesPerFood *= $SM.hasPerk('slow metabolism') ? 2 : 1;
 		if(World.foodMove >= movesPerFood) {
 			World.foodMove = 0;
-			var num = Path.outfit['腌肉'];
+			var num = Path.outfit['熏肉'];
 			num--;
 			if(num == 0) {
 				Notifications.notify(World, '肉快要吃完了');
@@ -462,7 +462,7 @@ var World = {
 				World.starvation = false;
 				World.setHp(World.health + World.meatHeal());
 			}
-			Path.outfit['腌肉'] = num;
+			Path.outfit['熏肉'] = num;
 		}
 		// Water
 		var movesPerWater = World.MOVES_PER_WATER;
@@ -653,8 +653,8 @@ var World = {
 				var pos = World.placeLandmark(landmark.minRadius, landmark.maxRadius, k, map);
 				if(k == World.TILE.SHIP) {
 					var dx = pos[0] - World.RADIUS, dy = pos[1] - World.RADIUS;
-					var horz = dx < 0 ? 'west' : 'east';
-					var vert = dy < 0 ? 'north' : 'south';
+					var horz = dx < 0 ? '西方' : '东方';
+					var vert = dy < 0 ? '北方' : '南方';
 					if(Math.abs(dx) / 2 > Math.abs(dy)) {
 						World.dir = horz;
 					} else if(Math.abs(dy) / 2 > Math.abs(dx)){
@@ -851,7 +851,7 @@ var World = {
 		
 		// Clear the embark cooldown
 		var btn = Button.clearCooldown($('#embarkButton'));
-		if(Path.outfit['腌肉'] > 0) {
+		if(Path.outfit['熏肉'] > 0) {
 			Button.setDisabled(btn, false);
 		}
 		
@@ -868,7 +868,7 @@ var World = {
 	},
 	
 	leaveItAtHome: function(thing) {
-		 return thing != '腌肉' && thing != '子弹' && thing != '能量元件'  && thing != '护身符' && thing != '药剂'
+		 return thing != '熏肉' && thing != '子弹' && thing != '能量元件'  && thing != '护身符' && thing != '药剂'
 			 && typeof World.Weapons[thing] == 'undefined' && typeof Room.Craftables[thing] == 'undefined';
 	},
 	
