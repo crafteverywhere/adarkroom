@@ -647,7 +647,7 @@ var Room = {
 		Notifications.notify(Room, "火堆" + Room.fire.text, true);
 		if(Room.fire.value > 1 && $SM.get('game.builder.level') < 0) {
 			$SM.set('game.builder.level', 0);
-			Notifications.notify(Room, "火光映出窗外，投入黑暗中");
+			Notifications.notify(Room, "火光映出窗外，投入黑暗之中");
 			setTimeout(Room.updateBuilderState, Room._BUILDER_STATE_DELAY);
 		}	
 		window.clearTimeout(Room._fireTimer);
@@ -698,7 +698,7 @@ var Room = {
 	updateBuilderState: function() {
 		var lBuilder = $SM.get('game.builder.level');
 		if(lBuilder == 0) {
-			Notifications.notify(Room, "衣衫褴褛的陌生人蹒跚地步入门来，瘫倒在角落里");
+			Notifications.notify(Room, "衣衫褴褛的陌生人步履蹒跚地步入门来，瘫倒在角落里");
 			lBuilder = $SM.setget('game.builder.level', 1);
 			setTimeout(Room.unlockForest, Room._NEED_WOOD_DELAY);
 		} 
@@ -973,7 +973,7 @@ var Room = {
 	buyUnlocked: function(thing) {
 		if(Room.buttons[thing]) {
 			return true;
-		} else if($SM.get('game.buildings["trading post"]', true) > 0) {
+		} else if($SM.get('game.buildings["贸易站"]', true) > 0) {
 			if(thing == 'compass' || typeof $SM.get('stores["'+thing+'"]') != 'undefined') {
 				// Allow the purchase of stuff once you've seen it
 				return true;
