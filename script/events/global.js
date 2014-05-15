@@ -5,7 +5,7 @@ Events.Global = [
 	{ /* The Thief */
 		title: '盗贼',
 		isAvailable: function() {
-			return (Engine.activeModule == Room || Engine.activeModule == Outside) && $SM.get('game.thieves') == 1;
+			return (Engine.activeModule == Room || Engine.activeModule == Outside) && $SM.get('game["盗贼"]') == 1;
 		},
 		scenes: {
 			'start': {
@@ -49,7 +49,7 @@ Events.Global = [
 			       "在离开前他分享了有关潜行的心得。"
 		        ],
 		        onLoad: function() {
-		        	$SM.set('game.thieves', 2);
+		        	$SM.set('game["盗贼"]', 2);
 		        	$SM.remove('income.thieves');
 		        	$SM.addPerk('stealthy');
 		        },
