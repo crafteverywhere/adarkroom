@@ -149,10 +149,10 @@ var Engine = {
 		Events.init();
 		Room.init();
 		
-		if(typeof $SM.get('stores.wood') != 'undefined') {
+		if(typeof $SM.get('stores["木头"]') != 'undefined') {
 			Outside.init();
 		}
-		if($SM.get('stores.compass', true) > 0) {
+		if($SM.get('stores["罗盘"]', true) > 0) {
 			Path.init();
 		}
 		if($SM.get('features.location.spaceShip')) {
