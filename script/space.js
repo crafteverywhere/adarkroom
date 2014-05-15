@@ -418,14 +418,14 @@ var Space = {
 			                		.appendTo('body');
 				                $('<span>')
 				                	.addClass('endGame')
-			                		.text('score for this game: ' + Score.calculateScore())
+			                		.text('游戏得分: ' + Score.calculateScore())
 			                		.appendTo('.centerCont')
 			                		.animate({opacity:1},1500);
 				                $('<br />')
 				                	.appendTo('.centerCont');
 				                $('<span>')
 				                	.addClass('endGame')
-			                		.text('total score: ' + Prestige.get().score)
+			                		.text('总分: ' + Prestige.get().score)
 			                		.appendTo('.centerCont')
 			                		.animate({opacity:1},1500);
 				                $('<br />')
@@ -436,7 +436,7 @@ var Space = {
 					    		$('#content, #notifications').remove();
 					    		$('<span>')
 				                	.addClass('endGame endGameRestart')
-				                	.text('restart.')
+				                	.text('重开游戏.')
 				                	.click(Engine.confirmDelete)
 				                	.appendTo('.centerCont')
 				                	.animate({opacity:1},1500);
