@@ -389,16 +389,16 @@ var Engine = {
  	    if (darkCss == null) {
  	      	$('head').append('<link rel="stylesheet" href="css/dark.css" type="text/css" title="darkenLights" />');
  	      	Engine.turnLightsOff;
- 	      	$('.lightsOff').text('lights on.');
+ 	      	$('.lightsOff').text('开灯.');
  	    }
  	  	else if (darkCss.disabled) {
  	    	darkCss.disabled = false;
- 	    	$('.lightsOff').text('lights on.');
+ 	    	$('.lightsOff').text('开灯.');
  	  	}
  	   	else {
  	     	$("#darkenLights").attr("disabled", "disabled");
  	     	darkCss.disabled = true;
- 	     	$('.lightsOff').text('lights off.');
+ 	     	$('.lightsOff').text('关灯.');
  	   	}
  	},
 	
@@ -424,7 +424,7 @@ var Engine = {
 			var diff = Math.abs(panelIndex - currentIndex);
 			slider.animate({left: -(panelIndex * 700) + 'px'}, 300 * diff);
 
-			if($SM.get('stores.wood') != undefined) {
+			if($SM.get('stores["木头"]') != undefined) {
 			// FIXME Why does this work if there's an animation queue...?
 				stores.animate({right: -(panelIndex * 700) + 'px'}, 300 * diff);
 			}
@@ -491,7 +491,7 @@ var Engine = {
 	},
 	
 	getIncomeMsg: function(num, delay) {
-		return (num > 0 ? "+" : "") + num + " per " + delay + "s";
+		return (num > 0 ? "+" : "") + num + "每" + delay + "秒";
 	},
 	
 	keyDown: function(e) {
