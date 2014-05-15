@@ -162,7 +162,7 @@ var Path = {
 		var total = 0;
 		// Add the non-craftables to the craftables
 		var carryable = $.extend({
-			'腌肉': { type: 'tool' },
+			'熏肉': { type: 'tool' },
 			'子弹': { type: 'tool' },
 			'手雷': {type: 'weapon' },
 			'套索': {type: 'weapon' },
@@ -228,7 +228,7 @@ var Path = {
 		// Update bagspace
 		$('#bagspace').text('容量' + Math.floor(Path.getCapacity() - total) + '/' + Path.getCapacity());
 		
-		if(Path.outfit['腌肉'] > 0) {
+		if(Path.outfit['熏肉'] > 0) {
 			Button.setDisabled($('#embarkButton'), false);
 		} else {
 			Button.setDisabled($('#embarkButton'), true);
