@@ -576,7 +576,7 @@ var Outside = {
 			if(len > 1 && i > 0 && i < len - 1) {
 				s += ", ";
 			} else if(len > 1 && i == len - 1) {
-				s += " and ";
+				s += "以及";
 			}
 			s += msg[i];
 		}
