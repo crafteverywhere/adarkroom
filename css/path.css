@@ -8,7 +8,7 @@
 
 div#outfitting:before {
 	position: absolute;
-	content: "supplies";
+	content: "补给";
 	top: -13px;
 	background-color: white;
 }
@@ -52,7 +52,7 @@ div#perks {
 
 div#perks:before {
 	position: absolute;
-	content: "perks";
+	content: "特技";
 	top: -13px;
 	background-color: white;
 }

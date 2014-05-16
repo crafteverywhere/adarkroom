@@ -3,59 +3,59 @@
  **/
 Events.Outside = [
     { /* Ruined traps */
-    	title: 'A Ruined Trap',
+    	title: '损毁的陷阱',
 		isAvailable: function() {
-			return Engine.activeModule == Outside && $SM.get('game.buildings["trap"]', true) > 0;
+			return Engine.activeModule == Outside && $SM.get('game.buildings["陷阱"]', true) > 0;
 		},
 		scenes: {
 			'start': {
 				text: [
-					'some of the traps have been torn apart.',
-					'large prints lead away, into the forest.'
+					'一些陷阱损毁了.',
+					'巨大的足印导向森林.'
 				],
 				onLoad: function() {
-					var numWrecked = Math.floor(Math.random() * $SM.get('game.buildings["trap"]', true)) + 1;
-					$SM.add('game.buildings["trap"]', -numWrecked);
+					var numWrecked = Math.floor(Math.random() * $SM.get('game.buildings["陷阱"]', true)) + 1;
+					$SM.add('game.buildings["陷阱"]', -numWrecked);
 					Outside.updateVillage();
 					Outside.updateTrapButton();
 				},
-				notification: 'some traps have been destroyed',
+				notification: '一些陷阱损毁了.',
 				buttons: {
 					'track': {
-						text: 'track them',
+						text: '追踪',
 						nextScene: {0.5: 'nothing', 1: 'catch'}
 					},
 					'ignore': {
-						text: 'ignore them',
+						text: '忽略',
 						nextScene: 'end'
 					}
 				}
 			},
 			'nothing': {
 				text: [
-					'the tracks disappear after just a few minutes.',
-					'the forest is silent.'
+					'数分钟后足印消失了.',
+					'森林归于静谧.'
 				],
 				buttons: {
 					'end': {
-						text: 'go home',
+						text: '回家',
 						nextScene: 'end'
 					}
 				}
 			},
 			'catch': {
 				text: [
-			       'not far from the village lies a large beast, its fur matted with blood.',
-			       'it puts up little resistance before the knife.'
+			       '村外不远处躺着一只巨大的野兽，它的毛皮上染满了鲜血.',
+			       '它无力挣扎任人宰割.'
 		        ],
 				reward: {
-					fur: 100,
-					meat: 100,
-					teeth: 10
+					'毛皮': 100,
+					'肉': 100,
+					'牙齿': 10
 				},
 				buttons: {
 					'end': {
-						text: 'go home',
+						text: '回家',
 						nextScene: 'end'
 					}
 				}
@@ -64,7 +64,7 @@ Events.Outside = [
     },
     
     { /* Sickness */
-    	title: 'Sickness',
+    	title: '瘟疫',
   		isAvailable: function() {
   			return Engine.activeModule == Outside && 
   				$SM.get('game.population', true) > 10 && 
@@ -74,37 +74,37 @@ Events.Outside = [
   		scenes: {
   			'start': {
   				text: [
-  			    'a sickness is spreading through the village.',
-  			    'medicine is needed immediately.'
+  			    '瘟疫在村子中蔓延.',
+  			    '亟需药剂.'
   		    ],
   		    buttons: {
   		      'heal': {
-  		        text: '1 medicine',
+  		        text: '1 瓶药剂',
   		        cost: { 'medicine' : 1 },
   		        nextScene: {1: 'healed'}
   		      },
   					'ignore': {
-  						text: 'ignore it',
+  						text: '忽略',
   						nextScene: {1: 'death'}
   					}
   				}
   			},
   			'healed': {
   				text: [
-  			    'the sickness is cured in time.'
+  			    '疫病及时地得到了控制.'
   		    ],
   		    buttons: {
   					'end': {
-  						text: 'go home',
+  						text: '回家',
   						nextScene: 'end'
   					}
   				}
   			},
   			'death': {
   				text: [
-  			    'the sickness spreads through the village.',
-  			    'the days are spent with burials.',
-  			    'the nights are rent with screams.'
+  			    '瘟疫在村子中蔓延.',
+  			    '葬礼接着葬礼.',
+  			    '尖叫响彻黑夜.'
   		    ],
   		    onLoad: function() {
 				    var numKilled = Math.floor(Math.random() * 20) + 1;
@@ -112,7 +112,7 @@ Events.Outside = [
     			},
   		    buttons: {
   					'end': {
-  						text: 'go home',
+  						text: '回家',
   						nextScene: 'end'
   					}
   				}
@@ -121,33 +121,33 @@ Events.Outside = [
     },
     
     { /* Plague */
-    	title: 'Plague',
+    	title: '黑死病',
   		isAvailable: function() {
   			return Engine.activeModule == Outside && $SM.get('game.population', true) > 50 && $SM.get('stores.medicine', true) > 0;
   		},
   		scenes: {
   			'start': {
   				text: [
-  			    'a terrible plague is fast spreading through the village.',
-  			    'medicine is needed immediately.'
+  			    '可怕的黑死病迅速地在村子里传播开来.',
+  			    '亟需药剂.'
   		    ],
   		    buttons: {
   		      'heal': {
-  		        text: '5 medicine',
+  		        text: '5 瓶药剂',
   		        cost: { 'medicine' : 5 },
   		        nextScene: {1: 'healed'}
   		      },
   					'ignore': {
-  						text: 'do nothing',
+  						text: '任其自然',
   						nextScene: {1: 'death'}
   					}
   				}
   			},
   			'healed': {
   				text: [
-  			    'the plague is kept from spreading.',
-  			    'only a few die.',
-  			    'the rest bury them.'
+  			    '黑死病得到了控制.',
+  			    '只有少数人死掉了.',
+  			    '剩下的人埋葬了他们.'
   		    ],
   		    onLoad: function() {
 				    var numKilled = Math.floor(Math.random() * 5) + 2;
@@ -155,16 +155,16 @@ Events.Outside = [
     			},
   		    buttons: {
   					'end': {
-  						text: 'go home',
+  						text: '回家',
   						nextScene: 'end'
   					}
   				}
   			},
   			'death': {
   				text: [
-  			    'the plague rips through the village.',
-  			    'the nights are rent with screams.',
-  			    'the only hope is a quick death.'
+  			    '黑死病席卷这个村落.',
+  			    '尖叫响彻黑夜.',
+  			    '人们只求速死.'
   		    ],
   		    onLoad: function() {
 				    var numKilled = Math.floor(Math.random() * 80) + 10;
@@ -172,7 +172,7 @@ Events.Outside = [
     			},
   		    buttons: {
   					'end': {
-  						text: 'go home',
+  						text: '回家',
   						nextScene: 'end'
   					}
   				}
@@ -181,16 +181,16 @@ Events.Outside = [
     },
     
     { /* Beast attack */
-    	title: 'A Beast Attack',
+    	title: '野兽来袭',
 		isAvailable: function() {
 			return Engine.activeModule == Outside && $SM.get('game.population', true) > 0;
 		},
 		scenes: {
 			'start': {
 				text: [
-			       'a pack of snarling beasts pours out of the trees.',
-			       'the fight is short and bloody, but the beasts are repelled.',
-			       'the villagers retreat to mourn the dead.'
+			       '一群咆哮的野兽冲出丛林.',
+			       '战斗短暂而血腥，但兽群溃退了.',
+			       '村民撤了回来，悼念那些死去的人.'
 		        ],
 		        onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 10) + 1;
@@ -203,7 +203,7 @@ Events.Outside = [
 		        },
 		        buttons: {
 					'end': {
-						text: 'go home',
+						text: '回家',
 						nextScene: 'end'
 					}
 				}
@@ -212,28 +212,28 @@ Events.Outside = [
     },
     
     { /* Soldier attack */
-    	title: 'A Military Raid',
+    	title: '军事突袭',
 		isAvailable: function() {
 			return Engine.activeModule == Outside && $SM.get('game.population', true) > 0 && $SM.get('game.cityCleared');;
 		},
 		scenes: {
 			'start': {
 				text: [
-			       'a gunshot rings through the trees.',
-			       'well armed men charge out of the forest, firing into the crowd.',
-			       'after a skirmish they are driven away, but not without losses.'
+			       '枪声啸过树林.',
+			       '武备精良的人冲出树林，向人群射击.',
+			       '虽然他们撤走了，但我们中有人在突袭中死掉了.'
 		        ],
 		        onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 40) + 1;
 					Outside.killVillagers(numKilled);
 				},
 		        reward: {
-		        	bullets: 10,
-		        	'cured meat': 50
+		        	'子弹': 10,
+		        	'熏肉': 50
 		        },
 		        buttons: {
 					'end': {
-						text: 'go home',
+						text: '回家',
 						nextScene: 'end'
 					}
 				}
@@ -241,4 +241,3 @@ Events.Outside = [
 		}
     }
 ];
-	

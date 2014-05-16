@@ -5,7 +5,7 @@ div#buildBtns {
 }
 
 div#buildBtns:before {
-	content: "build:";
+	content: "建造:";
 	position: relative;
 	top: -5px;
 }
@@ -17,7 +17,7 @@ div#craftBtns {
 }
 
 div#craftBtns:before {
-	content: "craft:";
+	content: "制造:";
 	position: relative;
 	top: -5px;
 }
@@ -29,7 +29,7 @@ div#buyBtns {
 }
 
 div#buyBtns:before {
-	content: "buy:";
+	content: "购买:";
 	position: relative;
 	top: -5px;
 }
@@ -55,7 +55,7 @@ div.storeRow {
 div#stores:before {
 	position: absolute;
 	background: white;
-	content: "stores";
+	content: "储存";
 	left: 8px;
 	top: -13px;	
 }
@@ -73,7 +73,7 @@ div#weapons {
 div#weapons:before {
 	position: absolute;
 	background: white;
-	content: "weapons";
+	content: "武器";
 	left: 8px;
 	top: -13px;	
 }

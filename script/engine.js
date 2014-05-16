@@ -52,7 +52,7 @@ var Engine = {
 			desc: '看得更远',
 			notify: '学会了往前看'
 		},
-		'诡秘': {
+		'潜行': {
 			desc: '更好地规避狂野中的冲突',
 			notify: '学会了隐匿身形'
 		},
@@ -149,10 +149,10 @@ var Engine = {
 		Events.init();
 		Room.init();
 		
-		if(typeof $SM.get('stores.wood') != 'undefined') {
+		if(typeof $SM.get('stores["木头"]') != 'undefined') {
 			Outside.init();
 		}
-		if($SM.get('stores.compass', true) > 0) {
+		if($SM.get('stores["罗盘"]', true) > 0) {
 			Path.init();
 		}
 		if($SM.get('features.location.spaceShip')) {
@@ -389,16 +389,16 @@ var Engine = {
  	    if (darkCss == null) {
  	      	$('head').append('<link rel="stylesheet" href="css/dark.css" type="text/css" title="darkenLights" />');
  	      	Engine.turnLightsOff;
- 	      	$('.lightsOff').text('lights on.');
+ 	      	$('.lightsOff').text('开灯.');
  	    }
  	  	else if (darkCss.disabled) {
  	    	darkCss.disabled = false;
- 	    	$('.lightsOff').text('lights on.');
+ 	    	$('.lightsOff').text('开灯.');
  	  	}
  	   	else {
  	     	$("#darkenLights").attr("disabled", "disabled");
  	     	darkCss.disabled = true;
- 	     	$('.lightsOff').text('lights off.');
+ 	     	$('.lightsOff').text('关灯.');
  	   	}
  	},
 	
@@ -424,7 +424,7 @@ var Engine = {
 			var diff = Math.abs(panelIndex - currentIndex);
 			slider.animate({left: -(panelIndex * 700) + 'px'}, 300 * diff);
 
-			if($SM.get('stores.wood') != undefined) {
+			if($SM.get('stores["木头"]') != undefined) {
 			// FIXME Why does this work if there's an animation queue...?
 				stores.animate({right: -(panelIndex * 700) + 'px'}, 300 * diff);
 			}
@@ -491,7 +491,7 @@ var Engine = {
 	},
 	
 	getIncomeMsg: function(num, delay) {
-		return (num > 0 ? "+" : "") + num + " per " + delay + "s";
+		return (num > 0 ? "+" : "") + num + "每" + delay + "秒";
 	},
 	
 	keyDown: function(e) {

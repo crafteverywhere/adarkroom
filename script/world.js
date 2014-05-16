@@ -42,63 +42,63 @@ var World = {
 	EAST:  [ 1,  0],
 	
 	Weapons: {
-		'fists': {
-			verb: 'punch',
+		'拳头': {
+			verb: '拳击',
 			type: 'unarmed',
 			damage: 1,
 			cooldown: 2
 		},
-		'bone spear': {
-			verb: 'stab',
+		'骨枪': {
+			verb: '戳击',
 			type: 'melee',
 			damage: 2,
 			cooldown: 2
 		},
-		'iron sword': {
-			verb: 'swing',
+		'铁剑': {
+			verb: '挥舞',
 			type: 'melee',
 			damage: 4,
 			cooldown: 2
 		},
-		'steel sword': {
-			verb: 'slash',
+		'钢剑': {
+			verb: '砍劈',
 			type: 'melee',
 			damage: 6,
 			cooldown: 2
 		},
-		'bayonet': {
-			verb: 'thrust',
+		'刺刀': {
+			verb: '猛刺',
 			type: 'melee',
 			damage: 8,
 			cooldown: 2
 		},
-		'rifle': {
-			verb: 'shoot',
+		'步枪': {
+			verb: '开火',
 			type: 'ranged',
 			damage: 5,
 			cooldown: 1,
-			cost: { 'bullets': 1 }
+			cost: { '子弹': 1 }
 		},
-		'laser rifle': {
-			verb: 'blast',
+		'激光枪': {
+			verb: '发射',
 			type: 'ranged',
 			damage: 8,
 			cooldown: 1,
-			cost: { 'energy cell': 1 }
+			cost: { '能量元件': 1 }
 		},
-		'grenade': {
-			verb: 'lob',
+		'手雷': {
+			verb: '掷弹',
 			type: 'ranged',
 			damage: 15,
 			cooldown: 5,
-			cost: { 'grenade': 1 }
+			cost: { '手雷': 1 }
 		},
-		'bolas': {
-			verb: 'tangle',
+		'套索': {
+			verb: '牵绊',
 			type: 'ranged',
 			damage: 'stun',
 			cooldown: 15,
-			cost: { 'bolas': 1 }
+			cost: { '套索': 1 }
 		}
 	},
 	
@@ -116,22 +116,22 @@ var World = {
 		World.TILE_PROBS[World.TILE.BARRENS] = 0.5;
 		
 		// Setpiece definitions
-		World.LANDMARKS[World.TILE.OUTPOST] = { num: 0, minRadius: 0, maxRadius: 0, scene: 'outpost', label: 'An&nbsp;Outpost' };
-		World.LANDMARKS[World.TILE.IRON_MINE] = { num: 1, minRadius: 5, maxRadius: 5, scene: 'ironmine', label: 'Iron&nbsp;Mine' };
-		World.LANDMARKS[World.TILE.COAL_MINE] = { num: 1, minRadius: 10, maxRadius: 10, scene: 'coalmine', label: 'Coal&nbsp;Mine' };
-		World.LANDMARKS[World.TILE.SULPHUR_MINE] = { num: 1, minRadius: 20, maxRadius: 20, scene: 'sulphurmine', label: 'Sulphur&nbsp;Mine' };
-		World.LANDMARKS[World.TILE.HOUSE] = { num: 10, minRadius: 0, maxRadius: World.RADIUS * 1.5, scene: 'house', label: 'An&nbsp;Old&nbsp;House' };
-		World.LANDMARKS[World.TILE.CAVE] = { num: 5, minRadius: 3, maxRadius: 10, scene: 'cave', label: 'A&nbsp;Damp&nbsp;Cave' };
-		World.LANDMARKS[World.TILE.TOWN] = { num: 10, minRadius: 10, maxRadius: 20, scene: 'town', label: 'An&nbsp;Abandoned&nbsp;Town' };
-		World.LANDMARKS[World.TILE.CITY] = { num: 20, minRadius: 20, maxRadius: World.RADIUS * 1.5, scene: 'city', label: 'A&nbsp;Ruined&nbsp;City' };
-		World.LANDMARKS[World.TILE.SHIP] = { num: 1, minRadius: 28, maxRadius: 28, scene: 'ship', label: 'A&nbsp;Crashed&nbsp;Starship'};
-		World.LANDMARKS[World.TILE.BOREHOLE] = { num: 10, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'borehole', label: 'A&nbsp;Borehole'};
-		World.LANDMARKS[World.TILE.BATTLEFIELD] = { num: 5, minRadius: 18, maxRadius: World.RADIUS * 1.5, scene: 'battlefield', label: 'A&nbsp;Battlefield'};
-		World.LANDMARKS[World.TILE.SWAMP] = { num: 1, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: 'swamp', label: 'A&nbsp;Murky&nbsp;Swamp'};
+		World.LANDMARKS[World.TILE.OUTPOST] = { num: 0, minRadius: 0, maxRadius: 0, scene: '前哨', label: '前哨' };
+		World.LANDMARKS[World.TILE.IRON_MINE] = { num: 1, minRadius: 5, maxRadius: 5, scene: '铁矿', label: '铁矿' };
+		World.LANDMARKS[World.TILE.COAL_MINE] = { num: 1, minRadius: 10, maxRadius: 10, scene: '煤矿', label: '煤矿' };
+		World.LANDMARKS[World.TILE.SULPHUR_MINE] = { num: 1, minRadius: 20, maxRadius: 20, scene: '硫磺矿', label: '硫磺矿' };
+		World.LANDMARKS[World.TILE.HOUSE] = { num: 10, minRadius: 0, maxRadius: World.RADIUS * 1.5, scene: '老屋', label: '破旧宅邸' };
+		World.LANDMARKS[World.TILE.CAVE] = { num: 5, minRadius: 3, maxRadius: 10, scene: '洞穴', label: '潮湿洞穴' };
+		World.LANDMARKS[World.TILE.TOWN] = { num: 10, minRadius: 10, maxRadius: 20, scene: '小镇', label: '废弃小镇' };
+		World.LANDMARKS[World.TILE.CITY] = { num: 20, minRadius: 20, maxRadius: World.RADIUS * 1.5, scene: '城市', label: '城市遗迹' };
+		World.LANDMARKS[World.TILE.SHIP] = { num: 1, minRadius: 28, maxRadius: 28, scene: '飞船', label: '失事飞船'};
+		World.LANDMARKS[World.TILE.BOREHOLE] = { num: 10, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: '巨坑', label: '巨坑'};
+		World.LANDMARKS[World.TILE.BATTLEFIELD] = { num: 5, minRadius: 18, maxRadius: World.RADIUS * 1.5, scene: '战场', label: '战场'};
+		World.LANDMARKS[World.TILE.SWAMP] = { num: 1, minRadius: 15, maxRadius: World.RADIUS * 1.5, scene: '沼泽', label: '迷雾沼泽'};
 		
 		// Only add the cache if there is prestige data
 		if($SM.get('previous.stores')) {
-    			World.LANDMARKS[World.TILE.CACHE] = { num: 1, minRadius: 10, maxRadius: World.RADIUS * 1.5, scene: 'cache', label: 'A&nbsp;Destroyed&nbsp;Village'};
+    			World.LANDMARKS[World.TILE.CACHE] = { num: 1, minRadius: 10, maxRadius: World.RADIUS * 1.5, scene: '临时', label: '荒原'};
 		}
 		
 		if(typeof $SM.get('features.location.world') == 'undefined') {
@@ -247,7 +247,7 @@ var World = {
 			water = World.createItemDiv('water', World.water);
 			water.prependTo(supplies);
 		} else if(World.water > 0) {
-			$('div#supply_water', supplies).text('water:' + World.water);
+			$('div#supply_water', supplies).text('水:' + World.water);
 		} else {
 			water.remove();
 		}
@@ -259,9 +259,9 @@ var World = {
 			total += num * Path.getWeight(k);
 			if(num > 0 && item.length == 0) {
 				item = World.createItemDiv(k, num);
-				if(k == 'cured meat' && World.water > 0) {
+				if(k == '熏肉' && World.water > 0) {
 					item.insertAfter(water);
-				} else if(k == 'cured meat') {
+				} else if(k == '熏肉') {
 					item.prependTo(supplies);
 				} else {
 					item.appendTo(supplies);
@@ -275,13 +275,13 @@ var World = {
 		
 		// Update label
 		var t = 'pockets';
-		if($SM.get('stores.rucksack', true) > 0) {
-			t = 'rucksack';
+		if($SM.get('stores["双肩包"]', true) > 0) {
+			t = '双肩包';
 		}
 		$('#backpackTitle').text(t);
 		
 		// Update bagspace
-		$('#backpackSpace').text('free ' + Math.floor(Path.getCapacity() - total) + '/' + Path.getCapacity());
+		$('#backpackSpace').text('背包空间' + Math.floor(Path.getCapacity() - total) + '/' + Path.getCapacity());
 	},
 	
 	setWater: function(w) {
@@ -340,9 +340,9 @@ var World = {
 		World.doSpace();
 		if(World.checkDanger()) {
 			if(World.danger) {
-				Notifications.notify(World, 'dangerous to be this far from the village without proper protection');
+				Notifications.notify(World, '没有妥善防护离开村子这么远很危险');
 			} else {
-				Notifications.notify(World, 'safer here');
+				Notifications.notify(World, '总算安全了');
 			}
 		}
 	},
@@ -410,11 +410,11 @@ var World = {
 	checkDanger: function() {
 		World.danger = typeof World.danger == 'undefined' ? false: World.danger;
 		if(!World.danger) {
-			if(!$SM.get('stores["i armour"]', true) > 0 && World.getDistance() >= 8) {
+			if(!$SM.get('stores["铁甲"]', true) > 0 && World.getDistance() >= 8) {
 				World.danger = true;
 				return true;
 			} 
-			if(!$SM.get('stores["s armour"]', true) > 0 && World.getDistance() >= 18) {
+			if(!$SM.get('stores["钢甲"]', true) > 0 && World.getDistance() >= 18) {
 				World.danger = true;
 				return true;
 			}
@@ -423,7 +423,7 @@ var World = {
 				World.danger = false;
 				return true;
 			}
-			if(World.getDistance < 18 && $SM.get('stores["i armour"]', true) > 0) {
+			if(World.getDistance < 18 && $SM.get('stores["铁甲"]', true) > 0) {
 				World.danger = false;
 				return true;
 			}
@@ -439,21 +439,21 @@ var World = {
 		movesPerFood *= $SM.hasPerk('slow metabolism') ? 2 : 1;
 		if(World.foodMove >= movesPerFood) {
 			World.foodMove = 0;
-			var num = Path.outfit['cured meat'];
+			var num = Path.outfit['熏肉'];
 			num--;
 			if(num == 0) {
-				Notifications.notify(World, 'the meat has run out');
+				Notifications.notify(World, '肉快要吃完了');
 			} else if(num < 0) {
 				// Starvation! Hooray!
 				num = 0;
 				if(!World.starvation) {
-					Notifications.notify(World, 'starvation sets in');
+					Notifications.notify(World, '饥饿袭来');
 					World.starvation = true;
 				} else {
 					$SM.set('character.starved', $SM.get('character.starved', true));
 					$SM.add('character.starved', 1);
-					if($SM.get('character.starved') >= 10 && !$SM.hasPerk('slow metabolism')) {
-						$SM.addPerk('slow metabolism');
+					if($SM.get('character.starved') >= 10 && !$SM.hasPerk('缓慢代谢')) {
+						$SM.addPerk('缓慢代谢');
 					}
 					World.die();
 					return false;
@@ -462,27 +462,27 @@ var World = {
 				World.starvation = false;
 				World.setHp(World.health + World.meatHeal());
 			}
-			Path.outfit['cured meat'] = num;
+			Path.outfit['熏肉'] = num;
 		}
 		// Water
 		var movesPerWater = World.MOVES_PER_WATER;
-		movesPerWater *= $SM.hasPerk('desert rat') ? 2 : 1;
+		movesPerWater *= $SM.hasPerk('荒漠跳鼠') ? 2 : 1;
 		if(World.waterMove >= movesPerWater) {
 			World.waterMove = 0;
 			var water = World.water;
 			water--;
 			if(water == 0) {
-				Notifications.notify(World, 'there is no more water');
+				Notifications.notify(World, '水耗尽了');
 			} else if(water < 0) {
 				water = 0;
 				if(!World.thirst) {
-					Notifications.notify(World, 'the thirst becomes unbearable');
+					Notifications.notify(World, '口渴难耐');
 					World.thirst = true;
 				} else {
 					$SM.set('character.dehydrated', $SM.get('character.dehydrated', true));
 					$SM.add('character.dehydrated', 1);
-					if($SM.get('character.dehydrated') >= 10 && !$SM.hasPerk('desert rat')) {
-						$SM.addPerk('desert rat');
+					if($SM.get('character.dehydrated') >= 10 && !$SM.hasPerk('荒漠跳鼠')) {
+						$SM.addPerk('荒漠跳鼠');
 					}
 					World.die();
 					return false;
@@ -497,7 +497,7 @@ var World = {
 	},
 	
 	meatHeal: function() {
-		return World.MEAT_HEAL * ($SM.hasPerk('gastronome') ? 2 : 1);
+		return World.MEAT_HEAL * ($SM.hasPerk('美食家') ? 2 : 1);
 	},
 	
 	medsHeal: function() {
@@ -509,7 +509,7 @@ var World = {
 		World.fightMove++;
 		if(World.fightMove > World.FIGHT_DELAY) {
 			var chance = World.FIGHT_CHANCE;
-			chance *= $SM.hasPerk('stealthy') ? 0.5 : 1;
+			chance *= $SM.hasPerk('潜行') ? 0.5 : 1;
 			if(Math.random() < chance) {
 				World.fightMove = 0;
 				Events.triggerFight();
@@ -549,30 +549,30 @@ var World = {
 			case World.TILE.FOREST:
 				switch(newTile) {
 					case World.TILE.FIELD:
-						msg = "the trees yield to dry grass. the yellowed brush rustles in the wind.";
+						msg = "树木歪倒在干草丛中，枯黄的灌木在风中沙沙作响.";
 						break;
 					case World.TILE.BARRENS:
-						msg = "the trees are gone. parched earth and blowing dust are poor replacements.";
+						msg = "树木都消失了，唯留下干裂的大地和飞扬的尘土.";
 						break;
 				}
 				break;
 			case World.TILE.FIELD:
 				switch(newTile) {
 					case World.TILE.FOREST:
-						msg = "trees loom on the horizon. grasses gradually yield to a forest floor of dry branches and fallen leaves.";
+						msg = "地平线上隐约瞧见树林。草地渐渐稀疏，替代以铺着枯枝败叶的森林.";
 						break;
 					case World.TILE.BARRENS:
-						msg = "the grasses thin. soon, only dust remains.";
+						msg = "草地很快稀疏了起来，唯留下漫天扬尘.";
 						break;
 				}
 				break;
 			case World.TILE.BARRENS:
 				switch(newTile) {
 					case World.TILE.FIELD:
-						msg = "the barrens break at a sea of dying grass, swaying in the arid breeze.";
+						msg = "在燥热的风中摇曳，枯草之海中现出一片荒地.";
 						break;
 					case World.TILE.FOREST:
-						msg = "a wall of gnarled trees rises from the dust. their branches twist into a skeletal canopy overhead.";
+						msg = "尘土之中生长出结瘤的树墙，枝干在头顶缠绕成骨骼般的天蓬.";
 						break;
 				}
 				break;
@@ -593,7 +593,7 @@ var World = {
 	
 	lightMap: function(x, y, mask) {
 		var r = World.LIGHT_RADIUS;
-		r *= $SM.hasPerk('scout') ? 2 : 1;
+		r *= $SM.hasPerk('侦察') ? 2 : 1;
 		World.uncoverMap(x, y, r, mask);
 		return mask;
 	},
@@ -653,8 +653,8 @@ var World = {
 				var pos = World.placeLandmark(landmark.minRadius, landmark.maxRadius, k, map);
 				if(k == World.TILE.SHIP) {
 					var dx = pos[0] - World.RADIUS, dy = pos[1] - World.RADIUS;
-					var horz = dx < 0 ? 'west' : 'east';
-					var vert = dy < 0 ? 'north' : 'south';
+					var horz = dx < 0 ? '西方' : '东方';
+					var vert = dy < 0 ? '北方' : '南方';
 					if(Math.abs(dx) / 2 > Math.abs(dy)) {
 						World.dir = horz;
 					} else if(Math.abs(dy) / 2 > Math.abs(dx)){
@@ -774,12 +774,12 @@ var World = {
 					ttClass += " bottom";
 				}
 				if(World.curPos[0] == i && World.curPos[1] == j) {
-					mapString += '<span class="landmark">@<div class="tooltip ' + ttClass + '">Wanderer</div></span>';
+					mapString += '<span class="landmark">@<div class="tooltip ' + ttClass + '">流浪者</div></span>';
 				} else if(World.state.mask[i][j]) {
 					var c = World.state.map[i][j];
 					switch(c) {
 						case World.TILE.VILLAGE:
-							mapString += '<span class="landmark">' + c + '<div class="tooltip' + ttClass + '">The&nbsp;Village</div></span>';
+							mapString += '<span class="landmark">' + c + '<div class="tooltip' + ttClass + '">村子</div></span>';
 							break;
 						default:
 							if(typeof World.LANDMARKS[c] != 'undefined' && (c != World.TILE.OUTPOST || !World.outpostUsed(i, j))) {
@@ -808,7 +808,7 @@ var World = {
 			Engine.event('game event', 'death');
 			Engine.keyLock = true;
 			// Dead! Discard any world changes and go home
-			Notifications.notify(World, 'the world fades');
+			Notifications.notify(World, '眼前的世界烟消云散');
 			World.state = null;
 			Path.outfit = {};
 			$('#outerSlider').animate({opacity: '0'}, 600, 'linear', function() {
@@ -831,17 +831,17 @@ var World = {
 	goHome: function() {
 		// Home safe! Commit the changes.
 		$SM.setM('game.world', World.state);
-		if(World.state.sulphurmine && $SM.get('game.buildings["sulphur mine"]', true) == 0) {
-			$SM.add('game.buildings["sulphur mine"]', 1);
-			Engine.event('progress', 'sulphur mine');
+		if(World.state.sulphurmine && $SM.get('game.buildings["硫磺矿"]', true) == 0) {
+			$SM.add('game.buildings["硫磺矿"]', 1);
+			Engine.event('progress', '硫磺矿');
 		}
-		if(World.state.ironmine && $SM.get('game.buildings["iron mine"]', true) == 0) {
-			$SM.add('game.buildings["iron mine"]', 1);
-			Engine.event('progress', 'iron mine');
+		if(World.state.ironmine && $SM.get('game.buildings["铁矿"]', true) == 0) {
+			$SM.add('game.buildings["铁矿"]', 1);
+			Engine.event('progress', '铁矿');
 		}
-		if(World.state.coalmine && $SM.get('game.buildings["coal mine"]', true) == 0) {
-			$SM.add('game.buildings["coal mine"]', 1);
-			Engine.event('progress', 'coal mine');
+		if(World.state.coalmine && $SM.get('game.buildings["煤矿"]', true) == 0) {
+			$SM.add('game.buildings["煤矿"]', 1);
+			Engine.event('progress', '煤矿');
 		}
 		if(World.state.ship && !$SM.get('features.location.spaceShip')) {
 			Ship.init();
@@ -851,7 +851,7 @@ var World = {
 		
 		// Clear the embark cooldown
 		var btn = Button.clearCooldown($('#embarkButton'));
-		if(Path.outfit['cured meat'] > 0) {
+		if(Path.outfit['熏肉'] > 0) {
 			Button.setDisabled(btn, false);
 		}
 		
@@ -868,34 +868,34 @@ var World = {
 	},
 	
 	leaveItAtHome: function(thing) {
-		 return thing != 'cured meat' && thing != 'bullets' && thing != 'energy cell'  && thing != 'charm' && thing != 'medicine'
+		 return thing != '熏肉' && thing != '子弹' && thing != '能量元件'  && thing != '护身符' && thing != '药剂'
 			 && typeof World.Weapons[thing] == 'undefined' && typeof Room.Craftables[thing] == 'undefined';
 	},
 	
 	getMaxHealth: function() {
-		if($SM.get('stores["s armour"]', true) > 0) {
+		if($SM.get('stores["钢甲"]', true) > 0) {
 			return World.BASE_HEALTH + 35;
-		} else if($SM.get('stores["i armour"]', true) > 0) {
+		} else if($SM.get('stores["铁甲"]', true) > 0) {
 			return World.BASE_HEALTH + 15;
-		} else if($SM.get('stores["l armour"]', true) > 0) {
+		} else if($SM.get('stores["皮甲"]', true) > 0) {
 			return World.BASE_HEALTH + 5;
 		}
 		return World.BASE_HEALTH;
 	},
 	
 	getHitChance: function() {
-		if($SM.hasPerk('precise')) {
+		if($SM.hasPerk('精密')) {
 			return World.BASE_HIT_CHANCE + 0.1;
 		}
 		return World.BASE_HIT_CHANCE;
 	},
 	
 	getMaxWater: function() {
-		if($SM.get('stores["water tank"]', true) > 0) {
+		if($SM.get('stores["水罐"]', true) > 0) {
 			return World.BASE_WATER + 50;
-		} else if($SM.get('stores.cask', true) > 0) {
+		} else if($SM.get('stores["水桶"]', true) > 0) {
 			return World.BASE_WATER + 20;
-		} else if($SM.get('stores.waterskin', true) > 0) {
+		} else if($SM.get('stores["水袋"]', true) > 0) {
 			return World.BASE_WATER + 10;
 		}
 		return World.BASE_WATER;
@@ -909,7 +909,7 @@ var World = {
 	},
 	
 	useOutpost: function() {
-		Notifications.notify(null, 'water replenished');
+		Notifications.notify(null, '水补充好了');
 		World.setWater(World.getMaxWater());
 		// Mark this outpost as used
 		World.usedOutposts[World.curPos[0] + ',' + World.curPos[1]] = true;
@@ -936,7 +936,7 @@ var World = {
 	},
 	
 	setTitle: function() {
-		document.title = 'A Barren World';
+		document.title = '荒原';
 	},
 	
 	copyPos: function(pos) {
