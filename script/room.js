@@ -512,7 +512,7 @@ var Room = {
 		if($SM.get('game.builder.level') >= 0 && $SM.get('game.builder.level') < 3) {
 			Room._builderTimer = setTimeout(Room.updateBuilderState, Room._BUILDER_STATE_DELAY);
 		}
-		if($SM.get('game.builder.level') == 1 && $SM.get('stores.["木头"]', true) < 0) {
+		if($SM.get('game.builder.level') == 1 && $SM.get('stores["木头"]', true) < 0) {
 			setTimeout(Room.unlockForest, Room._NEED_WOOD_DELAY);
 		}
 		setTimeout($SM.collectIncome, 1000);
@@ -600,7 +600,7 @@ var Room = {
 			}
 		}
 
-		if(!$SM.get('stores.["木头"]')) {
+		if(!$SM.get('stores["木头"]')) {
 			light.addClass('free');
 			stoke.addClass('free');
 		} else {
@@ -612,27 +612,27 @@ var Room = {
 	_fireTimer: null,
 	_tempTimer: null,
 	lightFire: function() {
-		var wood = $SM.get('stores.["木头"]');
+		var wood = $SM.get('stores["木头"]');
 		if(wood < 5) {
 			Notifications.notify(Room, "生火的木头不够了");
 			Button.clearCooldown($('#lightButton.button'));
 			return;
 		} else if(wood > 4) {
-			$SM.set('stores.["木头"]', wood - 5);
+			$SM.set('stores["木头"]', wood - 5);
 		}
 		Room.fire = Room.FireEnum.Burning;
 		Room.onFireChange();
 	},
 
 	stokeFire: function() {
-		var wood = $SM.get('stores.["木头"]');
+		var wood = $SM.get('stores["木头"]');
 		if(wood === 0) {
 			Notifications.notify(Room, "木头用光了");
 			Button.clearCooldown($('#stokeButton.button'));
 			return;
 		}
 		if(wood > 0) {
-			$SM.set('stores.["木头"]', wood - 1);
+			$SM.set('stores["木头"]', wood - 1);
 		}
 		if(Room.fire.value < 4) {
 			Room.fire = Room.FireEnum.fromInt(Room.fire.value + 1);
@@ -657,11 +657,11 @@ var Room = {
 	},
 
 	coolFire: function() {
-		var wood = $SM.get('stores.["木头"]');
+		var wood = $SM.get('stores["木头"]');
 		if(Room.fire.value <= Room.FireEnum.Flickering.value &&
 			$SM.get('game.builder.level') > 3 && wood > 0) {
 			Notifications.notify(Room, "建造者添了柴火", true);
-			$SM.set('stores.["木头"]', wood - 1);
+			$SM.set('stores["木头"]', wood - 1);
 			Room.fire = Room.FireEnum.fromInt(Room.fire.value + 1);
 		}
 		if(Room.fire.value > 0) {
@@ -688,7 +688,7 @@ var Room = {
 	},
 
 	unlockForest: function() {
-		$SM.set('stores.["木头"]', 4);
+		$SM.set('stores["木头"]', 4);
 		Outside.init();
 		Notifications.notify(Room, "屋外寒风呼啸");
 		Notifications.notify(Room, "木头用光了");
@@ -953,7 +953,7 @@ var Room = {
 			return true;
 		}
 		// Show buttons if we have at least 1/2 the wood, and all other components have been seen.
-		if($SM.get('stores.["木头"]', true) < cost['木头'] * 0.5) {
+		if($SM.get('stores["木头"]', true) < cost['木头'] * 0.5) {
 			return false;
 		}
 		for(var c in cost) {
