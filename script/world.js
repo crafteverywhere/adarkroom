@@ -893,9 +893,9 @@ var World = {
 	getMaxWater: function() {
 		if($SM.get('stores["水罐"]', true) > 0) {
 			return World.BASE_WATER + 50;
-		} else if($SM.get('stores.["水桶"]', true) > 0) {
+		} else if($SM.get('stores["水桶"]', true) > 0) {
 			return World.BASE_WATER + 20;
-		} else if($SM.get('stores.["水袋"]', true) > 0) {
+		} else if($SM.get('stores["水袋"]', true) > 0) {
 			return World.BASE_WATER + 10;
 		}
 		return World.BASE_WATER;
