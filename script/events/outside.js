@@ -10,8 +10,8 @@ Events.Outside = [
 		scenes: {
 			'start': {
 				text: [
-					'一些陷阱损毁了。',
-					'巨大的足印导向森林。'
+					'一些陷阱损毁了.',
+					'巨大的足印导向森林.'
 				],
 				onLoad: function() {
 					var numWrecked = Math.floor(Math.random() * $SM.get('game.buildings["陷阱"]', true)) + 1;
@@ -19,7 +19,7 @@ Events.Outside = [
 					Outside.updateVillage();
 					Outside.updateTrapButton();
 				},
-				notification: '一些陷阱损毁了。',
+				notification: '一些陷阱损毁了.',
 				buttons: {
 					'track': {
 						text: '追踪',
@@ -33,8 +33,8 @@ Events.Outside = [
 			},
 			'nothing': {
 				text: [
-					'数分钟后足印消失了。',
-					'森林归于静谧。'
+					'数分钟后足印消失了.',
+					'森林归于静谧.'
 				],
 				buttons: {
 					'end': {
@@ -45,13 +45,13 @@ Events.Outside = [
 			},
 			'catch': {
 				text: [
-			       '村外不远处躺着一只巨大的野兽，它的毛皮上染满了鲜血。',
-			       '它无力挣扎任人宰割。'
+			       '村外不远处躺着一只巨大的野兽，它的毛皮上染满了鲜血.',
+			       '它无力挣扎任人宰割.'
 		        ],
 				reward: {
-					fur: 100,
-					meat: 100,
-					teeth: 10
+					'毛皮': 100,
+					'肉': 100,
+					'牙齿': 10
 				},
 				buttons: {
 					'end': {
@@ -74,8 +74,8 @@ Events.Outside = [
   		scenes: {
   			'start': {
   				text: [
-  			    '瘟疫在村子中蔓延。',
-  			    '亟需药剂。'
+  			    '瘟疫在村子中蔓延.',
+  			    '亟需药剂.'
   		    ],
   		    buttons: {
   		      'heal': {
@@ -91,7 +91,7 @@ Events.Outside = [
   			},
   			'healed': {
   				text: [
-  			    '疫病及时地得到了控制。'
+  			    '疫病及时地得到了控制.'
   		    ],
   		    buttons: {
   					'end': {
@@ -102,9 +102,9 @@ Events.Outside = [
   			},
   			'death': {
   				text: [
-  			    '瘟疫在村子中蔓延。',
-  			    '葬礼接着葬礼。',
-  			    '尖叫响彻黑夜。'
+  			    '瘟疫在村子中蔓延.',
+  			    '葬礼接着葬礼.',
+  			    '尖叫响彻黑夜.'
   		    ],
   		    onLoad: function() {
 				    var numKilled = Math.floor(Math.random() * 20) + 1;
@@ -128,8 +128,8 @@ Events.Outside = [
   		scenes: {
   			'start': {
   				text: [
-  			    '可怕的黑死病迅速地在村子里传播开来。',
-  			    '亟需药剂。'
+  			    '可怕的黑死病迅速地在村子里传播开来.',
+  			    '亟需药剂.'
   		    ],
   		    buttons: {
   		      'heal': {
@@ -145,9 +145,9 @@ Events.Outside = [
   			},
   			'healed': {
   				text: [
-  			    '黑死病得到了控制。',
-  			    '只有少数人死掉了。',
-  			    '剩下的人埋葬了他们。'
+  			    '黑死病得到了控制.',
+  			    '只有少数人死掉了.',
+  			    '剩下的人埋葬了他们.'
   		    ],
   		    onLoad: function() {
 				    var numKilled = Math.floor(Math.random() * 5) + 2;
@@ -162,9 +162,9 @@ Events.Outside = [
   			},
   			'death': {
   				text: [
-  			    '黑死病席卷这个村落。',
-  			    '尖叫响彻黑夜。',
-  			    '人们只求速死。'
+  			    '黑死病席卷这个村落.',
+  			    '尖叫响彻黑夜.',
+  			    '人们只求速死.'
   		    ],
   		    onLoad: function() {
 				    var numKilled = Math.floor(Math.random() * 80) + 10;
@@ -188,9 +188,9 @@ Events.Outside = [
 		scenes: {
 			'start': {
 				text: [
-			       '一群咆哮的野兽冲出丛林。',
-			       '战斗短暂而血腥，但兽群溃退了。',
-			       '村民撤了回来，悼念那些死去的人。'
+			       '一群咆哮的野兽冲出丛林.',
+			       '战斗短暂而血腥，但兽群溃退了.',
+			       '村民撤了回来，悼念那些死去的人.'
 		        ],
 		        onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 10) + 1;
@@ -219,9 +219,9 @@ Events.Outside = [
 		scenes: {
 			'start': {
 				text: [
-			       '枪声啸过树林。',
-			       '武备精良的人冲出树林，向人群射击。',
-			       '虽然他们撤走了，但我们中有人在突袭中死掉了。'
+			       '枪声啸过树林.',
+			       '武备精良的人冲出树林，向人群射击.',
+			       '虽然他们撤走了，但我们中有人在突袭中死掉了.'
 		        ],
 		        onLoad: function() {
 					var numKilled = Math.floor(Math.random() * 40) + 1;
@@ -229,7 +229,7 @@ Events.Outside = [
 				},
 		        reward: {
 		        	'子弹': 10,
-		        	'腌肉': 50
+		        	'熏肉': 50
 		        },
 		        buttons: {
 					'end': {
