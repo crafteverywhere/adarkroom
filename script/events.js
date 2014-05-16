@@ -104,11 +104,11 @@ var Events = {
 		}
 		if(numWeapons == 0) {
 			// No weapons? You can punch stuff!
-			Events.createAttackButton('fists').prependTo(btns);
+			Events.createAttackButton('拳头').prependTo(btns);
 		}
 		
 		Events.createEatMeatButton().appendTo(btns);
-		if((Path.outfit['medicine'] || 0) != 0) {
+		if((Path.outfit['药剂'] || 0) != 0) {
 		  Events.createUseMedsButton().appendTo(btns);
 	  }
 		
@@ -123,13 +123,13 @@ var Events = {
 		
 		var btn = new Button.Button({
 			id: 'eat',
-			text: 'eat meat',
+			text: '吃肉',
 			cooldown: cooldown,
 			click: Events.eatMeat,
-			cost: { 'cured meat': 1 }
+			cost: { '熏肉': 1 }
 		});
 		
-		if(Path.outfit['cured meat'] == 0) {
+		if(Path.outfit['熏肉'] == 0) {
 			Button.setDisabled(btn, true);
 		}
 		
@@ -143,13 +143,13 @@ var Events = {
 		
 		var btn = new Button.Button({
 			id: 'meds',
-			text: 'use meds',
+			text: '服药',
 			cooldown: cooldown,
 			click: Events.useMeds,
-			cost: { 'medicine': 1 }
+			cost: { '药剂': 1 }
 		});
 		
-		if((Path.outfit['medicine'] || 0) == 0) {
+		if((Path.outfit['药剂'] || 0) == 0) {
 			Button.setDisabled(btn, true);
 		}
 		
@@ -160,7 +160,7 @@ var Events = {
 		var weapon = World.Weapons[weaponName];
 		var cd = weapon.cooldown;
 		if(weapon.type == 'unarmed') {
-			if($SM.hasPerk('unarmed master')) {
+			if($SM.hasPerk('徒手宗师')) {
 				cd /= 2;
 			}
 		}
@@ -198,10 +198,10 @@ var Events = {
 	},
 	
 	eatMeat: function() {
-		if(Path.outfit['cured meat'] > 0) {
-			Path.outfit['cured meat']--;
+		if(Path.outfit['熏肉'] > 0) {
+			Path.outfit['熏肉']--;
 			World.updateSupplies();
-			if(Path.outfit['cured meat'] == 0) {
+			if(Path.outfit['熏肉'] == 0) {
 				Button.setDisabled($('#eat'), true);
 			}
 			
@@ -220,10 +220,10 @@ var Events = {
 	},
 	
 	useMeds: function() {
-		if(Path.outfit['medicine'] > 0) {
-			Path.outfit['medicine']--;
+		if(Path.outfit['药剂'] > 0) {
+			Path.outfit['药剂']--;
 			World.updateSupplies();
-			if(Path.outfit['medicine'] == 0) {
+			if(Path.outfit['药剂'] == 0) {
 				Button.setDisabled($('#meds'), true);
 			}
 			
@@ -248,12 +248,12 @@ var Events = {
 			if(weapon.type == 'unarmed') {
 				if(!$SM.get('character.punches')) $SM.set('character.punches', 0);
 				$SM.add('character.punches', 1);
-				if($SM.get('character.punches') == 50 && !$SM.hasPerk('boxer')) {
-					$SM.addPerk('boxer');
-				} else if($SM.get('character.punches') == 150 && !$SM.hasPerk('martial artist')) {
-					$SM.addPerk('martial artist');
-				} else if($SM.get('character.punches') == 300 && !$SM.hasPerk('unarmed master')) {
-					$SM.addPerk('unarmed master');
+				if($SM.get('character.punches') == 50 && !$SM.hasPerk('拳击手')) {
+					$SM.addPerk('拳击手');
+				} else if($SM.get('character.punches') == 150 && !$SM.hasPerk('武斗家')) {
+					$SM.addPerk('武斗家');
+				} else if($SM.get('character.punches') == 300 && !$SM.hasPerk('徒手宗师')) {
+					$SM.addPerk('徒手宗师');
 				}
 				
 			}
@@ -285,7 +285,7 @@ var Events = {
 						// enable or create the punch button
 						var fists = $('#attack_fists');
 						if(fists.length == 0) {
-							Events.createAttackButton('fists').prependTo('#buttons', Events.eventPanel());
+							Events.createAttackButton('拳头').prependTo('#buttons', Events.eventPanel());
 						} else {
 							Button.setDisabled(fists, false);
 						}
@@ -297,16 +297,16 @@ var Events = {
 			if(Math.random() <= World.getHitChance()) {
 				dmg = weapon.damage;
 				if(typeof dmg == 'number') {
-					if(weapon.type == 'unarmed' && $SM.hasPerk('boxer')) {
+					if(weapon.type == 'unarmed' && $SM.hasPerk('拳击手')) {
 						dmg *= 2;
 					}
-					if(weapon.type == 'unarmed' && $SM.hasPerk('martial artist')) {
+					if(weapon.type == 'unarmed' && $SM.hasPerk('武斗家')) {
 						dmg *= 3;
 					}
-					if(weapon.type == 'unarmed' && $SM.hasPerk('unarmed master')) {
+					if(weapon.type == 'unarmed' && $SM.hasPerk('徒手宗师')) {
 						dmg *= 2;
 					}
-					if(weapon.type == 'melee' && $SM.hasPerk('barbarian')) {
+					if(weapon.type == 'melee' && $SM.hasPerk('野蛮人')) {
 						dmg = Math.floor(dmg * 1.5);
 					}
 				}
@@ -352,7 +352,7 @@ var Events = {
 				}
 			} else {
 				if(dmg == 'stun') {
-					msg = 'stunned';
+					msg = '被绊住了';
 					enemy.data('stunned', true);
 					setTimeout(function() {
 						enemy.data('stunned', false);
@@ -397,7 +397,7 @@ var Events = {
 				}
 			} else {
 				if(dmg == 'stun') {
-					msg = 'stunned';
+					msg = '被绊住了';
 					enemy.data('stunned', true);
 					setTimeout(function() {
 						enemy.data('stunned', false);
@@ -453,7 +453,7 @@ var Events = {
 					var btns = $('#buttons', Events.eventPanel());
 					desc.empty();
 					btns.empty();
-					$('<div>').text('the ' + scene.enemy + (scene.plural ? ' are' : ' is') + ' dead.').appendTo(desc);
+					$('<div>').text('' + scene.enemy + (scene.plural ? '' : '') + '死了.').appendTo(desc);
 					
 					Events.drawLoot(scene.loot);
 					
@@ -471,11 +471,11 @@ var Events = {
 									Events.endEvent(); 
 								}
 							},
-							text: 'leave'
+							text: '离开'
 						}).appendTo(btns);
 						
 						Events.createEatMeatButton(0).appendTo(btns);
-						if((Path.outfit['medicine'] || 0) != 0) {
+						if((Path.outfit['药剂'] || 0) != 0) {
 						  Events.createUseMedsButton(0).appendTo(btns);
 					  }
 					}
