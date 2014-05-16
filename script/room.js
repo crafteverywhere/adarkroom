@@ -537,7 +537,7 @@ var Room = {
 				stores: {'木头' : 2 }
 			});
 			Room.updateIncomeView();
-			Notifications.notify(Room, "一名陌生人出现在火堆前.她说她能帮忙.帮忙建些东西.");
+			Notifications.notify(Room, "那名陌生人出现在火堆前.她说她可以帮忙建些东西.");
 		}
 
 		Engine.moveStoresView(null, transition_diff);
