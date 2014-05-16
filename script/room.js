@@ -863,7 +863,7 @@ var Room = {
 		for(var k in cost) {
 			var have = $SM.get('stores["'+k+'"]', true);
 			if(have < cost[k]) {
-				Notifications.notify(Room, "不足" + k);
+				Notifications.notify(Room, "还需要更多" + k);
 				return false;
 			} else {
 				storeMod[k] = have - cost[k];
