@@ -128,7 +128,7 @@ var Outside = {
 		}
 		
 		// Create the outside tab
-		this.tab = Header.addLocation("静谧森林", "outside", Outside);
+		this.tab = Header.addLocation("A Silent Forest", "outside", Outside);
 		
 		// Create the Outside panel
 		this.panel = $('<div>').attr('id', "outsidePanel")
@@ -239,7 +239,7 @@ var Outside = {
 				workers.children().each(function(i) {
 					var child = $(this);
 					var cName = child.attr('id').substring(12).replace('-', ' ');
-					if(cName != 'gatherer') {
+					if(cName != '采集工') {
 						if(cName < k && (curPrev == null || cName > curPrev)) {
 							curPrev = cName;
 						}
@@ -271,7 +271,7 @@ var Outside = {
 		}
 		
 		if(gatherer.length == 0) {
-			gatherer = Outside.makeWorkerRow('gatherer', numGatherers);
+			gatherer = Outside.makeWorkerRow('采集工', numGatherers);
 			gatherer.prependTo(workers);
 		} else {
 			$('div#workers_row_gatherer > div.row_val > span', workers).text(numGatherers);
@@ -461,7 +461,7 @@ var Outside = {
 	updateVillageIncome: function() {		
 		for(var worker in Outside._INCOME) {
 			var income = Outside._INCOME[worker];
-			var num = worker == 'gatherer' ? Outside.getNumGatherers() : $SM.get('game.workers["'+worker+'"]');
+			var num = worker == '采集工' ? Outside.getNumGatherers() : $SM.get('game.workers["'+worker+'"]');
 			if(typeof num == 'number') {
 				var stores = {};
 				if(num < 0) num = 0;
