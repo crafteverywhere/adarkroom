@@ -97,7 +97,7 @@ var Room = {
 		'熏肉房': {
 			button: null,
 			maximum: 1,
-			availableMsg: "应该把肉熏一下，否则它会腐坏.建造者说她能搞定这个.",
+			availableMsg: "应该把肉熏一下，否则它会坏掉.建造者说她能搞定这个.",
 			buildMsg: '建造者完成了熏肉房，她看起来好饿',
 			type: 'building',
 			cost: function() {
@@ -110,7 +110,7 @@ var Room = {
 		'工坊': {
 			button: null,
 			maximum: 1,
-			availableMsg: "建造者说如果她有工具的话能做出一些更精良的东西.",
+			availableMsg: "建造者说如果有工具她能做出一些更精良的东西.",
 			buildMsg: "工坊终于建好了.建造者激动不已.",
 			type: 'building',
 			cost: function() {
@@ -911,7 +911,7 @@ var Room = {
 		for(var k in cost) {
 			var have = $SM.get('stores["'+k+'"]', true);
 			if(have < cost[k]) {
-				Notifications.notify(Room, "不足" + k);
+				Notifications.notify(Room, "还需要更多" + k);
 				return false;
 			} else {
 				storeMod[k] = have - cost[k];
