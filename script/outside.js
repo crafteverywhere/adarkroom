@@ -2,7 +2,7 @@
  * Module that registers the outdoors functionality
  */
 var Outside = {
-	name: "户外",
+	name: "Outside",
 	
 	_GATHER_DELAY: 60,
 	_TRAPS_DELAY: 90,
