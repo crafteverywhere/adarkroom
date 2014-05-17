@@ -113,7 +113,7 @@ Events.Room = [
 				buttons: {
 					'investigate': {
 						text: '调查',
-						nextScene: { 0.5: '鳞片', 0.8: '牙齿', 1: '布匹' }
+						nextScene: { 0.5: 'scales', 0.8: 'teeth', 1: 'cloth' }
 					},
 					'ignore': {
 						text: '忽略',
@@ -199,12 +199,12 @@ Events.Room = [
 					'50furs': {
 						text: '施舍50张毛皮',
 						cost: {'毛皮': 50},
-						nextScene: { 0.5: '鳞片', 0.8: '牙齿', 1: '布匹' }
+						nextScene: { 0.5: 'scales', 0.8: 'teeth', 1: 'cloth' }
 					},
 					'100furs': {
 						text: '施舍100张毛皮',
 						cost: {'毛皮': 100},
-						nextScene: { 0.5: '牙齿', 0.8: '鳞片', 1: '布匹' }
+						nextScene: { 0.5: 'teeth', 0.8: 'scales', 1: 'cloth' }
 					},
 					'deny': {
 						text: '赶走他',
