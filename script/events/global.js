@@ -32,7 +32,7 @@ Events.Global = [
 			       '此举卓有成效。数日后，遗失的物资都被还了回来。'
 		        ],
 		        onLoad: function() {
-		        	$SM.set('game.thieves', 2);
+		        	$SM.set('game["盗贼"]', 2);
 		        	$SM.remove('income.thieves');
 		        	$SM.addM('stores', $SM.get('game.stolen'));
 		        },
