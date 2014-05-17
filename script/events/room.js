@@ -113,7 +113,7 @@ Events.Room = [
 				buttons: {
 					'investigate': {
 						text: '调查',
-						nextScene: { 0.5: 'scales', 0.8: 'teeth', 1: 'cloth' }
+						nextScene: { 0.5: '鳞片', 0.8: '牙齿', 1: '布匹' }
 					},
 					'ignore': {
 						text: '忽略',
@@ -121,7 +121,7 @@ Events.Room = [
 					}
 				}
 			},
-			scales: {
+			'鳞片': {
 				text: [
 			       '有些木头不见了.',
 			       '地上散落着小鳞片.'
@@ -141,7 +141,7 @@ Events.Room = [
 			    	}
 			    }
 			},
-			teeth: {
+			'牙齿': {
 				text: [
 			       '有些木头不见了.',
 			       '地上散落着小牙齿.'
@@ -161,7 +161,7 @@ Events.Room = [
 			    	}
 			    }
 			},
-			cloth: {
+			'布匹': {
 				text: [
 			       '有些木头不见了.',
 			       '地上散落着布片.'
@@ -199,12 +199,12 @@ Events.Room = [
 					'50furs': {
 						text: '施舍50张毛皮',
 						cost: {'毛皮': 50},
-						nextScene: { 0.5: 'scales', 0.8: 'teeth', 1: 'cloth' }
+						nextScene: { 0.5: '鳞片', 0.8: '牙齿', 1: '布匹' }
 					},
 					'100furs': {
 						text: '施舍100张毛皮',
 						cost: {'毛皮': 100},
-						nextScene: { 0.5: 'teeth', 0.8: 'scales', 1: 'cloth' }
+						nextScene: { 0.5: '牙齿', 0.8: '鳞片', 1: '布匹' }
 					},
 					'deny': {
 						text: '赶走他',
@@ -212,8 +212,8 @@ Events.Room = [
 					}
 				}
 			},
-			scales: {
-				reward: { scales: 20 },
+			'鳞片': {
+				reward: { '鳞片': 20 },
 				text: [
 			       '乞丐感激涕零.',
 			       '留给我们一堆小鳞片.'
@@ -225,8 +225,8 @@ Events.Room = [
 			    	}
 			    }
 			},
-			teeth: {
-				reward: { teeth: 20 },
+			'牙齿': {
+				reward: { '牙齿': 20 },
 				text: [
 			       '乞丐感激涕零.',
 			       '留给我们一堆小牙齿.'
@@ -238,8 +238,8 @@ Events.Room = [
 			    	}
 			    }
 			},
-			cloth: {
-				reward: { cloth: 20 },
+			'布匹': {
+				reward: { '布匹': 20 },
 				text: [
 			       '乞丐感激涕零.',
 			       '留给我们一些布匹.'
