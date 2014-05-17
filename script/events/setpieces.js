@@ -116,7 +116,7 @@ Events.Setpieces = {
 				hit: 0.8,
 				attackDelay: 1,
 				health: 5,
-				notification: '受到惊吓的野兽正要捍卫它的巢穴.',
+				notification: '那受到惊吓的野兽正要捍卫它的巢穴.',
 				loot: {
 					'毛皮': {
 						min: 1,
@@ -159,7 +159,7 @@ Events.Setpieces = {
 			'a3': {
 				text: [
 			       '洞穴内出现一处老旧营地的遗迹.',
-			       '破旧脏污的睡袋平躺着，布满了一层薄薄的灰尘.'
+			       '破旧脏污的睡袋平躺着，上面蒙着一层薄薄的灰尘.'
 				],
 				loot: {
 					'熏肉': {
@@ -254,7 +254,7 @@ Events.Setpieces = {
 				hit: 0.8,
 				attackDelay: 1,
 				health: 5,
-				notification: '受到惊吓的野兽正要捍卫它的巢穴.',
+				notification: '那受到惊吓的野兽正要捍卫它的巢穴.',
 				loot: {
 					'毛皮': {
 						min: 1,
@@ -280,13 +280,13 @@ Events.Setpieces = {
 			},
 			'b4': {
 				combat: true,
-				enemy: 'cave lizard',
+				enemy: '洞穴蜥蜴',
 				chara: 'L',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
 				health: 6,
-				notification: 'a cave lizard attacks',
+				notification: '一只洞穴蜥蜴扑了过来',
 				loot: {
 					'鳞片': {
 						min: 1,
@@ -312,13 +312,13 @@ Events.Setpieces = {
 			},
 			'c1': {
 				combat: true,
-				enemy: 'beast',
+				enemy: '野兽',
 				chara: 'B',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
 				health: 10,
-				notification: 'a large beast charges out of the dark',
+				notification: '巨大的野兽现身于黑暗之中',
 				loot: {
 					'毛皮': {
 						min: 1,
@@ -344,13 +344,13 @@ Events.Setpieces = {
 			},
 			'c2': {
 				combat: true,
-				enemy: 'lizard',
+				enemy: '蜥蜴',
 				chara: 'L',
 				damage: 4,
 				hit: 0.8,
 				attackDelay: 2,
 				health: 10,
-				notification: 'a giant lizard shambles forward',
+				notification: '一只巨大的蜥蜴蹒跚地现身，挡住了前路',
 				loot: {
 					'鳞片': {
 						min: 1,
@@ -376,7 +376,7 @@ Events.Setpieces = {
 			},
 			'end1': {
 				text: [
-			       'the nest of a large animal lies at the back of the cave.'
+			       '巨兽的巢穴位于洞穴后方.'
 				],
 				onLoad: function() {
 					World.clearDungeon();
@@ -417,7 +417,7 @@ Events.Setpieces = {
 			},
 			'end2': {
 				text: [
-			       'a small supply cache is hidden at the back of the cave.'
+			       '洞穴后出现了一个小型的补给点.'
 		        ],
 		        loot: {
 					'布匹': {
@@ -468,7 +468,7 @@ Events.Setpieces = {
 			},
 			'end3': {
 				text: [
-			       'an old case is wedged behind a rock, covered in a thick layer of dust.'
+			       '一个陈旧的盒子夹在岩石下方，上面蒙着一层薄薄的灰尘.'
 		        ],
 		        loot: {
 		        	'钢剑': {
@@ -500,7 +500,7 @@ Events.Setpieces = {
 		}
 	},
 	"town": { /* Town */
-		title: 'A Deserted Town',
+		title: '废弃小镇',
 		scenes: {
 			'start': {
 				text: [
@@ -2734,7 +2734,7 @@ Events.Setpieces = {
 			
 			'end14': {
 				text: [
-				   'the warped man lies dead.',
+				   '受困男子的尸体躺在地面上.',
 				   'the operating theatre has a lot of curious equipment.'
 				],
 				onLoad: function() {
@@ -2778,7 +2778,7 @@ Events.Setpieces = {
 			
 			'end15': {
 				text: [
-					'the old man had a small cache of interesting items.'
+					'一名拥有些有趣玩意儿的老者.'
 				],
 				onLoad: function() {
 					World.clearDungeon();
@@ -2821,12 +2821,12 @@ Events.Setpieces = {
 		}	
 	},
 	"house": { /* Abandoned House */
-		title: 'An Old House',
+		title: '老屋',
 		scenes: {
 			'start': {
 				text: [
-					'an old house remains here, once white siding yellowed and peeling.',
-					'the door hangs open.'
+					'一栋老屋坐落于此，曾经白色的外墙已泛黄，涂料已剥落.',
+					'门晃晃悠悠地开了.'
 				],
 				notification: 'the remains of an old house stand as a monument to simpler times',
 				buttons: {
@@ -2842,8 +2842,8 @@ Events.Setpieces = {
 			},
 			'supplies': {
 				text: [
-					'the house is abandoned, but not yet picked over.',
-					'still a few drops of water in the old well.'
+					'屋子虽已废弃，但尚未被人搜罗过.',
+					'老井里也还能打上来些水喝.'
 				],
 				onLoad: function() {
 					World.markVisited(World.curPos[0], World.curPos[1]);
@@ -2876,8 +2876,8 @@ Events.Setpieces = {
 			},
 			'药剂': {
 				text: [
-				  'the house has been ransacked.',
-					'but there is a cache of medicine under the floorboards.'
+				    '屋子已被洗劫一空.',
+					'但地板上还能寻见几瓶药剂.'
 				],
 				onLoad: function() {
 					World.markVisited(World.curPos[0], World.curPos[1]);
@@ -2898,13 +2898,13 @@ Events.Setpieces = {
 			},
 			'occupied': {
 				combat: true,
-				enemy: 'squatter',
+				enemy: '伏击者',
 				chara: 'S',
 				damage: 3,
 				hit: 0.8,
 				attackDelay: 2,
 				health: 10,
-				notification: 'a man charges down the hall, a rusty blade in his hand',
+				notification: '男子手持着一柄生锈的刀，从大厅上方跳了下来',
 				onLoad: function() {
 					World.markVisited(World.curPos[0], World.curPos[1]);
 				},
@@ -2935,12 +2935,12 @@ Events.Setpieces = {
 		}
 	},
 	"battlefield": { /* Discovering an old battlefield */
-		title: 'A Forgotten Battlefield',
+		title: '被遗忘的战场',
 		scenes: {
 			'start': {
 				text: [
-			       'a battle was fought here, long ago.',
-			       'battered technology from both sides lays dormant on the blasted landscape.'
+			       '这里很久以前曾打过仗.',
+			       '战斗双方曾使用的武器装备在荒原上静静躺着.'
 		        ],
 		        onLoad: function() {
 					World.markVisited(World.curPos[0], World.curPos[1]);
@@ -2987,7 +2987,7 @@ Events.Setpieces = {
 		}
 	},
 	"borehole": { /* Admiring a huge borehole */
-		title: 'A Huge Borehole',
+		title: '巨坑',
 		scenes: {
 			'start': {
 				text: [
@@ -3015,7 +3015,7 @@ Events.Setpieces = {
 		}
 	},
 	"ship": { /* Finding a way off this rock */
-		title: 'A Crashed Ship',
+		title: '破损飞船',
 		scenes: {
 			'start': {
 				onLoad: function() {
@@ -3030,7 +3030,7 @@ Events.Setpieces = {
 		        ],
 		        buttons: {
 		        	'leavel': {
-		        		text: 'salvage',
+		        		text: '抢修',
 		        		nextScene: 'end'
 		        	}
 		        }
@@ -3182,14 +3182,14 @@ Events.Setpieces = {
 		}
 	},
 	"coalmine": { /* Clearing the Coal Mine */
-		title: 'The Coal Mine',
+		title: '煤矿',
 		scenes: {
 			'start': {
 				text: [
-					'camp fires burn by the entrance to the mine.',
-					'men mill about, weapons at the ready.'
+					'矿井入口边燃着营火.',
+					'手持武器待命的男子在附近巡逻.'
 				],
-				notification: 'this old mine is not abandoned',
+				notification: '这座矿井还没有被废弃',
 				buttons: {
 					'attack': {	
 						text: 'attack',
@@ -3221,7 +3221,7 @@ Events.Setpieces = {
 						chance: 0.8
 					}
 				},
-				notification: 'a man joins the fight',
+				notification: '一名男子加入了战斗',
 				buttons: {
 					'continue': {
 						text: '继续深入',
@@ -3327,7 +3327,7 @@ Events.Setpieces = {
 					'bleached bones are strewn about the entrance. many, deeply scored with jagged grooves.',
 					'feral howls echo out of the darkness.'
 				],
-				notification: 'the path leads to an abandoned mine',
+				notification: '通往废弃矿井的小路',
 				buttons: {
 					'enter': {
 						text: '进入',
@@ -3395,14 +3395,14 @@ Events.Setpieces = {
 	},
 	
 	"cache": { /* Cache - contains some of supplies from previous game */
-		title: 'A Destroyed Village',
+		title: '被毁灭的村落',
 		scenes: {
 			'start': {
 				text: [
 					'被毁灭的村子灰尘遍地.',
 					'破烂的尸体俯首即是.'
 				],
-				notification: 'the metallic tang of wanderer afterburner hangs in the air.',
+				notification: '流浪者舰艇加力燃烧室的金属柄脚尚还悬在空中.',
 				buttons: {
 					'enter': {
 						text: '进入',
