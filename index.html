@@ -10,10 +10,10 @@
 		Inspired by Candy Box (http://candies.aniwey.net/)
 		Contribute on GitHub! (https://github.com/Continuities/adarkroom/)
 	-->
-	<title>A Dark Room</title>
-	<meta itemprop="description" name="description" property="og:description" content="A minimalist text adventure">
+	<title>小黑屋</title>
+	<meta itemprop="description" name="description" property="og:description" content="极简主义文字冒险">
 	<meta itemprop="image" property="og:image" content="img/adr.png" />
-	<meta itemprop="name" property="og:title" content="A Dark Room" />
+	<meta itemprop="name" property="og:title" content="小黑屋" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="image_src" href="img/adr.png" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -41,8 +41,9 @@
 			} catch(e) {}
 		}
 		// if a language different than english requested, load all translations
-		if(lang && lang != 'en'){
+		if(lang && lang != 'zh_cn'){
 			document.write('<script src="lang/'+lang+'/strings.js"><\/script>');
+			//document.write('<script src="lang/'+lang+'/strings.po"><\/script>');
 			document.write('<link rel="stylesheet" type="text/css" href="lang/'+lang+'/main.css" \/>');
 		}
 	</script>
